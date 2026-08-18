@@ -1,1 +1,57 @@
 @import "tailwindcss";
+
+@layer base {
+  :focus-visible {
+    outline: 2px solid #000;
+    outline-offset: 2px;
+  }
+
+  html[data-a11y-text="large"] {
+    font-size: 125%;
+  }
+
+  html[data-a11y-text="larger"] {
+    font-size: 150%;
+  }
+
+  html[data-a11y-font="readable"] body {
+    font-family: var(--font-readable), ui-sans-serif, sans-serif;
+  }
+
+  html[data-a11y-contrast="high"] body,
+  html[data-a11y-contrast="high"] header,
+  html[data-a11y-contrast="high"] footer {
+    background: #fff;
+    color: #000;
+  }
+
+  html[data-a11y-contrast="high"] .text-zinc-600,
+  html[data-a11y-contrast="high"] .text-zinc-700,
+  html[data-a11y-contrast="high"] .text-zinc-800 {
+    color: #000;
+  }
+
+  html[data-a11y-links="underline"] a {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  html[data-a11y-spacing="roomy"] body {
+    letter-spacing: 0.06em;
+    word-spacing: 0.12em;
+    line-height: 1.8;
+  }
+
+  html[data-a11y-focus="strong"] :focus-visible {
+    outline: 4px solid #000;
+    outline-offset: 4px;
+  }
+
+  html[data-a11y-motion="reduce"] *,
+  html[data-a11y-motion="reduce"] *::before,
+  html[data-a11y-motion="reduce"] *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
