@@ -1,0 +1,3052 @@
+[
+  {
+    "frameworkId": "soc2",
+    "name": "SOC 2",
+    "alsoKnownAs": [
+      "SOC 2 Type I",
+      "SOC 2 Type II",
+      "Trust Services Criteria",
+      "TSC"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "security",
+    "type": "attestation",
+    "issuingBody": "AICPA",
+    "officialUrl": "https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2",
+    "scopeSummary": "Covers the service organization's system boundary and the Trust Services Criteria selected (security is required; availability, processing integrity, confidentiality and privacy are optional).",
+    "keyObligationsSummary": "Management defines the system, asserts control design and operation, and engages a licensed CPA firm to examine controls against the AICPA Trust Services Criteria. Type 1 reports on design at a point in time; Type 2 reports on operating effectiveness over a period, commonly 3 to 12 months. The output is an attestation report rather than a pass/fail certificate.",
+    "mandatoryVsVoluntary": "voluntary",
+    "researchSourceUrls": [
+      "https://www.aicpa-cima.com/resources/landing/system-and-organization-controls-soc-suite-of-services",
+      "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+    ]
+  },
+  {
+    "frameworkId": "soc1",
+    "name": "SOC 1",
+    "alsoKnownAs": [
+      "SSAE 18 SOC 1",
+      "ICFR report"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "financial",
+    "type": "attestation",
+    "issuingBody": "AICPA",
+    "officialUrl": "https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-1",
+    "scopeSummary": "Covers controls relevant to user entities' internal control over financial reporting (ICFR) for the described service.",
+    "keyObligationsSummary": "Management describes the system and control objectives relevant to financial reporting and a CPA firm examines them under SSAE 18 (AT-C 320). Reports are issued as Type 1 (design) or Type 2 (design and operating effectiveness). User auditors rely on the report during their customers' financial audits.",
+    "mandatoryVsVoluntary": "voluntary",
+    "researchSourceUrls": [
+      "https://www.aicpa-cima.com/resources/landing/system-and-organization-controls-soc-suite-of-services"
+    ]
+  },
+  {
+    "frameworkId": "soc3",
+    "name": "SOC 3",
+    "alsoKnownAs": [
+      "SOC 3 General Use Report",
+      "Trust Services Report for General Use"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "security",
+    "type": "attestation",
+    "issuingBody": "AICPA",
+    "officialUrl": "https://www.aicpa-cima.com/resources/landing/system-and-organization-controls-soc-suite-of-services",
+    "scopeSummary": "Same scope as the underlying SOC 2 examination, presented as a general-use summary report.",
+    "keyObligationsSummary": "A SOC 3 report is a general-use version of a SOC 2 Type 2 engagement without the detailed test procedures and results. It can be published or posted publicly, unlike restricted-use SOC 2 reports. It does not replace a SOC 2 report in security reviews.",
+    "mandatoryVsVoluntary": "voluntary",
+    "researchSourceUrls": [
+      "https://www.aicpa-cima.com/resources/landing/system-and-organization-controls-soc-suite-of-services"
+    ]
+  },
+  {
+    "frameworkId": "iso27001",
+    "name": "ISO/IEC 27001",
+    "alsoKnownAs": [
+      "ISO 27001",
+      "ISMS standard"
+    ],
+    "jurisdiction": "Global",
+    "region": "Global",
+    "category": "security",
+    "type": "certification",
+    "issuingBody": "ISO/IEC",
+    "officialUrl": "https://www.iso.org/standard/27001",
+    "scopeSummary": "Applies to the information security management system (ISMS) scope the organization defines, including people, processes and technology inside that boundary.",
+    "keyObligationsSummary": "Requires a documented ISMS with leadership commitment, risk assessment and treatment, a Statement of Applicability covering Annex A controls, internal audit and management review. Certification is issued by an accredited certification body after Stage 1 and Stage 2 audits. Surveillance audits occur annually with full recertification every three years.",
+    "mandatoryVsVoluntary": "voluntary",
+    "researchSourceUrls": [
+      "https://www.iso.org/isoiec-27001-information-security.html",
+      "https://www.iso.org/standard/27001"
+    ]
+  },
+  {
+    "frameworkId": "iso27002",
+    "name": "ISO/IEC 27002",
+    "alsoKnownAs": [
+      "ISO 27002",
+      "information security controls"
+    ],
+    "jurisdiction": "Global",
+    "region": "Global",
+    "category": "security",
+    "type": "standard",
+    "issuingBody": "ISO/IEC",
+    "officialUrl": "https://www.iso.org/standard/75652.html",
+    "scopeSummary": "Guidance standard covering the information security controls referenced by ISO/IEC 27001 Annex A.",
+    "keyObligationsSummary": "Provides implementation guidance and purpose statements for each control rather than certifiable management-system requirements. Organizations are not certified against ISO/IEC 27002 itself. It is commonly used to justify Statement of Applicability decisions.",
+    "mandatoryVsVoluntary": "voluntary",
+    "researchSourceUrls": [
+      "https://www.iso.org/standard/75652.html",
+      "https://www.iso.org/isoiec-27001-information-security.html"
+    ]
+  },
+  {
+    "frameworkId": "iso27017",
+    "name": "ISO/IEC 27017",
+    "alsoKnownAs": [
+      "ISO 27017",
+      "cloud security controls"
+    ],
+    "jurisdiction": "Global",
+    "region": "Global",
+    "category": "security",
+    "type": "standard",
+    "issuingBody": "ISO/IEC",
+    "officialUrl": "https://www.iso.org/standard/43757.html",
+    "scopeSummary": "Covers cloud service provider and cloud service customer responsibilities for information security in cloud environments.",
+    "keyObligationsSummary": "Provides cloud-specific implementation guidance for ISO/IEC 27002 controls plus additional cloud controls, including shared responsibility, virtual environment segregation and administrative operations. It is usually assessed as an extension to an ISO/IEC 27001 certification scope.",
+    "mandatoryVsVoluntary": "voluntary",
+    "researchSourceUrls": [
+      "https://www.iso.org/standard/43757.html",
+      "https://www.iso.org/isoiec-27001-information-security.html"
+    ]
+  },
+  {
+    "frameworkId": "iso27018",
+    "name": "ISO/IEC 27018",
+    "alsoKnownAs": [
+      "ISO 27018",
+      "PII in public clouds"
+    ],
+    "jurisdiction": "Global",
+    "region": "Global",
+    "category": "privacy",
+    "type": "standard",
+    "issuingBody": "ISO/IEC",
+    "officialUrl": "https://www.iso.org/standard/76559.html",
+    "scopeSummary": "Covers PII protection controls for public cloud service providers processing personal data on behalf of customers.",
+    "keyObligationsSummary": "Provides a code of practice with additional controls and guidance for cloud processors, including transparency about subprocessors, data location and return or deletion of data. It is typically certified as an extension to an ISO/IEC 27001 scope. It does not by itself establish legal compliance with privacy laws.",
+    "mandatoryVsVoluntary": "voluntary",
+    "researchSourceUrls": [
+      "https://www.iso.org/standard/76559.html",
+      "https://www.iso.org/isoiec-27001-information-security.html"
+    ]
+  },
+  {
+    "frameworkId": "iso27701",
+    "name": "ISO/IEC 27701",
+    "alsoKnownAs": [
+      "ISO 27701",
+      "PIMS",
+      "privacy extension to ISO 27001"
+    ],
+    "jurisdiction": "Global",
+    "region": "Global",
+    "category": "privacy",
+    "type": "certification",
+    "issuingBody": "ISO/IEC",
+    "officialUrl": "https://www.iso.org/standard/27701",
+    "scopeSummary": "Covers a Privacy Information Management System (PIMS) for organizations acting as PII controllers, PII processors or both, within a defined ISMS scope.",
+    "keyObligationsSummary": "Extends ISO/IEC 27001 and 27002 with privacy-specific requirements and controls for controllers and processors, including purpose limitation, data subject rights handling, records of processing and transfer transparency. Certification requires an existing or concurrent ISO/IEC 27001 certification. Annexes map controls to GDPR articles, which supports but does not prove legal compliance.",
+    "mandatoryVsVoluntary": "voluntary",
+    "researchSourceUrls": [
+      "https://www.iso.org/standard/71670.html",
+      "https://www.iso.org/isoiec-27001-information-security.html"
+    ]
+  },
+  {
+    "frameworkId": "iso42001",
+    "name": "ISO/IEC 42001",
+    "alsoKnownAs": [
+      "ISO 42001",
+      "AI management system",
+      "AIMS"
+    ],
+    "jurisdiction": "Global",
+    "region": "Global",
+    "category": "ai",
+    "type": "certification",
+    "issuingBody": "ISO/IEC",
+    "officialUrl": "https://www.iso.org/standard/42001",
+    "scopeSummary": "Covers an AI management system (AIMS) for the AI systems and roles inside the declared scope, for providers and users of AI.",
+    "keyObligationsSummary": "Requires an AI management system with AI risk assessment, AI system impact assessment, defined roles across the AI lifecycle, and controls for data, model and third-party management. It is certifiable by accredited certification bodies. It is a governance standard and does not itself demonstrate conformity with AI legislation.",
+    "mandatoryVsVoluntary": "voluntary",
+    "researchSourceUrls": [
+      "https://www.iso.org/standard/81230.html",
+      "https://www.iso.org/artificial-intelligence/ai-management-systems"
+    ]
+  },
+  {
+    "frameworkId": "iso22301",
+    "name": "ISO 22301",
+    "alsoKnownAs": [
+      "business continuity management system",
+      "BCMS"
+    ],
+    "jurisdiction": "Global",
+    "region": "Global",
+    "category": "industry",
+    "type": "certification",
+    "issuingBody": "ISO",
+    "officialUrl": "https://www.iso.org/standard/75106.html",
+    "scopeSummary": "Covers a business continuity management system (BCMS) for the products, services and sites in the declared scope.",
+    "keyObligationsSummary": "Requires business impact analysis, risk assessment, continuity strategies, documented plans, and exercising and testing of those plans. Certification is available from accredited bodies. Many buyers accept BCMS evidence without full certification.",
+    "mandatoryVsVoluntary": "voluntary",
+    "researchSourceUrls": [
+      "https://www.iso.org/standard/75106.html",
+      "https://www.iso.org/iso-22301-business-continuity.html"
+    ]
+  },
+  {
+    "frameworkId": "iso9001",
+    "name": "ISO 9001",
+    "alsoKnownAs": [
+      "quality management system",
+      "QMS"
+    ],
+    "jurisdiction": "Global",
+    "region": "Global",
+    "category": "industry",
+    "type": "certification",
+    "issuingBody": "ISO",
+    "officialUrl": "https://www.iso.org/standard/62085.html",
+    "scopeSummary": "Covers a quality management system (QMS) for the products and services in the declared scope.",
+    "keyObligationsSummary": "Requires a process-based QMS with customer focus, documented processes, competence management, nonconformity and corrective action handling, internal audit and management review. Certification is issued by accredited certification bodies. It addresses quality management, not information security.",
+    "mandatoryVsVoluntary": "voluntary",
+    "researchSourceUrls": [
+      "https://www.iso.org/iso-9001-quality-management.html",
+      "https://www.iso.org/standard/62085.html"
+    ]
+  },
+  {
+    "frameworkId": "iso14001",
+    "name": "ISO 14001",
+    "alsoKnownAs": [
+      "environmental management system",
+      "EMS"
+    ],
+    "jurisdiction": "Global",
+    "region": "Global",
+    "category": "industry",
+    "type": "certification",
+    "issuingBody": "ISO",
+    "officialUrl": "https://www.iso.org/standard/14001",
+    "scopeSummary": "Covers an environmental management system (EMS) for the activities, products and services in the declared scope.",
+    "keyObligationsSummary": "Requires identification of environmental aspects and compliance obligations, environmental objectives, operational controls, emergency preparedness, internal audit and management review. Certification is issued by accredited certification bodies. It manages environmental performance rather than information security or privacy.",
+    "mandatoryVsVoluntary": "voluntary",
+    "researchSourceUrls": [
+      "https://www.iso.org/iso-14001-environmental-management.html",
+      "https://www.iso.org/standard/60857.html"
+    ]
+  },
+  {
+    "frameworkId": "iso13485",
+    "name": "ISO 13485",
+    "alsoKnownAs": [
+      "medical devices quality management system"
+    ],
+    "jurisdiction": "Global",
+    "region": "Global",
+    "category": "healthcare",
+    "type": "certification",
+    "issuingBody": "ISO",
+    "officialUrl": "https://www.iso.org/standard/59752.html",
+    "scopeSummary": "Covers a quality management system for organizations involved in one or more stages of the medical device lifecycle.",
+    "keyObligationsSummary": "Requires a documented quality management system with design and development controls, risk management across the lifecycle, supplier controls, traceability, complaint handling and regulatory reporting processes. Certification supports regulatory approvals such as EU MDR conformity assessment and is widely expected by notified bodies. It is quality-system focused and does not replace product conformity assessment.",
+    "mandatoryVsVoluntary": "voluntary",
+    "researchSourceUrls": [
+      "https://www.iso.org/standard/59752.html",
+      "https://www.iso.org/standards.html"
+    ]
+  },
+  {
+    "frameworkId": "iso20000-1",
+    "name": "ISO/IEC 20000-1",
+    "alsoKnownAs": [
+      "ISO 20000",
+      "IT service management system",
+      "SMS"
+    ],
+    "jurisdiction": "Global",
+    "region": "Global",
+    "category": "industry",
+    "type": "certification",
+    "issuingBody": "ISO/IEC",
+    "officialUrl": "https://www.iso.org/standard/70636.html",
+    "scopeSummary": "Covers a service management system (SMS) for the services in the declared scope.",
+    "keyObligationsSummary": "Requires a documented service management system with service planning, service level management, incident, problem and change management, and continual improvement. Certification is available from accredited bodies. It complements but does not replace security certifications.",
+    "mandatoryVsVoluntary": "voluntary",
+    "researchSourceUrls": [
+      "https://www.iso.org/standard/70636.html",
+      "https://www.iso.org/standards.html"
+    ]
+  },
+  {
+    "frameworkId": "iso31000",
+    "name": "ISO 31000",
+    "alsoKnownAs": [
+      "risk management guidelines"
+    ],
+    "jurisdiction": "Global",
+    "region": "Global",
+    "category": "industry",
+    "type": "guidance",
+    "issuingBody": "ISO",
+    "officialUrl": "https://www.iso.org/standard/65694.html",
+    "scopeSummary": "Guidance for managing risk across any organization type, size or sector; not scoped to a specific system.",
+    "keyObligationsSummary": "Provides principles, a framework and a process for risk management including identification, analysis, evaluation, treatment, monitoring and communication. It is guidance only and is not certifiable. It is commonly referenced to justify risk methodology in ISO 27001 or SOC 2 programs.",
+    "mandatoryVsVoluntary": "voluntary",
+    "researchSourceUrls": [
+      "https://www.iso.org/iso-31000-risk-management.html",
+      "https://www.iso.org/standard/65694.html"
+    ]
+  },
+  {
+    "frameworkId": "iec62443",
+    "name": "ISA/IEC 62443",
+    "alsoKnownAs": [
+      "IEC 62443",
+      "industrial automation and control systems security"
+    ],
+    "jurisdiction": "Global",
+    "region": "Global",
+    "category": "industry",
+    "type": "standard",
+    "issuingBody": "ISA and IEC",
+    "officialUrl": "https://www.isa.org/standards-and-publications/isa-standards/isa-iec-62443-series-of-standards",
+    "scopeSummary": "Covers industrial automation and control systems organized into zones and conduits, with roles for asset owners, integrators and product suppliers.",
+    "keyObligationsSummary": "Defines security program requirements for asset owners, security requirements for integration service providers, secure product development lifecycle requirements for suppliers, and technical system and component security requirements. Security levels 1 to 4 express the strength of protection required for each zone. Certification schemes such as ISASecure and IECEE assess products, processes and systems.",
+    "mandatoryVsVoluntary": "voluntary",
+    "researchSourceUrls": [
+      "https://www.isa.org/standards-and-publications/isa-standards/isa-iec-62443-series-of-standards",
+      "https://www.iec.ch/functionalsafety"
+    ]
+  },
+  {
+    "frameworkId": "nist-csf",
+    "name": "NIST Cybersecurity Framework",
+    "alsoKnownAs": [
+      "NIST CSF",
+      "CSF 2.0"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "security",
+    "type": "framework",
+    "issuingBody": "NIST",
+    "officialUrl": "https://www.nist.gov/cyberframework",
+    "scopeSummary": "Voluntary framework applicable to organizations of any size or sector; scope is defined by the organization.",
+    "keyObligationsSummary": "Organizes cybersecurity outcomes into functions and categories that organizations use to assess current and target profiles. Version 2.0, published in 2024, added the Govern function alongside Identify, Protect, Detect, Respond and Recover. It is outcome-based, so implementation is chosen by the organization and there is no certification.",
+    "mandatoryVsVoluntary": "voluntary",
+    "researchSourceUrls": [
+      "https://www.nist.gov/cyberframework",
+      "https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf"
+    ]
+  },
+  {
+    "frameworkId": "nist-800-53",
+    "name": "NIST SP 800-53",
+    "alsoKnownAs": [
+      "SP 800-53 Rev. 5",
+      "security and privacy controls"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "security",
+    "type": "standard",
+    "issuingBody": "NIST",
+    "officialUrl": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+    "scopeSummary": "Applies to federal information systems and organizations, and to non-federal systems where adopted by contract or program such as FedRAMP.",
+    "keyObligationsSummary": "Provides a catalog of security and privacy controls with low, moderate and high baselines selected by system categorization. Control selection is paired with assessment procedures in SP 800-53A. FedRAMP and FISMA programs use tailored baselines drawn from this catalog.",
+    "mandatoryVsVoluntary": "mixed",
+    "researchSourceUrls": [
+      "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+      "https://csrc.nist.gov/projects/risk-management/sp800-53-controls"
+    ]
+  },
+  {
+    "frameworkId": "nist-800-171",
+    "name": "NIST SP 800-171",
+    "alsoKnownAs": [
+      "SP 800-171 Rev. 3",
+      "CUI protection"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "security",
+    "type": "standard",
+    "issuingBody": "NIST",
+    "officialUrl": "https://csrc.nist.gov/pubs/sp/800/171/r3/final",
+    "scopeSummary": "Applies to CUI in nonfederal systems and organizations, scoped to the environment where CUI is handled.",
+    "keyObligationsSummary": "Requires implementation of security requirements for protecting CUI, a system security plan and plans of action for gaps. DFARS 252.204-7012 obliges many defense contractors to implement it and report scores, and CMMC assessments verify it. Revision 3 restructured the requirement families and tailoring approach.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://csrc.nist.gov/pubs/sp/800/171/r3/final",
+      "https://www.acquisition.gov/dfars/252.204-7012-safeguarding-covered-defense-information-and-cyber-incident-reporting."
+    ]
+  },
+  {
+    "frameworkId": "nist-800-172",
+    "name": "NIST SP 800-172",
+    "alsoKnownAs": [
+      "enhanced CUI requirements",
+      "APT protection"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "security",
+    "type": "standard",
+    "issuingBody": "NIST",
+    "officialUrl": "https://csrc.nist.gov/pubs/sp/800/172/final",
+    "scopeSummary": "Applies as a supplement to SP 800-171 for selected systems and components identified by the contracting agency.",
+    "keyObligationsSummary": "Provides enhanced security requirements aimed at advanced persistent threats, including penetration-resistant architecture and cyber resiliency measures. Requirements apply only when specified by the federal agency or contract. It is used for CMMC Level 3 assessment content.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://csrc.nist.gov/pubs/sp/800/172/final",
+      "https://csrc.nist.gov/pubs/sp/800/171/r3/final"
+    ]
+  },
+  {
+    "frameworkId": "nist-ssdf",
+    "name": "NIST SP 800-218 Secure Software Development Framework",
+    "alsoKnownAs": [
+      "SSDF",
+      "secure software development framework"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "security",
+    "type": "framework",
+    "issuingBody": "NIST",
+    "officialUrl": "https://csrc.nist.gov/pubs/sp/800/218/final",
+    "scopeSummary": "Covers secure software development practices across the software development lifecycle for the producer's software.",
+    "keyObligationsSummary": "Describes practices grouped into preparing the organization, protecting software, producing well-secured software and responding to vulnerabilities. It is referenced by U.S. federal secure software development attestation requirements for software sold to agencies. It is guidance rather than a certification.",
+    "mandatoryVsVoluntary": "mixed",
+    "researchSourceUrls": [
+      "https://csrc.nist.gov/Projects/ssdf",
+      "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218.pdf"
+    ]
+  },
+  {
+    "frameworkId": "nist-privacy-framework",
+    "name": "NIST Privacy Framework",
+    "alsoKnownAs": [
+      "NIST PF"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "privacy",
+    "type": "framework",
+    "issuingBody": "NIST",
+    "officialUrl": "https://www.nist.gov/privacy-framework",
+    "scopeSummary": "Voluntary framework for managing privacy risk arising from data processing; scope is defined by the organization.",
+    "keyObligationsSummary": "Organizes privacy outcomes into functions and categories that organizations use to build current and target profiles alongside the NIST Cybersecurity Framework. It is voluntary, non-certifiable and technology-neutral. Tennessee's privacy statute provides an affirmative defense for programs that reasonably conform to it.",
+    "mandatoryVsVoluntary": "voluntary",
+    "researchSourceUrls": [
+      "https://www.nist.gov/privacy-framework",
+      "https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.01162020.pdf"
+    ]
+  },
+  {
+    "frameworkId": "nist-ai-rmf",
+    "name": "NIST AI Risk Management Framework",
+    "alsoKnownAs": [
+      "NIST AI RMF",
+      "AI RMF 1.0"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "ai",
+    "type": "framework",
+    "issuingBody": "NIST",
+    "officialUrl": "https://www.nist.gov/itl/ai-risk-management-framework",
+    "scopeSummary": "Voluntary framework for AI risks across the AI lifecycle; scope is set by the organization and AI use cases.",
+    "keyObligationsSummary": "Organizes AI risk management into the Govern, Map, Measure and Manage functions with characteristics of trustworthy AI. It is voluntary and not certifiable, and is often paired with the companion Playbook and generative AI profile. Many buyers use it as the structure for AI governance evidence.",
+    "mandatoryVsVoluntary": "voluntary",
+    "researchSourceUrls": [
+      "https://www.nist.gov/itl/ai-risk-management-framework",
+      "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf"
+    ]
+  },
+  {
+    "frameworkId": "cis-controls",
+    "name": "CIS Critical Security Controls",
+    "alsoKnownAs": [
+      "CIS Controls",
+      "CIS Top 18",
+      "Implementation Groups IG1-IG3"
+    ],
+    "jurisdiction": "Global",
+    "region": "Global",
+    "category": "security",
+    "type": "framework",
+    "issuingBody": "Center for Internet Security",
+    "officialUrl": "https://www.cisecurity.org/controls",
+    "scopeSummary": "Applies to the enterprise's assets, accounts, data and networks; implementation groups scale scope by organization size and risk.",
+    "keyObligationsSummary": "Defines prioritized safeguards across 18 controls, grouped into Implementation Groups IG1 to IG3. IG1 is described as essential cyber hygiene for smaller organizations. The controls are voluntary, mapped to other frameworks, and not certifiable, though CIS offers self-assessment tooling.",
+    "mandatoryVsVoluntary": "voluntary",
+    "researchSourceUrls": [
+      "https://www.cisecurity.org/controls",
+      "https://www.cisecurity.org/controls/cis-controls-list"
+    ]
+  },
+  {
+    "frameworkId": "cis-benchmarks",
+    "name": "CIS Benchmarks",
+    "alsoKnownAs": [
+      "CIS hardening benchmarks"
+    ],
+    "jurisdiction": "Global",
+    "region": "Global",
+    "category": "security",
+    "type": "guidance",
+    "issuingBody": "Center for Internet Security",
+    "officialUrl": "https://www.cisecurity.org/cis-benchmarks",
+    "scopeSummary": "Covers secure configuration baselines for specific technologies and versions rather than an organization-wide management system.",
+    "keyObligationsSummary": "Provides consensus-developed configuration recommendations with rationale, audit and remediation steps, generally organized into Level 1 and Level 2 profiles. Organizations select applicable benchmarks, document deviations and monitor drift, often using automated assessment tooling. There is no certification, though CIS Hardened Images and CIS-CAT support implementation and measurement.",
+    "mandatoryVsVoluntary": "voluntary",
+    "researchSourceUrls": [
+      "https://www.cisecurity.org/cis-benchmarks",
+      "https://www.cisecurity.org/cis-cat-pro"
+    ]
+  },
+  {
+    "frameworkId": "csa-star",
+    "name": "CSA STAR",
+    "alsoKnownAs": [
+      "Cloud Security Alliance STAR",
+      "CAIQ",
+      "Cloud Controls Matrix",
+      "CCM"
+    ],
+    "jurisdiction": "Global",
+    "region": "Global",
+    "category": "security",
+    "type": "certification",
+    "issuingBody": "Cloud Security Alliance",
+    "officialUrl": "https://cloudsecurityalliance.org/star",
+    "scopeSummary": "Covers the cloud service offering assessed against the Cloud Controls Matrix, at the level of assurance chosen.",
+    "keyObligationsSummary": "Providers document controls against the CSA Cloud Controls Matrix and CAIQ and may publish results in the STAR Registry. Level 1 is self-assessment, Level 2 is third-party certification or attestation combined with ISO 27001 or SOC 2, and continuous monitoring options exist. Listing serves as a reusable trust artifact for cloud diligence.",
+    "mandatoryVsVoluntary": "voluntary",
+    "researchSourceUrls": [
+      "https://cloudsecurityalliance.org/star",
+      "https://cloudsecurityalliance.org/research/cloud-controls-matrix"
+    ]
+  },
+  {
+    "frameworkId": "owasp-asvs",
+    "name": "OWASP Application Security Verification Standard",
+    "alsoKnownAs": [
+      "OWASP ASVS"
+    ],
+    "jurisdiction": "Global",
+    "region": "Global",
+    "category": "security",
+    "type": "standard",
+    "issuingBody": "OWASP Foundation",
+    "officialUrl": "https://owasp.org/www-project-application-security-verification-standard/",
+    "scopeSummary": "Covers application-level security requirements for the application or API under review.",
+    "keyObligationsSummary": "Provides a catalog of verification requirements across levels of rigor that teams use for secure design, development and testing. It is a community standard with no formal certification body. It is often referenced in penetration test scopes and secure development policies.",
+    "mandatoryVsVoluntary": "voluntary",
+    "researchSourceUrls": [
+      "https://owasp.org/www-project-application-security-verification-standard/",
+      "https://github.com/OWASP/ASVS"
+    ]
+  },
+  {
+    "frameworkId": "pci-dss",
+    "name": "PCI DSS",
+    "alsoKnownAs": [
+      "Payment Card Industry Data Security Standard",
+      "PCI DSS v4.0.1"
+    ],
+    "jurisdiction": "Global",
+    "region": "Global",
+    "category": "financial",
+    "type": "standard",
+    "issuingBody": "PCI Security Standards Council",
+    "officialUrl": "https://www.pcisecuritystandards.org/standards/pci-dss/",
+    "scopeSummary": "Covers the cardholder data environment, connected systems and any people and processes with access to account data.",
+    "keyObligationsSummary": "Requires implementation of technical and operational requirements across network security, data protection, vulnerability management, access control, monitoring and policy. Validation depends on merchant or service provider level and channel, using a Self-Assessment Questionnaire with an Attestation of Compliance or a Report on Compliance by a QSA. Version 4.0.1 is the current standard, with customized approach options and additional authentication and script-management requirements.",
+    "mandatoryVsVoluntary": "contractual",
+    "researchSourceUrls": [
+      "https://www.pcisecuritystandards.org/document_library/",
+      "https://www.pcisecuritystandards.org/standards/pci-dss/"
+    ]
+  },
+  {
+    "frameworkId": "pci-ssf",
+    "name": "PCI Software Security Framework",
+    "alsoKnownAs": [
+      "PCI SSF",
+      "Secure Software Standard",
+      "Secure SLC Standard"
+    ],
+    "jurisdiction": "Global",
+    "region": "Global",
+    "category": "financial",
+    "type": "standard",
+    "issuingBody": "PCI Security Standards Council",
+    "officialUrl": "https://www.pcisecuritystandards.org/standards/software-security-framework/",
+    "scopeSummary": "Covers payment software products under the Secure Software Standard and vendor development processes under the Secure Software Lifecycle Standard.",
+    "keyObligationsSummary": "The Secure Software Standard sets security objectives for payment software including sensitive data protection, attack detection and secure updates, validated by a qualified assessor. The Secure SLC Standard validates the vendor's development lifecycle so qualifying changes can be released without full revalidation. Validated products and vendors are listed by the PCI Security Standards Council and the framework replaced PA-DSS.",
+    "mandatoryVsVoluntary": "contractual",
+    "researchSourceUrls": [
+      "https://www.pcisecuritystandards.org/standards/software-security-framework/",
+      "https://www.pcisecuritystandards.org/document_library/"
+    ]
+  },
+  {
+    "frameworkId": "pci-3ds",
+    "name": "PCI 3DS Core Security Standard",
+    "alsoKnownAs": [
+      "PCI 3-D Secure",
+      "3DS Core"
+    ],
+    "jurisdiction": "Global",
+    "region": "Global",
+    "category": "financial",
+    "type": "standard",
+    "issuingBody": "PCI Security Standards Council",
+    "officialUrl": "https://www.pcisecuritystandards.org/document_library/?category=3ds",
+    "scopeSummary": "Covers the 3DS environment and the systems, processes and personnel performing 3DS functions.",
+    "keyObligationsSummary": "Requires baseline security controls plus 3DS-specific requirements covering key management, transaction data protection and segregation of the 3DS environment. Assessment is performed by a qualified 3DS assessor, resulting in a Report on Compliance and Attestation of Compliance. It is generally applied in addition to, not instead of, PCI DSS where cardholder data is present.",
+    "mandatoryVsVoluntary": "contractual",
+    "researchSourceUrls": [
+      "https://www.pcisecuritystandards.org/standards/3ds-standards/",
+      "https://www.pcisecuritystandards.org/document_library/"
+    ]
+  },
+  {
+    "frameworkId": "swift-csp",
+    "name": "SWIFT Customer Security Programme",
+    "alsoKnownAs": [
+      "SWIFT CSP",
+      "Customer Security Controls Framework",
+      "CSCF"
+    ],
+    "jurisdiction": "Global",
+    "region": "Global",
+    "category": "financial",
+    "type": "framework",
+    "issuingBody": "Swift",
+    "officialUrl": "https://www.swift.com/myswift/customer-security-programme",
+    "scopeSummary": "Covers the user's Swift-related infrastructure and the architecture type declared, from full local footprint to fully outsourced connectivity.",
+    "keyObligationsSummary": "Requires implementation of the Customer Security Controls Framework, comprising mandatory and advisory controls scoped by architecture type. Users must submit an annual attestation through the KYC-Security Attestation application, supported by an independent assessment, either internal or external. Non-compliance can be reported to supervisors and to counterparties.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.swift.com/myswift/customer-security-programme",
+      "https://www.swift.com/myswift/customer-security-programme-csp/security-controls"
+    ]
+  },
+  {
+    "frameworkId": "hitrust-csf",
+    "name": "HITRUST CSF",
+    "alsoKnownAs": [
+      "HITRUST Common Security Framework",
+      "e1",
+      "i1",
+      "r2"
+    ],
+    "jurisdiction": "Global",
+    "region": "Global",
+    "category": "healthcare",
+    "type": "certification",
+    "issuingBody": "HITRUST Alliance",
+    "officialUrl": "https://hitrustalliance.net/hitrust-framework",
+    "scopeSummary": "Covers the in-scope systems and facilities assessed against the HITRUST CSF at the selected assessment type.",
+    "keyObligationsSummary": "Organizations scope requirements through the HITRUST MyCSF platform, implement the mapped control requirements and undergo validation by an authorized external assessor before HITRUST issues certification. Assessment types include the e1 essentials, i1 implemented and r2 risk-based options with differing rigor and validity. The CSF maps to multiple authoritative sources including HIPAA, NIST and ISO.",
+    "mandatoryVsVoluntary": "voluntary",
+    "researchSourceUrls": [
+      "https://hitrustalliance.net/hitrust-framework",
+      "https://hitrustalliance.net/assessments-and-certifications"
+    ]
+  },
+  {
+    "frameworkId": "fedramp",
+    "name": "FedRAMP",
+    "alsoKnownAs": [
+      "Federal Risk and Authorization Management Program"
+    ],
+    "jurisdiction": "United States - Federal",
+    "region": "US",
+    "category": "security",
+    "type": "certification",
+    "issuingBody": "US General Services Administration",
+    "officialUrl": "https://www.fedramp.gov/",
+    "scopeSummary": "Covers the cloud service offering boundary and its supporting infrastructure at the authorized impact level.",
+    "keyObligationsSummary": "Requires implementation of NIST SP 800-53 baselines tailored by FedRAMP, assessment by an accredited third-party assessment organization, and authorization by an agency or the FedRAMP program. Authorized offerings must maintain continuous monitoring with monthly deliverables and annual assessments. Impact levels are Low, Moderate and High, with FedRAMP Tailored options for lower-risk services.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.fedramp.gov/",
+      "https://www.fedramp.gov/documents-templates/"
+    ]
+  },
+  {
+    "frameworkId": "stateramp",
+    "name": "GovRAMP",
+    "alsoKnownAs": [
+      "StateRAMP",
+      "State Risk and Authorization Management Program"
+    ],
+    "jurisdiction": "United States - State and Local",
+    "region": "US-State",
+    "category": "security",
+    "type": "certification",
+    "issuingBody": "GovRAMP (legal entity StateRAMP)",
+    "officialUrl": "https://govramp.org/",
+    "scopeSummary": "Covers the cloud offering boundary assessed at the required impact level for participating state and local governments.",
+    "keyObligationsSummary": "Uses NIST SP 800-53 based security requirements verified by a third-party assessment organization, with progressive statuses leading to Authorized. Verified offerings are listed for participating governments and require continuous monitoring. Requirements closely mirror FedRAMP, and FedRAMP packages can often be reciprocally recognized.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://stateramp.org/",
+      "https://stateramp.org/templates-resources/"
+    ]
+  },
+  {
+    "frameworkId": "tx-ramp",
+    "name": "TX-RAMP",
+    "alsoKnownAs": [
+      "Texas Risk and Authorization Management Program"
+    ],
+    "jurisdiction": "United States - Texas",
+    "region": "US-State",
+    "category": "security",
+    "type": "certification",
+    "issuingBody": "Texas Department of Information Resources",
+    "officialUrl": "https://dir.texas.gov/tx-ramp",
+    "scopeSummary": "Covers cloud computing services that process, store or transmit Texas state agency data, categorized by impact level.",
+    "keyObligationsSummary": "Requires certification at Level 1 for higher-impact data or Level 2 for lower-impact data, based on evidence such as a StateRAMP or FedRAMP authorization, or a Texas-specific assessment package. State agencies may not enter or renew contracts for cloud services that lack the required status. The Department of Information Resources manages the program and publishes certified services.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://dir.texas.gov/tx-ramp",
+      "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.2054.htm"
+    ]
+  },
+  {
+    "frameworkId": "cmmc",
+    "name": "Cybersecurity Maturity Model Certification",
+    "alsoKnownAs": [
+      "CMMC",
+      "CMMC 2.0",
+      "CMMC Level 1/2/3"
+    ],
+    "jurisdiction": "United States - Federal",
+    "region": "US",
+    "category": "security",
+    "type": "certification",
+    "issuingBody": "US Department of Defense",
+    "officialUrl": "https://dodcio.defense.gov/cmmc/",
+    "scopeSummary": "Applies to the contractor systems that process, store or transmit FCI or CUI, scoped to the assessment boundary.",
+    "keyObligationsSummary": "Establishes three levels: Level 1 self-assessment for FCI based on FAR 52.204-21, Level 2 based on NIST SP 800-171 (self or C3PAO certification assessment), and Level 3 adding selected NIST SP 800-172 requirements assessed by DCMA DIBCAC. Contractors must post results and affirmations in SPRS. Required levels are set in solicitations under the DoD acquisition rule.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://dodcio.defense.gov/CMMC/",
+      "https://www.ecfr.gov/current/title-32/subtitle-A/chapter-I/subchapter-D/part-170"
+    ]
+  },
+  {
+    "frameworkId": "fisma",
+    "name": "Federal Information Security Modernization Act",
+    "alsoKnownAs": [
+      "FISMA",
+      "FISMA 2014"
+    ],
+    "jurisdiction": "United States - Federal",
+    "region": "US",
+    "category": "security",
+    "type": "law",
+    "issuingBody": "US Congress; overseen by CISA and OMB",
+    "officialUrl": "https://www.cisa.gov/topics/cyber-threats-and-advisories/federal-information-security-modernization-act",
+    "scopeSummary": "Applies to federal information and information systems, including contractor systems used or operated for an agency.",
+    "keyObligationsSummary": "Requires agencies to run an information security program with system categorization under FIPS 199, control selection from NIST SP 800-53, assessment and authorization, and continuous monitoring. Agencies report annually to OMB and Congress. Contractors inherit requirements through contract terms.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://csrc.nist.gov/Projects/risk-management/fisma-background",
+      "https://www.congress.gov/bill/113th-congress/senate-bill/2521"
+    ]
+  },
+  {
+    "frameworkId": "dfars-7012",
+    "name": "DFARS 252.204-7012",
+    "alsoKnownAs": [
+      "DFARS 7012",
+      "Safeguarding Covered Defense Information"
+    ],
+    "jurisdiction": "United States - Federal",
+    "region": "US",
+    "category": "security",
+    "type": "regulation",
+    "issuingBody": "US Department of Defense",
+    "officialUrl": "https://www.acquisition.gov/dfars/252.204-7012-safeguarding-covered-defense-information-and-cyber-incident-reporting.",
+    "scopeSummary": "Applies to covered contractor information systems that process, store or transmit covered defense information.",
+    "keyObligationsSummary": "Requires implementation of NIST SP 800-171 security requirements, rapid reporting of cyber incidents to DoD within 72 hours, media preservation, malicious software submission and flow-down to subcontractors. Cloud services used to store covered defense information must generally meet DoD cloud security requirements. It is imposed through the contract clause.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.acquisition.gov/dfars/252.204-7012-safeguarding-covered-defense-information-and-cyber-incident-reporting.",
+      "https://dodcio.defense.gov/CMMC/"
+    ]
+  },
+  {
+    "frameworkId": "itar",
+    "name": "International Traffic in Arms Regulations",
+    "alsoKnownAs": [
+      "ITAR",
+      "22 CFR Parts 120-130"
+    ],
+    "jurisdiction": "United States - Federal",
+    "region": "US",
+    "category": "industry",
+    "type": "regulation",
+    "issuingBody": "US Department of State, DDTC",
+    "officialUrl": "https://www.pmddtc.state.gov/",
+    "scopeSummary": "Applies to defense articles and technical data on the USML, including software and technical data shared with foreign persons, wherever located.",
+    "keyObligationsSummary": "Requires registration with the Directorate of Defense Trade Controls for manufacturers, exporters and brokers, licensing or use of exemptions for exports and re-exports, and controls preventing deemed exports to foreign persons. Recordkeeping and access controls over technical data are required, including for cloud environments. Compliance programs commonly include personnel screening and encryption practices.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.pmddtc.state.gov/",
+      "https://www.ecfr.gov/current/title-22/chapter-I/subchapter-M"
+    ]
+  },
+  {
+    "frameworkId": "ear",
+    "name": "Export Administration Regulations",
+    "alsoKnownAs": [
+      "EAR",
+      "15 CFR Parts 730-774",
+      "dual-use export controls"
+    ],
+    "jurisdiction": "United States - Federal",
+    "region": "US",
+    "category": "industry",
+    "type": "regulation",
+    "issuingBody": "US Bureau of Industry and Security",
+    "officialUrl": "https://www.ecfr.gov/current/title-15/subtitle-B/chapter-VII/subchapter-C",
+    "scopeSummary": "Applies to items subject to the EAR, including those on the Commerce Control List and EAR99 items, and to deemed exports of technology to foreign nationals.",
+    "keyObligationsSummary": "Requires classification of items, determination of license requirements by country, end user and end use, screening against restricted party lists, and recordkeeping. Encryption software has specific classification and reporting rules. License exceptions may apply but must be documented.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.bis.doc.gov/index.php/regulations/export-administration-regulations-ear",
+      "https://www.ecfr.gov/current/title-15/subtitle-B/chapter-VII/subchapter-C"
+    ]
+  },
+  {
+    "frameworkId": "section-508",
+    "name": "Section 508 of the Rehabilitation Act",
+    "alsoKnownAs": [
+      "Section 508",
+      "Revised 508 Standards"
+    ],
+    "jurisdiction": "United States - Federal",
+    "region": "US",
+    "category": "industry",
+    "type": "regulation",
+    "issuingBody": "US Access Board; GSA",
+    "officialUrl": "https://www.section508.gov/",
+    "scopeSummary": "Covers ICT developed, procured, maintained or used by federal agencies, including software, websites, documents and hardware.",
+    "keyObligationsSummary": "Requires ICT to conform to the Revised 508 Standards, which incorporate WCAG 2.0 Level A and AA success criteria for web and non-web content plus hardware and support documentation requirements. Vendors typically document conformance in an Accessibility Conformance Report based on the VPAT template. Agencies must assess and report on accessibility, and procurement can be challenged for non-conforming ICT.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.section508.gov/",
+      "https://www.access-board.gov/ict/"
+    ]
+  },
+  {
+    "frameworkId": "ada",
+    "name": "Americans with Disabilities Act",
+    "alsoKnownAs": [
+      "ADA",
+      "ADA Title II web accessibility rule"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "industry",
+    "type": "law",
+    "issuingBody": "US Department of Justice",
+    "officialUrl": "https://www.ada.gov/",
+    "scopeSummary": "Covers discrimination on the basis of disability, applied by courts and DOJ rulemaking to websites, mobile apps and other digital services.",
+    "keyObligationsSummary": "Requires that goods, services and programs be accessible to people with disabilities, including effective communication and reasonable modifications. The 2024 Title II rule requires state and local government web content and mobile apps to conform to WCAG 2.1 Level AA, with compliance dates in 2026 and 2027 depending on entity size. For private businesses under Title III there is no codified technical standard, so WCAG conformance is the prevailing benchmark used in litigation and settlements.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.ada.gov/",
+      "https://www.ada.gov/resources/2024-03-08-web-rule/"
+    ]
+  },
+  {
+    "frameworkId": "wcag",
+    "name": "Web Content Accessibility Guidelines",
+    "alsoKnownAs": [
+      "WCAG",
+      "WCAG 2.1",
+      "WCAG 2.2"
+    ],
+    "jurisdiction": "Global",
+    "region": "Global",
+    "category": "industry",
+    "type": "standard",
+    "issuingBody": "W3C Web Accessibility Initiative",
+    "officialUrl": "https://www.w3.org/TR/WCAG22/",
+    "scopeSummary": "Covers web content, including web applications, documents and, through WCAG2ICT guidance, non-web software and content.",
+    "keyObligationsSummary": "Organizes accessibility requirements under the perceivable, operable, understandable and robust principles, with testable success criteria at conformance levels A, AA and AAA. Level AA is the common regulatory and contractual benchmark. Conformance is self-declared or evaluated by specialists, since there is no certification body.",
+    "mandatoryVsVoluntary": "voluntary",
+    "researchSourceUrls": [
+      "https://www.w3.org/TR/WCAG22/",
+      "https://www.w3.org/WAI/standards-guidelines/wcag/"
+    ]
+  },
+  {
+    "frameworkId": "uk-g-cloud",
+    "name": "UK G-Cloud Framework",
+    "alsoKnownAs": [
+      "Digital Marketplace G-Cloud",
+      "Crown Commercial Service G-Cloud"
+    ],
+    "jurisdiction": "United Kingdom",
+    "region": "UK",
+    "category": "industry",
+    "type": "framework",
+    "issuingBody": "UK Crown Commercial Service",
+    "officialUrl": "https://www.crowncommercial.gov.uk/agreements/RM1557.14",
+    "scopeSummary": "Covers services listed on the framework and the associated framework and call-off contract terms, not a security control set.",
+    "keyObligationsSummary": "Suppliers apply during a framework iteration, submit service definitions, pricing and terms, and must keep listings accurate. Call-off contracts impose obligations that commonly include security, data protection, transparency and exit assistance, and buyers frequently require Cyber Essentials or equivalent assurance. Listings are only valid for the framework term, so re-application is needed for successor iterations.",
+    "mandatoryVsVoluntary": "contractual",
+    "researchSourceUrls": [
+      "https://www.gov.uk/guidance/g-cloud-suppliers-guide",
+      "https://www.crowncommercial.gov.uk/agreements/RM1557.14"
+    ]
+  },
+  {
+    "frameworkId": "cyber-essentials",
+    "name": "Cyber Essentials",
+    "alsoKnownAs": [
+      "Cyber Essentials Plus",
+      "CE",
+      "CE+"
+    ],
+    "jurisdiction": "United Kingdom",
+    "region": "UK",
+    "category": "security",
+    "type": "certification",
+    "issuingBody": "UK National Cyber Security Centre",
+    "officialUrl": "https://www.ncsc.gov.uk/cyberessentials/overview",
+    "scopeSummary": "Covers internet-facing infrastructure, devices, software and user accounts within the declared organizational scope.",
+    "keyObligationsSummary": "Requires implementation of five technical control themes: firewalls, secure configuration, security update management, user access control and malware protection. Basic certification is a verified self-assessment; Cyber Essentials Plus adds hands-on technical verification by an assessor. Certification is valid for twelve months.",
+    "mandatoryVsVoluntary": "mixed",
+    "researchSourceUrls": [
+      "https://www.ncsc.gov.uk/cyberessentials/overview",
+      "https://iasme.co.uk/cyber-essentials/"
+    ]
+  },
+  {
+    "frameworkId": "irap",
+    "name": "Infosec Registered Assessors Program",
+    "alsoKnownAs": [
+      "IRAP",
+      "ASD IRAP assessment"
+    ],
+    "jurisdiction": "Australia",
+    "region": "APAC",
+    "category": "security",
+    "type": "attestation",
+    "issuingBody": "Australian Signals Directorate",
+    "officialUrl": "https://www.cyber.gov.au/business-government/protecting-devices-systems/assessment-evaluation-programs/irap",
+    "scopeSummary": "Covers the system or service assessed against the Australian Government Information Security Manual controls at the relevant classification level.",
+    "keyObligationsSummary": "An IRAP-endorsed assessor evaluates the system against the ISM controls and produces a security assessment report; the government entity then makes its own risk-based authorization decision. IRAP is an assessment process, not a certification issued by the ASD. Scope and classification level determine applicable controls.",
+    "mandatoryVsVoluntary": "mixed",
+    "researchSourceUrls": [
+      "https://www.cyber.gov.au/resources-business-and-government/assessment-and-evaluation-programs/irap",
+      "https://www.cyber.gov.au/resources-business-and-government/essential-cyber-security/ism"
+    ]
+  },
+  {
+    "frameworkId": "essential-eight",
+    "name": "ACSC Essential Eight",
+    "alsoKnownAs": [
+      "Essential Eight Maturity Model",
+      "E8"
+    ],
+    "jurisdiction": "Australia",
+    "region": "APAC",
+    "category": "security",
+    "type": "framework",
+    "issuingBody": "Australian Signals Directorate",
+    "officialUrl": "https://www.cyber.gov.au/resources-business-and-government/essential-cyber-security/essential-eight",
+    "scopeSummary": "Applies to the organization's internet-connected IT environment; maturity levels scale with threat sophistication.",
+    "keyObligationsSummary": "Defines eight mitigation strategies including application control, patching applications and operating systems, configuring macro settings, user application hardening, restricting administrative privileges, multi-factor authentication and regular backups. Maturity Levels One to Three describe increasing rigor. Non-corporate Commonwealth entities are directed to implement it, and it is widely used commercially as a baseline.",
+    "mandatoryVsVoluntary": "mixed",
+    "researchSourceUrls": [
+      "https://www.cyber.gov.au/resources-business-and-government/essential-cyber-security/essential-eight",
+      "https://www.cyber.gov.au/resources-business-and-government/essential-cyber-security/essential-eight/essential-eight-maturity-model"
+    ]
+  },
+  {
+    "frameworkId": "bsi-c5",
+    "name": "BSI Cloud Computing Compliance Criteria Catalogue",
+    "alsoKnownAs": [
+      "C5",
+      "C5:2020",
+      "Kriterienkatalog Cloud Computing"
+    ],
+    "jurisdiction": "Germany",
+    "region": "EU",
+    "category": "security",
+    "type": "attestation",
+    "issuingBody": "German Federal Office for Information Security (BSI)",
+    "officialUrl": "https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/CloudComputing/ComplianceControlsCatalogue/2020/C5_2020.html",
+    "scopeSummary": "Covers the cloud service in scope against the BSI Cloud Computing Compliance Criteria Catalogue.",
+    "keyObligationsSummary": "Providers are assessed by an auditor against the C5 criteria and receive an attestation report based on ISAE 3000 style engagements, issued as Type 1 or Type 2. The catalogue includes basic and additional criteria plus mandatory environmental disclosures about jurisdiction and data location. German federal customers frequently require C5 attestation.",
+    "mandatoryVsVoluntary": "mixed",
+    "researchSourceUrls": [
+      "https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Informationen-und-Empfehlungen/Empfehlungen-nach-Angriffszielen/Cloud-Computing/Kriterienkatalog-C5/kriterienkatalog-c5_node.html",
+      "https://www.bsi.bund.de/EN/Home/home_node.html"
+    ]
+  },
+  {
+    "frameworkId": "ens-spain",
+    "name": "Esquema Nacional de Seguridad",
+    "alsoKnownAs": [
+      "ENS",
+      "Spanish National Security Framework",
+      "Real Decreto 311/2022"
+    ],
+    "jurisdiction": "Spain",
+    "region": "EU",
+    "category": "security",
+    "type": "certification",
+    "issuingBody": "Centro Criptologico Nacional (CCN)",
+    "officialUrl": "https://ens.ccn.cni.es/es/",
+    "scopeSummary": "Covers information systems used to provide services to Spanish public administrations, categorized as basic, medium or high.",
+    "keyObligationsSummary": "Requires system categorization, a risk analysis, a declaration or certification of conformity, and implementation of the security measures in Annex II appropriate to the category. Basic-category systems may use a self-declaration, while medium and high categories require certification by an accredited conformity assessment entity. Conformity must be published and maintained.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://ens.ccn.cni.es/es/",
+      "https://www.boe.es/eli/es/rd/2022/05/03/311"
+    ]
+  },
+  {
+    "frameworkId": "ismap",
+    "name": "ISMAP",
+    "alsoKnownAs": [
+      "Information system Security Management and Assessment Program"
+    ],
+    "jurisdiction": "Japan",
+    "region": "APAC",
+    "category": "security",
+    "type": "certification",
+    "issuingBody": "ISMAP Steering Committee (Digital Agency, METI, MIC)",
+    "officialUrl": "https://www.ismap.go.jp/csm",
+    "scopeSummary": "Covers the registered cloud service and its management, operational and technical controls, with a separate lighter track for low-risk services.",
+    "keyObligationsSummary": "Providers implement the ISMAP control criteria, undergo an audit by an ISMAP-registered auditing firm, and apply for registration on the ISMAP cloud service list maintained by the steering committee. Government procurement is generally limited to registered services. Registration must be renewed through periodic audits and updated for significant changes.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.ismap.go.jp/csm",
+      "https://www.ismap.go.jp/csm?id=kb_article_view&sysparm_article=KB0010005"
+    ]
+  },
+  {
+    "frameworkId": "k-isms-p",
+    "name": "ISMS-P (Korea)",
+    "alsoKnownAs": [
+      "K-ISMS",
+      "K-ISMS-P",
+      "Personal Information and Information Security Management System"
+    ],
+    "jurisdiction": "South Korea",
+    "region": "APAC",
+    "category": "security",
+    "type": "certification",
+    "issuingBody": "Korea Internet & Security Agency (KISA)",
+    "officialUrl": "https://www.kisa.or.kr/1050602",
+    "scopeSummary": "Covers the certified management system scope, either ISMS for information security or ISMS-P which adds personal information protection.",
+    "keyObligationsSummary": "Requires implementation of management system requirements and control items, an internal review, and certification audit by an authorized certification body under KISA and the PIPC. Certain service providers are legally required to obtain ISMS certification based on revenue and user thresholds. Certificates are valid for three years with annual follow-up audits.",
+    "mandatoryVsVoluntary": "mixed",
+    "researchSourceUrls": [
+      "https://isms.kisa.or.kr/main/",
+      "https://www.pipc.go.kr/eng/"
+    ]
+  },
+  {
+    "frameworkId": "mtcs-sg",
+    "name": "Multi-Tier Cloud Security Singapore Standard",
+    "alsoKnownAs": [
+      "MTCS",
+      "SS 584",
+      "SS 584:2020"
+    ],
+    "jurisdiction": "Singapore",
+    "region": "APAC",
+    "category": "security",
+    "type": "certification",
+    "issuingBody": "Infocomm Media Development Authority; Singapore Standards Council",
+    "officialUrl": "https://www.imda.gov.sg/-/media/imda/files/industry-development/enterprises/mtcs/factsheet.pdf",
+    "scopeSummary": "Covers the cloud service and supporting infrastructure certified at Level 1, 2 or 3 according to data sensitivity and business impact.",
+    "keyObligationsSummary": "Providers implement the SS 584 controls for the target tier and are certified by an accredited certification body. Level 3 is aimed at regulated and high-impact workloads and includes the most extensive control set. Certification is accompanied by a self-disclosure schedule that customers use for due diligence.",
+    "mandatoryVsVoluntary": "mixed",
+    "researchSourceUrls": [
+      "https://www.imda.gov.sg/-/media/imda/files/industry-development/enterprises/mtcs/factsheet.pdf",
+      "https://www.imda.gov.sg/"
+    ]
+  },
+  {
+    "frameworkId": "tisax",
+    "name": "TISAX",
+    "alsoKnownAs": [
+      "Trusted Information Security Assessment Exchange",
+      "VDA ISA"
+    ],
+    "jurisdiction": "Global",
+    "region": "EU",
+    "category": "security",
+    "type": "certification",
+    "issuingBody": "ENX Association",
+    "officialUrl": "https://www.enx.com/en-US/TISAX/",
+    "scopeSummary": "Covers the sites and services in the declared assessment scope against the VDA ISA catalogue at the required assessment level.",
+    "keyObligationsSummary": "Participants perform a VDA ISA self-assessment, undergo an audit by an accredited provider at the required assessment level, and share results through the ENX exchange rather than receiving a public certificate. Assessment objectives cover information security, prototype protection and data protection depending on scope. Labels are typically valid for three years.",
+    "mandatoryVsVoluntary": "contractual",
+    "researchSourceUrls": [
+      "https://portal.enx.com/en-US/TISAX/",
+      "https://www.vda.de/en/topics/digitalisation/data/information-security"
+    ]
+  },
+  {
+    "frameworkId": "coppa",
+    "name": "Children's Online Privacy Protection Rule",
+    "alsoKnownAs": [
+      "COPPA",
+      "COPPA Rule",
+      "16 CFR Part 312"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "privacy",
+    "type": "regulation",
+    "issuingBody": "US Federal Trade Commission",
+    "officialUrl": "https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa",
+    "scopeSummary": "Applies to online collection, use and disclosure of personal information from children under 13, including through third-party services integrated into child-directed properties.",
+    "keyObligationsSummary": "Requires a clear online privacy notice, direct notice and verifiable parental consent before collecting personal information from children, and a means for parents to review or delete data and revoke consent. Operators must limit collection to what is reasonably necessary, retain data only as long as needed, and maintain reasonable security including vendor assurances. The amended COPPA Rule adds requirements such as a written children's data security program and separate consent for third-party disclosures including targeted advertising.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa",
+      "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-312"
+    ]
+  },
+  {
+    "frameworkId": "ferpa",
+    "name": "Family Educational Rights and Privacy Act",
+    "alsoKnownAs": [
+      "FERPA",
+      "34 CFR Part 99"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "US Department of Education",
+    "officialUrl": "https://studentprivacy.ed.gov/ferpa",
+    "scopeSummary": "Applies to education records containing personally identifiable information about students held by covered schools and their designated school officials.",
+    "keyObligationsSummary": "Requires parental or eligible-student consent before disclosing personally identifiable information from education records, unless an exception such as the school official exception applies. Vendors relying on that exception must use the data only for authorized purposes, remain under the school's direct control and not redisclose without authorization. Schools must provide annual notification of rights and allow inspection, review and amendment requests.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://studentprivacy.ed.gov/ferpa",
+      "https://www.ecfr.gov/current/title-34/subtitle-A/part-99"
+    ]
+  },
+  {
+    "frameworkId": "can-spam",
+    "name": "CAN-SPAM Act",
+    "alsoKnownAs": [
+      "CAN-SPAM Rule",
+      "16 CFR Part 316"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "US Federal Trade Commission",
+    "officialUrl": "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business",
+    "scopeSummary": "Applies to commercial electronic mail messages, with lighter rules for transactional or relationship messages, regardless of whether the list is opt-in.",
+    "keyObligationsSummary": "Requires accurate header and sender information, non-deceptive subject lines, identification of the message as an advertisement where applicable, a valid physical postal address, and a clear opt-out mechanism. Opt-out requests must be honored within ten business days and the mechanism must remain functional for at least 30 days after sending. Senders remain responsible for compliance by affiliates and agents acting on their behalf.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business",
+      "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-316"
+    ]
+  },
+  {
+    "frameworkId": "tcpa",
+    "name": "Telephone Consumer Protection Act",
+    "alsoKnownAs": [
+      "TCPA",
+      "47 CFR 64.1200",
+      "robocall and SMS consent rules"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "US Federal Communications Commission",
+    "officialUrl": "https://www.fcc.gov/general/telemarketing-and-robocalls",
+    "scopeSummary": "Applies to calls and texts using an automatic telephone dialing system or artificial or prerecorded voice, telemarketing to residential and wireless numbers, and unsolicited fax advertisements.",
+    "keyObligationsSummary": "Requires prior express consent for many automated calls and texts, and prior express written consent for marketing calls and texts to wireless numbers and for artificial or prerecorded telemarketing calls. Callers must honor do-not-call requests, screen against the National Do Not Call Registry for telemarketing, provide identification and an opt-out mechanism, and observe calling-time restrictions. FCC rules also require revocation of consent to be honored promptly, generally within ten business days.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.fcc.gov/general/telemarketing-and-robocalls",
+      "https://www.ecfr.gov/current/title-47/chapter-I/subchapter-B/part-64/subpart-L"
+    ]
+  },
+  {
+    "frameworkId": "fcra",
+    "name": "Fair Credit Reporting Act",
+    "alsoKnownAs": [
+      "FCRA",
+      "15 U.S.C. 1681"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "US Federal Trade Commission; CFPB",
+    "officialUrl": "https://www.ftc.gov/legal-library/browse/statutes/fair-credit-reporting-act",
+    "scopeSummary": "Applies to consumer reports used for credit, employment, insurance, tenancy and other permissible purposes, including background screening and some data analytics products.",
+    "keyObligationsSummary": "Requires permissible purpose for obtaining consumer reports, disclosure and written authorization for employment screening, and pre-adverse and adverse action notices with a copy of the report and summary of rights. Consumer reporting agencies must follow reasonable procedures to assure maximum possible accuracy, investigate disputes and honor consumer file access rights. Furnishers must provide accurate information and investigate disputed items.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.ftc.gov/legal-library/browse/statutes/fair-credit-reporting-act",
+      "https://www.consumerfinance.gov/rules-policy/regulations/1022/"
+    ]
+  },
+  {
+    "frameworkId": "bipa",
+    "name": "Illinois Biometric Information Privacy Act",
+    "alsoKnownAs": [
+      "BIPA",
+      "740 ILCS 14"
+    ],
+    "jurisdiction": "United States - Illinois",
+    "region": "US-State",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Illinois General Assembly",
+    "officialUrl": "https://www.ilga.gov/Legislation/ILCS/Articles?ActID=3004&ChapterID=57",
+    "scopeSummary": "Applies to biometric identifiers such as fingerprints, voiceprints, retina or iris scans and face geometry, and to biometric information derived from them.",
+    "keyObligationsSummary": "Requires a written, publicly available retention and destruction policy, informed written consent before collection, and a prohibition on selling or profiting from biometric data. Disclosure to third parties generally requires consent, and entities must store biometric data using the reasonable standard of care applicable to their industry. Illinois amended the statute in 2024 so that repeated collections of the same biometric from the same person generally give rise to a single violation.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=3004&ChapterID=57",
+      "https://www.illinoisattorneygeneral.gov/"
+    ]
+  },
+  {
+    "frameworkId": "wa-my-health-my-data",
+    "name": "Washington My Health My Data Act",
+    "alsoKnownAs": [
+      "MHMD",
+      "My Health My Data"
+    ],
+    "jurisdiction": "United States - Washington",
+    "region": "US-State",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Washington State Legislature; Washington Attorney General",
+    "officialUrl": "https://app.leg.wa.gov/RCW/default.aspx?cite=19.373",
+    "scopeSummary": "Applies to consumer health data, defined broadly to include information that identifies a consumer's past, present or future physical or mental health status, including inferences and precise location near health facilities.",
+    "keyObligationsSummary": "Requires a separate consumer health data privacy policy, opt-in consent for collection and sharing beyond what is necessary for a requested product or service, and separate valid authorization to sell such data. Consumers have rights to confirm, access, withdraw consent and delete their health data, including deletion by downstream recipients. Geofencing around in-person health service locations for advertising or data collection is prohibited.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.atg.wa.gov/my-health-my-data-act",
+      "https://app.leg.wa.gov/rcw/default.aspx?cite=19.373"
+    ]
+  },
+  {
+    "frameworkId": "nyc-ll144",
+    "name": "NYC Local Law 144",
+    "alsoKnownAs": [
+      "NYC AEDT Law",
+      "automated employment decision tools bias audit"
+    ],
+    "jurisdiction": "United States - New York City",
+    "region": "US-State",
+    "category": "ai",
+    "type": "law",
+    "issuingBody": "NYC Department of Consumer and Worker Protection",
+    "officialUrl": "https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page",
+    "scopeSummary": "Covers automated employment decision tools used to substantially assist or replace discretionary decisions for NYC-based positions.",
+    "keyObligationsSummary": "Requires an independent bias audit within one year before use, calculating selection or scoring rates and impact ratios by sex and race or ethnicity categories, with a public summary of results posted on the employer's website. Candidates and employees must receive at least ten business days' notice before use, including the job qualifications and characteristics assessed. Enforcement is by the Department of Consumer and Worker Protection.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page",
+      "https://rules.cityofnewyork.us/rule/automated-employment-decision-tools-updated/"
+    ]
+  },
+  {
+    "frameworkId": "il-ai-video-interview",
+    "name": "Illinois Artificial Intelligence Video Interview Act",
+    "alsoKnownAs": [
+      "AIVIA",
+      "820 ILCS 42"
+    ],
+    "jurisdiction": "United States - Illinois",
+    "region": "US-State",
+    "category": "ai",
+    "type": "law",
+    "issuingBody": "Illinois General Assembly",
+    "officialUrl": "https://www.ilga.gov/Legislation/ILCS/Articles?ActID=4015&ChapterID=68",
+    "scopeSummary": "Covers AI analysis of applicant video interviews, including the notice, consent, sharing and deletion of those recordings.",
+    "keyObligationsSummary": "Requires notifying applicants before the interview that AI may be used, explaining how the AI works and what characteristics it evaluates, and obtaining consent. Videos may be shared only with persons whose expertise is necessary to evaluate the applicant, and must be deleted, including backups, within 30 days of an applicant's deletion request. Employers that rely solely on AI to decide who advances to in-person interviews must collect and report race and ethnicity data annually to the Illinois Department of Commerce and Economic Opportunity.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=4015&ChapterID=68",
+      "https://dceo.illinois.gov/"
+    ]
+  },
+  {
+    "frameworkId": "ccpa-cpra",
+    "name": "California Consumer Privacy Act as amended by CPRA",
+    "alsoKnownAs": [
+      "CCPA",
+      "CPRA",
+      "California Privacy Rights Act"
+    ],
+    "jurisdiction": "United States - California",
+    "region": "US-State",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "California Privacy Protection Agency; California Attorney General",
+    "officialUrl": "https://oag.ca.gov/privacy/ccpa",
+    "scopeSummary": "Applies to personal information of California residents, including employees, job applicants and business contacts, with entity- and data-level exemptions such as HIPAA, GLBA and FCRA data.",
+    "keyObligationsSummary": "Requires notices at collection and a comprehensive privacy policy, and support for rights to know, delete, correct, opt out of sale or sharing, limit use of sensitive personal information and non-discrimination. Businesses must honor opt-out preference signals such as Global Privacy Control, provide a Do Not Sell or Share link where applicable, and use compliant contracts with service providers, contractors and third parties. Risk assessments, cybersecurity audits and automated decision-making rules apply under CPPA regulations on a phased timeline.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://oag.ca.gov/privacy/ccpa",
+      "https://cppa.ca.gov/regulations/"
+    ]
+  },
+  {
+    "frameworkId": "vcdpa",
+    "name": "Virginia Consumer Data Protection Act",
+    "alsoKnownAs": [
+      "VCDPA",
+      "Va. Code 59.1-575"
+    ],
+    "jurisdiction": "United States - Virginia",
+    "region": "US-State",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Virginia General Assembly; Virginia Attorney General",
+    "officialUrl": "https://law.lis.virginia.gov/vacodefull/title59.1/chapter53/",
+    "scopeSummary": "Applies to personal data of Virginia residents acting in an individual or household context; employee and business-to-business contact data are generally excluded, and entity- or data-level exemptions typically cover HIPAA, GLBA and FCRA data. Nonprofits and institutions of higher education are exempt.",
+    "keyObligationsSummary": "Requires a privacy notice and support for consumer rights to access, delete and obtain a portable copy of personal data, plus opt-outs where applicable for targeted advertising, sale of personal data and certain profiling. Sensitive data handling and data protection assessments follow the statute's specific rules. Controllers must use processor contracts with defined duties, and the law took effect on January 1, 2023. Consent is required before processing sensitive data, and data protection assessments are required for targeted advertising, sale, certain profiling and sensitive data processing.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://law.lis.virginia.gov/vacodefull/title59.1/chapter53/",
+      "https://www.oag.state.va.us/"
+    ]
+  },
+  {
+    "frameworkId": "co-cpa",
+    "name": "Colorado Privacy Act",
+    "alsoKnownAs": [
+      "CPA",
+      "Colorado Privacy Act rules"
+    ],
+    "jurisdiction": "United States - Colorado",
+    "region": "US-State",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Colorado Attorney General",
+    "officialUrl": "https://coag.gov/resources/colorado-privacy-act/",
+    "scopeSummary": "Applies to personal data of Colorado residents acting in an individual or household context; employee and business-to-business contact data are generally excluded, and entity- or data-level exemptions typically cover HIPAA, GLBA and FCRA data. Nonprofits are covered, unlike in several other states.",
+    "keyObligationsSummary": "Requires a privacy notice and support for consumer rights to access, delete and obtain a portable copy of personal data, plus opt-outs where applicable for targeted advertising, sale of personal data and certain profiling. Sensitive data handling and data protection assessments follow the statute's specific rules. Controllers must use processor contracts with defined duties, and the law took effect on July 1, 2023. Controllers must recognize universal opt-out mechanisms on the Attorney General's public list, obtain consent for sensitive data and for processing minors' data for targeted advertising, and complete data protection assessments for higher-risk processing.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://coag.gov/resources/colorado-privacy-act/",
+      "https://coag.gov/app/uploads/2023/03/FINAL-CLEAN-2023.03.15-Official-CPA-Rules.pdf"
+    ]
+  },
+  {
+    "frameworkId": "ctdpa",
+    "name": "Connecticut Data Privacy Act",
+    "alsoKnownAs": [
+      "CTDPA",
+      "CTDPA as amended"
+    ],
+    "jurisdiction": "United States - Connecticut",
+    "region": "US-State",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Connecticut Attorney General",
+    "officialUrl": "https://portal.ct.gov/ag/sections/privacy/the-connecticut-data-privacy-act",
+    "scopeSummary": "Applies to personal data of Connecticut residents acting in an individual or household context; employee and business-to-business contact data are generally excluded, and entity- or data-level exemptions typically cover HIPAA, GLBA and FCRA data. Nonprofits and higher education institutions were exempt originally, and 2025 amendments broaden scope and tighten duties on a later effective date.",
+    "keyObligationsSummary": "Requires a privacy notice and support for consumer rights to access, delete and obtain a portable copy of personal data, plus opt-outs where applicable for targeted advertising, sale of personal data and certain profiling. Sensitive data handling and data protection assessments follow the statute's specific rules. Controllers must use processor contracts with defined duties, and the law took effect on July 1, 2023. Consent is required for sensitive data including consumer health data and for targeted advertising or sale involving minors, and data protection assessments are required for higher-risk processing.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://portal.ct.gov/ag/sections/privacy/the-connecticut-data-privacy-act",
+      "https://www.cga.ct.gov/2022/act/pa/pdf/2022PA-00015-R00SB-00006-PA.pdf"
+    ]
+  },
+  {
+    "frameworkId": "ucpa",
+    "name": "Utah Consumer Privacy Act",
+    "alsoKnownAs": [
+      "UCPA",
+      "Utah Code Title 13 Chapter 61"
+    ],
+    "jurisdiction": "United States - Utah",
+    "region": "US-State",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Utah Legislature; Utah Division of Consumer Protection",
+    "officialUrl": "https://le.utah.gov/xcode/Title13/Chapter61/13-61.html",
+    "scopeSummary": "Applies to personal data of Utah residents acting in an individual or household context; employee and business-to-business contact data are generally excluded, and entity- or data-level exemptions typically cover HIPAA, GLBA and FCRA data. Applies only to controllers or processors with annual revenue of 25 million US dollars or more.",
+    "keyObligationsSummary": "Requires a privacy notice and support for consumer rights to access, delete and obtain a portable copy of personal data, plus opt-outs where applicable for targeted advertising, sale of personal data and certain profiling. Sensitive data handling and data protection assessments follow the statute's specific rules. Controllers must use processor contracts with defined duties, and the law took effect on December 31, 2023. This law is comparatively light: there is no right to correct, no data protection assessment requirement, and sensitive data requires notice and an opportunity to opt out rather than opt-in consent.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://le.utah.gov/xcode/Title13/Chapter61/13-61.html",
+      "https://dcp.utah.gov/"
+    ]
+  },
+  {
+    "frameworkId": "tdpsa",
+    "name": "Texas Data Privacy and Security Act",
+    "alsoKnownAs": [
+      "TDPSA",
+      "Texas DPSA"
+    ],
+    "jurisdiction": "United States - Texas",
+    "region": "US-State",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Texas Attorney General",
+    "officialUrl": "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm",
+    "scopeSummary": "Applies to personal data of Texas residents acting in an individual or household context; employee and business-to-business contact data are generally excluded, and entity- or data-level exemptions typically cover HIPAA, GLBA and FCRA data. Applicability is based on business size rather than consumer counts.",
+    "keyObligationsSummary": "Requires a privacy notice and support for consumer rights to access, delete and obtain a portable copy of personal data, plus opt-outs where applicable for targeted advertising, sale of personal data and certain profiling. Sensitive data handling and data protection assessments follow the statute's specific rules. Controllers must use processor contracts with defined duties, and the law took effect on July 1, 2024. Consent is required for sensitive data, controllers that sell sensitive or biometric data must post prescribed notices, and data protection assessments are required for higher-risk processing.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.texasattorneygeneral.gov/consumer-protection/privacy-and-identity-theft/texas-data-privacy-and-security-act",
+      "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm"
+    ]
+  },
+  {
+    "frameworkId": "or-ocpa",
+    "name": "Oregon Consumer Privacy Act",
+    "alsoKnownAs": [
+      "OCPA",
+      "Oregon Consumer Privacy Act"
+    ],
+    "jurisdiction": "United States - Oregon",
+    "region": "US-State",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Oregon Department of Justice",
+    "officialUrl": "https://olis.oregonlegislature.gov/liz/2023R1/Measures/Overview/SB619",
+    "scopeSummary": "Applies to personal data of Oregon residents acting in an individual or household context; employee and business-to-business contact data are generally excluded, and entity- or data-level exemptions typically cover HIPAA, GLBA and FCRA data. Nonprofits became covered from July 2025.",
+    "keyObligationsSummary": "Requires a privacy notice and support for consumer rights to access, delete and obtain a portable copy of personal data, plus opt-outs where applicable for targeted advertising, sale of personal data and certain profiling. Sensitive data handling and data protection assessments follow the statute's specific rules. Controllers must use processor contracts with defined duties, and the law took effect on July 1, 2024. Consent is required for sensitive data, consumers may request a list of specific third parties that received their personal data, and data protection assessments are required for higher-risk processing.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.doj.state.or.us/consumer-protection/privacy-and-data-security/oregon-consumer-privacy-act/",
+      "https://olis.oregonlegislature.gov/liz/2023R1/Measures/Overview/SB619"
+    ]
+  },
+  {
+    "frameworkId": "mt-cdpa",
+    "name": "Montana Consumer Data Privacy Act",
+    "alsoKnownAs": [
+      "MTCDPA",
+      "Montana CDPA",
+      "SB 384"
+    ],
+    "jurisdiction": "United States - Montana",
+    "region": "US-State",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Montana Legislature; Montana Attorney General",
+    "officialUrl": "https://leg.mt.gov/bills/mca/title_0300/chapter_0140/part_0280/section_0010/0300-0140-0280-0010.html",
+    "scopeSummary": "Applies to personal data of Montana residents acting in an individual or household context; employee and business-to-business contact data are generally excluded, and entity- or data-level exemptions typically cover HIPAA, GLBA and FCRA data. Applicability thresholds are among the lowest in the country and were lowered further by 2025 amendments.",
+    "keyObligationsSummary": "Requires a privacy notice and support for consumer rights to access, delete and obtain a portable copy of personal data, plus opt-outs where applicable for targeted advertising, sale of personal data and certain profiling. Sensitive data handling and data protection assessments follow the statute's specific rules. Controllers must use processor contracts with defined duties, and the law took effect on October 1, 2024. Consent is required for sensitive data and for processing known minors' data for targeted advertising or sale, and data protection assessments are required for higher-risk processing.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://leg.mt.gov/bills/2023/billpdf/SB0384.pdf",
+      "https://dojmt.gov/consumer/"
+    ]
+  },
+  {
+    "frameworkId": "fl-fdbr",
+    "name": "Florida Digital Bill of Rights",
+    "alsoKnownAs": [
+      "FDBR",
+      "Florida SB 262"
+    ],
+    "jurisdiction": "United States - Florida",
+    "region": "US-State",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Florida Legislature; Florida Attorney General",
+    "officialUrl": "https://www.flsenate.gov/Session/Bill/2023/262",
+    "scopeSummary": "Applies to Florida residents' personal data held by covered controllers; separate provisions on sale of sensitive data, children's protections and government-directed content moderation apply more broadly.",
+    "keyObligationsSummary": "Covered controllers must provide notice, honor rights to access, correct, delete and obtain a portable copy, and offer opt-outs for targeted advertising, sale and certain profiling. Consent is required for sensitive data, and additional duties apply to processing of known minors' data. The law also restricts the sale of sensitive data without notice and includes surveillance-device and voice-recognition provisions applying beyond the main revenue threshold.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.flsenate.gov/Session/Bill/2023/262",
+      "https://www.myfloridalegal.com/"
+    ]
+  },
+  {
+    "frameworkId": "de-dpdpa",
+    "name": "Delaware Personal Data Privacy Act",
+    "alsoKnownAs": [
+      "DPDPA",
+      "Delaware PDPA"
+    ],
+    "jurisdiction": "United States - Delaware",
+    "region": "US-State",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Delaware General Assembly; Delaware Department of Justice",
+    "officialUrl": "https://legis.delaware.gov/BillDetail?legislationId=140388",
+    "scopeSummary": "Applies to personal data of Delaware residents acting in an individual or household context; employee and business-to-business contact data are generally excluded, and entity- or data-level exemptions typically cover HIPAA, GLBA and FCRA data. Nonprofits are largely covered, with narrow exceptions.",
+    "keyObligationsSummary": "Requires a privacy notice and support for consumer rights to access, delete and obtain a portable copy of personal data, plus opt-outs where applicable for targeted advertising, sale of personal data and certain profiling. Sensitive data handling and data protection assessments follow the statute's specific rules. Controllers must use processor contracts with defined duties, and the law took effect on January 1, 2025. Consent is required for sensitive data and for targeted advertising or sale involving consumers aged 13 to 17, consumers may request a list of third-party categories, and data protection assessments are required for higher-risk processing.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://legis.delaware.gov/BillDetail?legislationId=140388",
+      "https://attorneygeneral.delaware.gov/"
+    ]
+  },
+  {
+    "frameworkId": "ia-cdpa",
+    "name": "Iowa Consumer Data Protection Act",
+    "alsoKnownAs": [
+      "Iowa CDPA",
+      "SF 262"
+    ],
+    "jurisdiction": "United States - Iowa",
+    "region": "US-State",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Iowa Legislature; Iowa Attorney General",
+    "officialUrl": "https://www.legis.iowa.gov/legislation/BillBook?ga=90&ba=SF262",
+    "scopeSummary": "Applies to personal data of Iowa residents acting in an individual or household context; employee and business-to-business contact data are generally excluded, and entity- or data-level exemptions typically cover HIPAA, GLBA and FCRA data. This is among the least prescriptive comprehensive state privacy laws.",
+    "keyObligationsSummary": "Requires a privacy notice and support for consumer rights to access, delete and obtain a portable copy of personal data, plus opt-outs where applicable for targeted advertising, sale of personal data and certain profiling. Sensitive data handling and data protection assessments follow the statute's specific rules. Controllers must use processor contracts with defined duties, and the law took effect on January 1, 2025. There is no right to correct and no data protection assessment requirement; sensitive data requires notice and an opportunity to opt out rather than opt-in consent.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.legis.iowa.gov/legislation/BillBook?ga=90&ba=SF262",
+      "https://www.iowaattorneygeneral.gov/"
+    ]
+  },
+  {
+    "frameworkId": "ne-ndpa",
+    "name": "Nebraska Data Privacy Act",
+    "alsoKnownAs": [
+      "NDPA",
+      "Nebraska LB 1074"
+    ],
+    "jurisdiction": "United States - Nebraska",
+    "region": "US-State",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Nebraska Legislature; Nebraska Attorney General",
+    "officialUrl": "https://nebraskalegislature.gov/bills/view_bill.php?DocumentID=54339",
+    "scopeSummary": "Applies to personal data of Nebraska residents acting in an individual or household context; employee and business-to-business contact data are generally excluded, and entity- or data-level exemptions typically cover HIPAA, GLBA and FCRA data. Applicability is based on business size rather than consumer counts.",
+    "keyObligationsSummary": "Requires a privacy notice and support for consumer rights to access, delete and obtain a portable copy of personal data, plus opt-outs where applicable for targeted advertising, sale of personal data and certain profiling. Sensitive data handling and data protection assessments follow the statute's specific rules. Controllers must use processor contracts with defined duties, and the law took effect on January 1, 2025. Consent is required for sensitive data, small businesses must still obtain consent before selling sensitive data, and data protection assessments are required for higher-risk processing.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://nebraskalegislature.gov/bills/view_bill.php?DocumentID=54339",
+      "https://ago.nebraska.gov/"
+    ]
+  },
+  {
+    "frameworkId": "nh-privacy-act",
+    "name": "New Hampshire Data Privacy Act",
+    "alsoKnownAs": [
+      "NH SB 255",
+      "New Hampshire Privacy Act",
+      "RSA 507-H"
+    ],
+    "jurisdiction": "United States - New Hampshire",
+    "region": "US-State",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "New Hampshire General Court; NH Department of Justice",
+    "officialUrl": "https://www.gencourt.state.nh.us/rsa/html/lii/507-h/507-h-mrg.htm",
+    "scopeSummary": "Applies to personal data of New Hampshire residents acting in an individual or household context; employee and business-to-business contact data are generally excluded, and entity- or data-level exemptions typically cover HIPAA, GLBA and FCRA data. Codified at RSA chapter 507-H.",
+    "keyObligationsSummary": "Requires a privacy notice and support for consumer rights to access, delete and obtain a portable copy of personal data, plus opt-outs where applicable for targeted advertising, sale of personal data and certain profiling. Sensitive data handling and data protection assessments follow the statute's specific rules. Controllers must use processor contracts with defined duties, and the law took effect on January 1, 2025. Consent is required for sensitive data, and data protection assessments are required for targeted advertising, sale, certain profiling and sensitive data processing.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.gencourt.state.nh.us/rsa/html/lii/507-h/507-h-mrg.htm",
+      "https://www.doj.nh.gov/"
+    ]
+  },
+  {
+    "frameworkId": "nj-djpa",
+    "name": "New Jersey Data Privacy Act",
+    "alsoKnownAs": [
+      "NJDPA",
+      "New Jersey S332"
+    ],
+    "jurisdiction": "United States - New Jersey",
+    "region": "US-State",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "New Jersey Division of Consumer Affairs; NJ Attorney General",
+    "officialUrl": "https://www.njconsumeraffairs.gov/dpa",
+    "scopeSummary": "Applies to personal data of New Jersey residents acting in an individual or household context; employee and business-to-business contact data are generally excluded, and entity- or data-level exemptions typically cover HIPAA, GLBA and FCRA data. The Division of Consumer Affairs has rulemaking authority to add detail.",
+    "keyObligationsSummary": "Requires a privacy notice and support for consumer rights to access, delete and obtain a portable copy of personal data, plus opt-outs where applicable for targeted advertising, sale of personal data and certain profiling. Sensitive data handling and data protection assessments follow the statute's specific rules. Controllers must use processor contracts with defined duties, and the law took effect on January 15, 2025. Consent is required for sensitive data, for selling data or targeted advertising involving consumers aged 13 to 16, and controllers must honor universal opt-out mechanisms and complete data protection assessments.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.njoag.gov/about/divisions-and-offices/division-of-consumer-affairs-home/division-of-consumer-affairs-data-privacy/",
+      "https://pub.njleg.gov/bills/2022/PL23/266_.PDF"
+    ]
+  },
+  {
+    "frameworkId": "tn-tipa",
+    "name": "Tennessee Information Protection Act",
+    "alsoKnownAs": [
+      "TIPA",
+      "Tennessee HB 1181"
+    ],
+    "jurisdiction": "United States - Tennessee",
+    "region": "US-State",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Tennessee General Assembly; Tennessee Attorney General",
+    "officialUrl": "https://www.capitol.tn.gov/Bills/113/Bill/HB1181.pdf",
+    "scopeSummary": "Applies to personal data of Tennessee residents acting in an individual or household context; employee and business-to-business contact data are generally excluded, and entity- or data-level exemptions typically cover HIPAA, GLBA and FCRA data. Applies only to controllers and processors with more than 25 million US dollars in revenue.",
+    "keyObligationsSummary": "Requires a privacy notice and support for consumer rights to access, delete and obtain a portable copy of personal data, plus opt-outs where applicable for targeted advertising, sale of personal data and certain profiling. Sensitive data handling and data protection assessments follow the statute's specific rules. Controllers must use processor contracts with defined duties, and the law took effect on July 1, 2025. Consent is required for sensitive data, data protection assessments are required for higher-risk processing, and maintaining a NIST Privacy Framework-aligned program provides an affirmative defense.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.capitol.tn.gov/Bills/113/Bill/HB1181.pdf",
+      "https://www.tn.gov/attorneygeneral.html"
+    ]
+  },
+  {
+    "frameworkId": "mn-cdpa",
+    "name": "Minnesota Consumer Data Privacy Act",
+    "alsoKnownAs": [
+      "MCDPA",
+      "Minnesota Statutes Chapter 325M"
+    ],
+    "jurisdiction": "United States - Minnesota",
+    "region": "US-State",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Minnesota Legislature; Minnesota Attorney General",
+    "officialUrl": "https://www.revisor.mn.gov/statutes/cite/325M",
+    "scopeSummary": "Applies to personal data of Minnesota residents acting in an individual or household context; employee and business-to-business contact data are generally excluded, and entity- or data-level exemptions typically cover HIPAA, GLBA and FCRA data. Codified at Minnesota Statutes chapter 325O; small businesses are largely exempt.",
+    "keyObligationsSummary": "Requires a privacy notice and support for consumer rights to access, delete and obtain a portable copy of personal data, plus opt-outs where applicable for targeted advertising, sale of personal data and certain profiling. Sensitive data handling and data protection assessments follow the statute's specific rules. Controllers must use processor contracts with defined duties, and the law took effect on July 31, 2025. Controllers must maintain a data inventory, and consumers can question the result of profiling in furtherance of a decision with legal or similarly significant effects, review data used, and obtain a list of specific third parties that received their data.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.revisor.mn.gov/statutes/cite/325O",
+      "https://www.ag.state.mn.us/"
+    ]
+  },
+  {
+    "frameworkId": "md-modpa",
+    "name": "Maryland Online Data Privacy Act",
+    "alsoKnownAs": [
+      "MODPA",
+      "Maryland SB 541"
+    ],
+    "jurisdiction": "United States - Maryland",
+    "region": "US-State",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Maryland General Assembly; Maryland Attorney General",
+    "officialUrl": "https://mgaleg.maryland.gov/mgawebsite/Legislation/Details/sb0541?ys=2024RS",
+    "scopeSummary": "Applies to personal data of Maryland residents acting in an individual or household context; employee and business-to-business contact data are generally excluded, and entity- or data-level exemptions typically cover HIPAA, GLBA and FCRA data. This law imposes the strictest data minimization standard among U.S. state privacy laws.",
+    "keyObligationsSummary": "Requires a privacy notice and support for consumer rights to access, delete and obtain a portable copy of personal data, plus opt-outs where applicable for targeted advertising, sale of personal data and certain profiling. Sensitive data handling and data protection assessments follow the statute's specific rules. Controllers must use processor contracts with defined duties, and the law took effect on October 1, 2025. Collection is limited to what is reasonably necessary to provide the specific product or service requested, sale of sensitive data is prohibited, and targeted advertising or sale of data of consumers under 18 is prohibited.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://mgaleg.maryland.gov/mgawebsite/Legislation/Details/sb0541?ys=2024RS",
+      "https://www.marylandattorneygeneral.gov/"
+    ]
+  },
+  {
+    "frameworkId": "in-cdpa",
+    "name": "Indiana Consumer Data Protection Act",
+    "alsoKnownAs": [
+      "Indiana CDPA",
+      "SB 5"
+    ],
+    "jurisdiction": "United States - Indiana",
+    "region": "US-State",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Indiana General Assembly; Indiana Attorney General",
+    "officialUrl": "https://iga.in.gov/legislative/2023/bills/senate/5/details",
+    "scopeSummary": "Applies to personal data of Indiana residents acting in an individual or household context; employee and business-to-business contact data are generally excluded, and entity- or data-level exemptions typically cover HIPAA, GLBA and FCRA data. Closely modeled on the Virginia statute.",
+    "keyObligationsSummary": "Requires a privacy notice and support for consumer rights to access, delete and obtain a portable copy of personal data, plus opt-outs where applicable for targeted advertising, sale of personal data and certain profiling. Sensitive data handling and data protection assessments follow the statute's specific rules. Controllers must use processor contracts with defined duties, and the law took effect on January 1, 2026. Consent is required for sensitive data, and data protection assessments are required for targeted advertising, sale, certain profiling and sensitive data processing.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://iga.in.gov/legislative/2023/bills/senate/5/details",
+      "https://www.in.gov/attorneygeneral/"
+    ]
+  },
+  {
+    "frameworkId": "ky-cdpa",
+    "name": "Kentucky Consumer Data Protection Act",
+    "alsoKnownAs": [
+      "Kentucky CDPA",
+      "HB 15"
+    ],
+    "jurisdiction": "United States - Kentucky",
+    "region": "US-State",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Kentucky General Assembly; Kentucky Attorney General",
+    "officialUrl": "https://apps.legislature.ky.gov/record/24rs/hb15.html",
+    "scopeSummary": "Applies to personal data of Kentucky residents acting in an individual or household context; employee and business-to-business contact data are generally excluded, and entity- or data-level exemptions typically cover HIPAA, GLBA and FCRA data. Closely modeled on the Virginia statute.",
+    "keyObligationsSummary": "Requires a privacy notice and support for consumer rights to access, delete and obtain a portable copy of personal data, plus opt-outs where applicable for targeted advertising, sale of personal data and certain profiling. Sensitive data handling and data protection assessments follow the statute's specific rules. Controllers must use processor contracts with defined duties, and the law took effect on January 1, 2026. Consent is required for sensitive data, and data protection assessments are required for targeted advertising, sale, certain profiling and sensitive data processing.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://apps.legislature.ky.gov/record/24rs/hb15.html",
+      "https://www.ag.ky.gov/"
+    ]
+  },
+  {
+    "frameworkId": "ri-dtppa",
+    "name": "Rhode Island Data Transparency and Privacy Protection Act",
+    "alsoKnownAs": [
+      "RIDTPPA",
+      "Rhode Island H 7787"
+    ],
+    "jurisdiction": "United States - Rhode Island",
+    "region": "US-State",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Rhode Island General Assembly; RI Attorney General",
+    "officialUrl": "https://webserver.rilegislature.gov/BillText24/HouseText24/H7787A.pdf",
+    "scopeSummary": "Applies to personal data of Rhode Island residents acting in an individual or household context; employee and business-to-business contact data are generally excluded, and entity- or data-level exemptions typically cover HIPAA, GLBA and FCRA data. Applicability thresholds are among the lowest, and the notice duties are unusually specific.",
+    "keyObligationsSummary": "Requires a privacy notice and support for consumer rights to access, delete and obtain a portable copy of personal data, plus opt-outs where applicable for targeted advertising, sale of personal data and certain profiling. Sensitive data handling and data protection assessments follow the statute's specific rules. Controllers must use processor contracts with defined duties, and the law took effect on January 1, 2026. In addition to standard rights and opt-outs, controllers must name the third parties to which personal data has been or may be sold in the privacy notice, and consent is required for sensitive data.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://webserver.rilegislature.gov/BillText24/HouseText24/H7787A.pdf",
+      "https://riag.ri.gov/"
+    ]
+  },
+  {
+    "frameworkId": "nydfs-500",
+    "name": "NYDFS Cybersecurity Regulation",
+    "alsoKnownAs": [
+      "23 NYCRR 500",
+      "NYDFS Part 500"
+    ],
+    "jurisdiction": "United States - New York",
+    "region": "US-State",
+    "category": "financial",
+    "type": "regulation",
+    "issuingBody": "New York State Department of Financial Services",
+    "officialUrl": "https://www.dfs.ny.gov/industry_guidance/cybersecurity",
+    "scopeSummary": "Covers the covered entity's information systems and nonpublic information, including systems operated by affiliates and third-party service providers.",
+    "keyObligationsSummary": "Requires a written cybersecurity program and policy approved by the board or senior governing body, a qualified CISO reporting at least annually, risk assessments, multi-factor authentication for all remote and privileged access, asset inventories, encryption, incident response and business continuity plans, and a written third-party service provider policy. Cybersecurity events must be reported to the Department within 72 hours and extortion payments within 24 hours, with an annual notice of compliance filed by April 15. Class A companies must obtain independent audits and implement additional controls such as privileged access management and endpoint detection and response.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.dfs.ny.gov/industry_guidance/cybersecurity",
+      "https://www.dfs.ny.gov/system/files/documents/2023/10/rf_fs_2amend23NYCRR500_text_20231101.pdf"
+    ]
+  },
+  {
+    "frameworkId": "co-admt-act",
+    "name": "Colorado Automated Decision-Making Technology Act",
+    "alsoKnownAs": [
+      "Colorado AI Act",
+      "SB 24-205",
+      "SB 26-189",
+      "ADMT Act"
+    ],
+    "jurisdiction": "United States - Colorado",
+    "region": "US-State",
+    "category": "ai",
+    "type": "law",
+    "issuingBody": "Colorado General Assembly; Colorado Attorney General",
+    "officialUrl": "https://coag.gov/ai/",
+    "scopeSummary": "Covers automated decision-making technology used in consequential decisions concerning Colorado consumers, with duties allocated between developers and deployers.",
+    "keyObligationsSummary": "The original Colorado AI Act, SB 24-205, imposed reasonable-care duties to avoid algorithmic discrimination, including impact assessments, risk management programs, consumer notices and disclosures to the Attorney General. It was repealed and reenacted by SB 26-189 as the Automated Decision-Making Technology Act, with an effective date of January 1, 2027, so implementing detail and rulemaking are still developing. Organizations should track the reenacted statute's final obligations before building controls.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://coag.gov/ai/",
+      "https://leg.colorado.gov/bills/sb24-205"
+    ]
+  },
+  {
+    "frameworkId": "tx-traiga",
+    "name": "Texas Responsible Artificial Intelligence Governance Act",
+    "alsoKnownAs": [
+      "TRAIGA",
+      "Texas HB 149"
+    ],
+    "jurisdiction": "United States - Texas",
+    "region": "US-State",
+    "category": "ai",
+    "type": "law",
+    "issuingBody": "Texas Legislature; Texas Attorney General",
+    "officialUrl": "https://capitol.texas.gov/billlookup/BillSummary.aspx?Bill=HB149&LegSess=89R",
+    "scopeSummary": "Covers AI systems developed, marketed, distributed or deployed in Texas, focused on prohibited intentional uses rather than general risk tiering.",
+    "keyObligationsSummary": "Prohibits developing or deploying AI with intent to unlawfully discriminate, incite self-harm or crime, produce certain unlawful sexual content, or infringe constitutional rights, and restricts government use for social scoring and certain biometric identification. Government agencies must disclose AI interactions with consumers, and health care providers must disclose AI use in treatment. The Attorney General has exclusive enforcement with a 60-day cure period, and the law creates a regulatory sandbox and an AI Council, effective January 1, 2026.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://capitol.texas.gov/billlookup/BillSummary.aspx?Bill=HB149&LegSess=89R",
+      "https://www.texasattorneygeneral.gov/"
+    ]
+  },
+  {
+    "frameworkId": "sox",
+    "name": "Sarbanes-Oxley Act",
+    "alsoKnownAs": [
+      "SOX",
+      "SOX 404",
+      "ITGC requirements"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "financial",
+    "type": "law",
+    "issuingBody": "US Congress; SEC; PCAOB",
+    "officialUrl": "https://www.govinfo.gov/app/details/PLAW-107publ204",
+    "scopeSummary": "Covers internal control over financial reporting, including the IT general controls and application controls supporting financially relevant systems.",
+    "keyObligationsSummary": "Requires management assertions on disclosure controls under Section 302 and on internal control over financial reporting under Section 404, with auditor attestation for accelerated filers. In IT terms this drives documented IT general controls over access management, change management, IT operations and program development for in-scope systems. Deficiencies are evaluated and, where material, disclosed as significant deficiencies or material weaknesses.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.govinfo.gov/app/details/PLAW-107publ204",
+      "https://pcaobus.org/oversight/standards/auditing-standards"
+    ]
+  },
+  {
+    "frameworkId": "glba-safeguards",
+    "name": "Gramm-Leach-Bliley Act and FTC Safeguards Rule",
+    "alsoKnownAs": [
+      "GLBA",
+      "FTC Safeguards Rule",
+      "16 CFR Part 314"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "financial",
+    "type": "regulation",
+    "issuingBody": "US Federal Trade Commission",
+    "officialUrl": "https://www.ftc.gov/legal-library/browse/rules/safeguards-rule",
+    "scopeSummary": "Covers customer information handled by a financial institution, including information received about another institution's customers.",
+    "keyObligationsSummary": "Requires a written information security program with a designated qualified individual, a written risk assessment, and specific safeguards including access controls, data inventory, encryption in transit and at rest, secure development practices, multi-factor authentication, disposal, change management and activity monitoring. Institutions must test controls through continuous monitoring or annual penetration testing plus biannual vulnerability assessments, oversee service providers, maintain an incident response plan, and provide an annual written report to the board. Since 2024 they must notify the FTC within 30 days of discovering a security event involving unencrypted customer information of 500 or more consumers, and GLBA privacy notice rules apply separately.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.ftc.gov/legal-library/browse/rules/safeguards-rule",
+      "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-314"
+    ]
+  },
+  {
+    "frameworkId": "bsa-aml",
+    "name": "Bank Secrecy Act / Anti-Money Laundering",
+    "alsoKnownAs": [
+      "BSA",
+      "AML",
+      "31 CFR Chapter X"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "financial",
+    "type": "law",
+    "issuingBody": "US Financial Crimes Enforcement Network (FinCEN)",
+    "officialUrl": "https://www.fincen.gov/resources/statutes-and-regulations/bank-secrecy-act",
+    "scopeSummary": "Covers financial transactions and customer relationships subject to the Bank Secrecy Act and FinCEN regulations in 31 CFR Chapter X.",
+    "keyObligationsSummary": "Requires a risk-based AML and countering the financing of terrorism program with internal controls, a designated compliance officer, training, independent testing and customer due diligence including beneficial ownership identification. Institutions must file suspicious activity reports, generally within 30 days of detection, currency transaction reports for cash transactions above 10,000 US dollars, and maintain records including funds transfer and travel rule information. Sanctions screening under OFAC rules operates in parallel.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.fincen.gov/resources/statutes-regulations",
+      "https://bsaaml.ffiec.gov/manual"
+    ]
+  },
+  {
+    "frameworkId": "finra-rules",
+    "name": "FINRA Rules",
+    "alsoKnownAs": [
+      "FINRA Rulebook",
+      "FINRA 4511 recordkeeping",
+      "SEA Rule 17a-4"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "financial",
+    "type": "regulation",
+    "issuingBody": "Financial Industry Regulatory Authority",
+    "officialUrl": "https://www.finra.org/rules-guidance/rulebooks/finra-rules",
+    "scopeSummary": "Covers member firms' business activities, supervision, communications, books and records, and customer protection obligations.",
+    "keyObligationsSummary": "Requires written supervisory procedures and a supervisory system, review and approval of communications with the public, and preservation of books and records including electronic communications. SEA Rule 17a-4 permits electronic records preservation using either a write-once read-many format or an audit-trail alternative, with a designated third party or executive access undertaking. Firms must also meet cybersecurity, business continuity and customer identification expectations examined by FINRA.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.finra.org/rules-guidance/rulebooks/finra-rules",
+      "https://www.finra.org/rules-guidance/key-topics/books-records"
+    ]
+  },
+  {
+    "frameworkId": "sec-cyber-disclosure",
+    "name": "SEC Cybersecurity Disclosure Rules",
+    "alsoKnownAs": [
+      "Item 1.05 Form 8-K",
+      "Regulation S-K Item 106"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "financial",
+    "type": "regulation",
+    "issuingBody": "US Securities and Exchange Commission",
+    "officialUrl": "https://www.sec.gov/newsroom/press-releases/2023-139",
+    "scopeSummary": "Applies to registrants' disclosure of material cybersecurity incidents and of cybersecurity risk management, strategy and governance.",
+    "keyObligationsSummary": "Requires disclosure of a material cybersecurity incident on Form 8-K Item 1.05 generally within four business days of determining materiality, with limited national security delays. Annual reports must describe processes for assessing, identifying and managing cybersecurity risks plus board and management oversight under Regulation S-K Item 106. Foreign private issuers report comparable information on Forms 6-K and 20-F.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.sec.gov/rules-regulations/2023/07/33-11216",
+      "https://www.sec.gov/newsroom/press-releases/2023-139"
+    ]
+  },
+  {
+    "frameworkId": "ffiec-it-handbook",
+    "name": "FFIEC IT Examination Handbook",
+    "alsoKnownAs": [
+      "FFIEC IT Handbook",
+      "FFIEC Information Security Booklet"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "financial",
+    "type": "guidance",
+    "issuingBody": "Federal Financial Institutions Examination Council",
+    "officialUrl": "https://ithandbook.ffiec.gov/",
+    "scopeSummary": "Covers IT governance, information security, business continuity, outsourcing, development and acquisition, and related examination areas.",
+    "keyObligationsSummary": "Provides examination procedures and expectations that institutions use to structure IT risk management, information security programs, resilience and third-party risk. Technology service providers can be examined directly under the Bank Service Company Act. It is supervisory guidance rather than a regulation, but findings drive mandatory remediation.",
+    "mandatoryVsVoluntary": "mixed",
+    "researchSourceUrls": [
+      "https://ithandbook.ffiec.gov/",
+      "https://www.ffiec.gov/"
+    ]
+  },
+  {
+    "frameworkId": "hipaa",
+    "name": "Health Insurance Portability and Accountability Act",
+    "alsoKnownAs": [
+      "HIPAA",
+      "HIPAA Privacy Rule",
+      "HIPAA Security Rule",
+      "Breach Notification Rule"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "healthcare",
+    "type": "law",
+    "issuingBody": "US Department of Health and Human Services, Office for Civil Rights",
+    "officialUrl": "https://www.hhs.gov/hipaa/index.html",
+    "scopeSummary": "Covers protected health information created, received, maintained or transmitted by covered entities and business associates, including electronic PHI.",
+    "keyObligationsSummary": "The Privacy Rule limits uses and disclosures of PHI and grants individual rights of access, amendment and accounting of disclosures. The Security Rule requires administrative, physical and technical safeguards supported by a risk analysis and risk management process, workforce training, contingency planning and audit controls. The Breach Notification Rule requires notice to affected individuals and HHS, generally within 60 days, and business associate agreements are required before PHI is shared with vendors.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.hhs.gov/hipaa/index.html",
+      "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164"
+    ]
+  },
+  {
+    "frameworkId": "hitech",
+    "name": "HITECH Act",
+    "alsoKnownAs": [
+      "Health Information Technology for Economic and Clinical Health Act"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "healthcare",
+    "type": "law",
+    "issuingBody": "US Department of Health and Human Services",
+    "officialUrl": "https://www.hhs.gov/hipaa/for-professionals/special-topics/hitech-act-enforcement-interim-final-rule/index.html",
+    "scopeSummary": "Covers electronic health information practices, breach notification and enforcement layered onto the HIPAA rules.",
+    "keyObligationsSummary": "Extended direct HIPAA liability to business associates, established the tiered civil money penalty structure and mandatory breach notification, and strengthened enforcement including state attorney general authority. Its 2021 amendment requires HHS to consider an entity's recognized security practices maintained for the prior twelve months when determining penalties and audit outcomes. Implementation is largely through the HIPAA Omnibus Rule.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.hhs.gov/hipaa/for-professionals/special-topics/hitech-act-enforcement-interim-final-rule/index.html",
+      "https://www.hhs.gov/hipaa/for-professionals/privacy/laws-regulations/index.html"
+    ]
+  },
+  {
+    "frameworkId": "fda-21-cfr-11",
+    "name": "FDA 21 CFR Part 11",
+    "alsoKnownAs": [
+      "Part 11",
+      "electronic records and electronic signatures"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "healthcare",
+    "type": "regulation",
+    "issuingBody": "US Food and Drug Administration",
+    "officialUrl": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-A/part-11",
+    "scopeSummary": "Covers electronic records and electronic signatures used to satisfy FDA predicate rule requirements, in closed and open systems.",
+    "keyObligationsSummary": "Requires validation of systems to ensure accuracy, reliability and consistent intended performance, secure computer-generated time-stamped audit trails, authority checks, and record retention and retrieval throughout the required period. Electronic signatures must be unique, verified, and linked to their records, with certification to the FDA that electronic signatures are legally binding. FDA guidance applies a risk-based approach, with computer software assurance guidance for production and quality system software.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-A/part-11",
+      "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/part-11-electronic-records-electronic-signatures-scope-and-application"
+    ]
+  },
+  {
+    "frameworkId": "us-cgmp",
+    "name": "FDA Current Good Manufacturing Practice regulations",
+    "alsoKnownAs": [
+      "cGMP",
+      "GxP",
+      "21 CFR Parts 210 and 211"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "healthcare",
+    "type": "regulation",
+    "issuingBody": "US Food and Drug Administration",
+    "officialUrl": "https://www.fda.gov/drugs/pharmaceutical-quality-resources/current-good-manufacturing-practice-cgmp-regulations",
+    "scopeSummary": "Covers the manufacturing, processing, packing and holding of drug products, with parallel GxP regimes for clinical (GCP) and laboratory (GLP) activities.",
+    "keyObligationsSummary": "Requires a quality unit with defined responsibilities, written and approved procedures, validated processes and equipment, controlled documentation and records, deviation and change control, and investigation of failures. Data integrity expectations, including attributable, legible, contemporaneous, original and accurate records, apply to computerized systems. Inspections verify compliance and findings drive corrective action.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.fda.gov/drugs/pharmaceutical-quality-resources/current-good-manufacturing-practice-cgmp-regulations",
+      "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-C/part-211"
+    ]
+  },
+  {
+    "frameworkId": "us-42-cfr-part-2",
+    "name": "42 CFR Part 2",
+    "alsoKnownAs": [
+      "Part 2",
+      "substance use disorder patient records confidentiality"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "healthcare",
+    "type": "regulation",
+    "issuingBody": "US Substance Abuse and Mental Health Services Administration",
+    "officialUrl": "https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2",
+    "scopeSummary": "Covers records of the identity, diagnosis, prognosis or treatment of any patient created by a federally assisted substance use disorder program.",
+    "keyObligationsSummary": "Requires written patient consent for use and disclosure of Part 2 records, with narrow exceptions such as medical emergencies, audits and qualified service organization arrangements. The 2024 final rule aligns Part 2 more closely with HIPAA, permitting a single consent for treatment, payment and health care operations, applying HIPAA breach notification and enforcement, and requiring notices and safeguards against use in legal proceedings. Compliance with the 2024 rule is required by February 16, 2026.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2",
+      "https://www.samhsa.gov/about-us/who-we-are/laws-regulations/confidentiality-regulations-faqs"
+    ]
+  },
+  {
+    "frameworkId": "eu-mdr",
+    "name": "EU Medical Device Regulation",
+    "alsoKnownAs": [
+      "MDR",
+      "Regulation (EU) 2017/745"
+    ],
+    "jurisdiction": "European Union",
+    "region": "EU",
+    "category": "healthcare",
+    "type": "regulation",
+    "issuingBody": "European Union",
+    "officialUrl": "https://eur-lex.europa.eu/eli/reg/2017/745/oj",
+    "scopeSummary": "Covers medical devices and accessories placed on the EU market, classified as Class I, IIa, IIb or III based on risk.",
+    "keyObligationsSummary": "Requires a quality management system, technical documentation, clinical evaluation, risk management and, for most classes, conformity assessment involving a notified body before CE marking. Manufacturers must register devices and economic operators in EUDAMED, assign Unique Device Identifiers, appoint a person responsible for regulatory compliance, and operate post-market surveillance and vigilance including incident reporting. Software as a medical device must also meet cybersecurity and IEC 62304-style lifecycle expectations reflected in guidance.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://eur-lex.europa.eu/eli/reg/2017/745/oj",
+      "https://health.ec.europa.eu/medical-devices-sector_en"
+    ]
+  },
+  {
+    "frameworkId": "eu-ivdr",
+    "name": "EU In Vitro Diagnostic Regulation",
+    "alsoKnownAs": [
+      "IVDR",
+      "Regulation (EU) 2017/746"
+    ],
+    "jurisdiction": "European Union",
+    "region": "EU",
+    "category": "healthcare",
+    "type": "regulation",
+    "issuingBody": "European Union",
+    "officialUrl": "https://eur-lex.europa.eu/eli/reg/2017/746/oj",
+    "scopeSummary": "Covers in vitro diagnostic medical devices classified as Class A, B, C or D based on risk to individuals and public health.",
+    "keyObligationsSummary": "Requires a quality management system, technical documentation, performance evaluation including scientific validity and clinical performance, and notified body conformity assessment for most classes before CE marking. Manufacturers must register in EUDAMED, assign UDIs, appoint a person responsible for regulatory compliance and conduct post-market performance follow-up and vigilance reporting. Transitional provisions extended deadlines for legacy devices depending on class.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://eur-lex.europa.eu/eli/reg/2017/746/oj",
+      "https://health.ec.europa.eu/medical-devices-sector_en"
+    ]
+  },
+  {
+    "frameworkId": "ehds",
+    "name": "European Health Data Space Regulation",
+    "alsoKnownAs": [
+      "EHDS",
+      "Regulation (EU) 2025/327"
+    ],
+    "jurisdiction": "European Union",
+    "region": "EU",
+    "category": "healthcare",
+    "type": "regulation",
+    "issuingBody": "European Union",
+    "officialUrl": "https://eur-lex.europa.eu/eli/reg/2025/327/oj",
+    "scopeSummary": "Covers primary use of electronic health data for care and secondary use for research, innovation, policy and regulatory purposes, plus EHR system requirements.",
+    "keyObligationsSummary": "Establishes rights for individuals to access and control their electronic health data, obligations for data holders to make defined categories available for secondary use through health data access bodies, and essential requirements for EHR systems including interoperability and logging. Manufacturers of EHR systems must issue declarations of conformity and meet European interoperability and security requirements. The regulation entered into force in March 2025 with obligations phasing in from 2027 onward.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://eur-lex.europa.eu/eli/reg/2025/327/oj",
+      "https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space_en"
+    ]
+  },
+  {
+    "frameworkId": "gdpr",
+    "name": "General Data Protection Regulation",
+    "alsoKnownAs": [
+      "GDPR",
+      "Regulation (EU) 2016/679"
+    ],
+    "jurisdiction": "European Union",
+    "region": "EU",
+    "category": "privacy",
+    "type": "regulation",
+    "issuingBody": "European Union; enforced by national DPAs and the EDPB",
+    "officialUrl": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+    "scopeSummary": "Applies to processing of personal data of individuals in the EU and EEA by controllers and processors, including many non-EU companies with no local entity.",
+    "keyObligationsSummary": "Requires a lawful basis for processing, transparency notices, and support for data subject rights including access, erasure, rectification, portability and objection. Controllers must maintain records of processing, apply data protection by design and by default, sign Article 28 contracts with processors, run DPIAs for high-risk processing and notify personal data breaches to the supervisory authority within 72 hours. Transfers outside the EEA require an adequacy decision, Standard Contractual Clauses or another Chapter V mechanism, and some organizations must appoint a DPO or EU representative.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+      "https://edpb.europa.eu/edpb_en"
+    ]
+  },
+  {
+    "frameworkId": "uk-gdpr-dpa2018",
+    "name": "UK GDPR and Data Protection Act 2018",
+    "alsoKnownAs": [
+      "UK GDPR",
+      "DPA 2018"
+    ],
+    "jurisdiction": "United Kingdom",
+    "region": "UK",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "UK Parliament; Information Commissioner's Office",
+    "officialUrl": "https://www.legislation.gov.uk/ukpga/2018/12/contents",
+    "scopeSummary": "Applies to processing of UK personal data by controllers and processors, with the Data Protection Act 2018 supplementing the retained UK GDPR and covering law enforcement and intelligence processing.",
+    "keyObligationsSummary": "Mirrors GDPR requirements for lawful basis, transparency, data subject rights, records of processing, DPIAs and 72-hour breach reporting to the ICO. UK international transfers use UK adequacy regulations, the International Data Transfer Agreement or the UK Addendum to the EU SCCs. Certain organizations must pay the ICO data protection fee and may need a UK representative.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.legislation.gov.uk/ukpga/2018/12/contents",
+      "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/"
+    ]
+  },
+  {
+    "frameworkId": "eprivacy-directive",
+    "name": "ePrivacy Directive",
+    "alsoKnownAs": [
+      "Directive 2002/58/EC",
+      "Cookie Directive"
+    ],
+    "jurisdiction": "European Union",
+    "region": "EU",
+    "category": "privacy",
+    "type": "regulation",
+    "issuingBody": "European Union",
+    "officialUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32002L0058",
+    "scopeSummary": "Applies to storing or accessing information on users' terminal equipment, such as cookies and similar technologies, and to electronic direct marketing and confidentiality of communications, as implemented in each member state's national law.",
+    "keyObligationsSummary": "Requires informed consent before non-essential cookies or similar technologies are used, with strictly necessary and communications-transmission exemptions. Electronic direct marketing generally requires prior consent, subject to a limited soft opt-in for existing customers under national implementations. Because it is a directive, exact requirements and enforcement depend on national transpositions and regulators.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32002L0058",
+      "https://edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-22023-technical-scope-art-53-eprivacy-directive_en"
+    ]
+  },
+  {
+    "frameworkId": "uk-pecr",
+    "name": "Privacy and Electronic Communications Regulations",
+    "alsoKnownAs": [
+      "PECR",
+      "UK cookie rules"
+    ],
+    "jurisdiction": "United Kingdom",
+    "region": "UK",
+    "category": "privacy",
+    "type": "regulation",
+    "issuingBody": "UK Information Commissioner's Office",
+    "officialUrl": "https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guide-to-pecr/",
+    "scopeSummary": "Applies to cookies and similar technologies, unsolicited electronic marketing by email, SMS, phone and fax, and security and confidentiality of public electronic communications services in the UK.",
+    "keyObligationsSummary": "Requires clear information and consent for non-essential cookies, with strictly necessary exemptions. Electronic marketing to individuals generally requires consent, with a soft opt-in available for existing customers on similar products with a clear opt-out. The ICO enforces PECR separately from the UK GDPR.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guide-to-pecr/",
+      "https://www.legislation.gov.uk/uksi/2003/2426/contents"
+    ]
+  },
+  {
+    "frameworkId": "eu-scc",
+    "name": "EU Standard Contractual Clauses",
+    "alsoKnownAs": [
+      "SCCs",
+      "Commission Implementing Decision (EU) 2021/914"
+    ],
+    "jurisdiction": "European Union",
+    "region": "EU",
+    "category": "privacy",
+    "type": "regulation",
+    "issuingBody": "European Commission",
+    "officialUrl": "https://eur-lex.europa.eu/eli/dec_impl/2021/914/oj",
+    "scopeSummary": "Applies to the specific transfer relationships covered by the chosen module: controller to controller, controller to processor, processor to processor or processor to controller.",
+    "keyObligationsSummary": "Parties execute the Commission-approved clauses in the applicable module, complete the annexes describing the transfer, security measures and subprocessors, and perform a transfer impact assessment considering third-country law. Supplementary measures may be required where local law undermines the clauses. The clauses are contractual and cannot be materially altered.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://eur-lex.europa.eu/eli/dec_impl/2021/914/oj",
+      "https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/standard-contractual-clauses-scc_en"
+    ]
+  },
+  {
+    "frameworkId": "nis2",
+    "name": "NIS2 Directive",
+    "alsoKnownAs": [
+      "NIS 2",
+      "Directive (EU) 2022/2555"
+    ],
+    "jurisdiction": "European Union",
+    "region": "EU",
+    "category": "security",
+    "type": "regulation",
+    "issuingBody": "European Union",
+    "officialUrl": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj",
+    "scopeSummary": "Applies to essential and important entities in covered sectors established or offering services in the EU, as transposed by each member state.",
+    "keyObligationsSummary": "Requires risk management measures covering policies, incident handling, business continuity, supply chain security, vulnerability handling, cryptography and access control. Incident reporting follows a staged timeline with early warning within 24 hours and a notification within 72 hours to the national CSIRT or authority. Management bodies carry approval and training responsibilities, and national transposition determines registration and supervision details.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://eur-lex.europa.eu/eli/dir/2022/2555/oj",
+      "https://digital-strategy.ec.europa.eu/en/policies/nis2-directive"
+    ]
+  },
+  {
+    "frameworkId": "eu-cra",
+    "name": "EU Cyber Resilience Act",
+    "alsoKnownAs": [
+      "CRA",
+      "Regulation (EU) 2024/2847"
+    ],
+    "jurisdiction": "European Union",
+    "region": "EU",
+    "category": "security",
+    "type": "regulation",
+    "issuingBody": "European Union",
+    "officialUrl": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj",
+    "scopeSummary": "Applies to hardware and software products with digital elements made available on the EU market, with heightened rules for important and critical categories.",
+    "keyObligationsSummary": "Requires security by design and by default, a conformity assessment appropriate to the product class, CE marking, and technical documentation including a software bill of materials. Manufacturers must handle vulnerabilities for the support period and report actively exploited vulnerabilities and severe incidents to ENISA and national authorities within defined deadlines. Main obligations apply from December 2027, with reporting duties from September 2026.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://eur-lex.europa.eu/eli/reg/2024/2847/oj",
+      "https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act"
+    ]
+  },
+  {
+    "frameworkId": "eu-ai-act",
+    "name": "EU Artificial Intelligence Act",
+    "alsoKnownAs": [
+      "AI Act",
+      "Regulation (EU) 2024/1689"
+    ],
+    "jurisdiction": "European Union",
+    "region": "EU",
+    "category": "ai",
+    "type": "regulation",
+    "issuingBody": "European Union",
+    "officialUrl": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+    "scopeSummary": "Applies by risk tier: prohibited practices, high-risk systems listed in the annexes, limited-risk systems with transparency duties, and general-purpose AI models with separate provider obligations.",
+    "keyObligationsSummary": "Prohibits specified practices such as social scoring and certain biometric categorization, and imposes on high-risk systems a risk management system, data governance, technical documentation, logging, human oversight, accuracy and robustness, conformity assessment, CE marking and post-market monitoring. Deployers of high-risk systems have duties including human oversight, input data relevance, log retention and, for some public bodies, fundamental rights impact assessments. Obligations phase in from February 2025 for prohibitions and AI literacy, August 2025 for general-purpose AI models and governance, and August 2026 and 2027 for most high-risk requirements.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+      "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+    ]
+  },
+  {
+    "frameworkId": "dora",
+    "name": "Digital Operational Resilience Act",
+    "alsoKnownAs": [
+      "DORA",
+      "Regulation (EU) 2022/2554"
+    ],
+    "jurisdiction": "European Union",
+    "region": "EU",
+    "category": "financial",
+    "type": "regulation",
+    "issuingBody": "European Union",
+    "officialUrl": "https://eur-lex.europa.eu/eli/reg/2022/2554/oj",
+    "scopeSummary": "Applies to in-scope EU financial entities and, through designation, to critical ICT third-party service providers.",
+    "keyObligationsSummary": "Requires an ICT risk management framework, classification and reporting of major ICT-related incidents, digital operational resilience testing including threat-led penetration testing for larger entities, and management of ICT third-party risk with a register of information and mandatory contractual terms. Financial entities must maintain exit strategies and concentration risk analysis for critical providers. Critical ICT providers are subject to direct EU oversight.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://eur-lex.europa.eu/eli/reg/2022/2554/oj",
+      "https://www.eiopa.europa.eu/digital-operational-resilience-act-dora_en"
+    ]
+  },
+  {
+    "frameworkId": "psd2",
+    "name": "Payment Services Directive 2",
+    "alsoKnownAs": [
+      "PSD2",
+      "Directive (EU) 2015/2366",
+      "SCA"
+    ],
+    "jurisdiction": "European Union",
+    "region": "EU",
+    "category": "financial",
+    "type": "regulation",
+    "issuingBody": "European Union",
+    "officialUrl": "https://eur-lex.europa.eu/eli/dir/2015/2366/oj",
+    "scopeSummary": "Applies to payment services provided in the EU, including account information and payment initiation services and the security of electronic payments.",
+    "keyObligationsSummary": "Requires authorization or registration as a payment service provider, strong customer authentication for most electronic payments with defined exemptions, secure communication with account servicing providers, and incident and fraud reporting. Regulatory technical standards specify SCA and secure communication requirements. National competent authorities supervise compliance.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://eur-lex.europa.eu/eli/dir/2015/2366/oj",
+      "https://www.eba.europa.eu/regulation-and-policy/payment-services-and-electronic-money"
+    ]
+  },
+  {
+    "frameworkId": "mifid2",
+    "name": "Markets in Financial Instruments Directive II",
+    "alsoKnownAs": [
+      "MiFID II",
+      "Directive 2014/65/EU"
+    ],
+    "jurisdiction": "European Union",
+    "region": "EU",
+    "category": "financial",
+    "type": "regulation",
+    "issuingBody": "European Union",
+    "officialUrl": "https://eur-lex.europa.eu/eli/dir/2014/65/oj",
+    "scopeSummary": "Covers investment services and activities in financial instruments, including client communications, order handling, trading and reporting.",
+    "keyObligationsSummary": "Requires recording and retention of telephone conversations and electronic communications relating to orders, generally for five years and up to seven years if requested by a competent authority. Firms must meet best execution, product governance, suitability and appropriateness, transaction reporting and cost and charges disclosure requirements. National competent authorities supervise compliance under the directive as transposed.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://eur-lex.europa.eu/eli/dir/2014/65/oj",
+      "https://www.esma.europa.eu/policy-rules/mifid-ii-and-mifir"
+    ]
+  },
+  {
+    "frameworkId": "basel3",
+    "name": "Basel III",
+    "alsoKnownAs": [
+      "Basel III framework",
+      "Basel Committee capital and liquidity standards"
+    ],
+    "jurisdiction": "Global",
+    "region": "Global",
+    "category": "financial",
+    "type": "framework",
+    "issuingBody": "Basel Committee on Banking Supervision, BIS",
+    "officialUrl": "https://www.bis.org/bcbs/basel3.htm",
+    "scopeSummary": "Covers bank regulatory capital, leverage, liquidity and risk-weighted asset calculation, including operational risk capital.",
+    "keyObligationsSummary": "Sets minimum risk-based capital and leverage ratios, liquidity coverage and net stable funding requirements, and buffers such as the countercyclical and capital conservation buffers. The finalized reforms revise credit, market and operational risk measurement, including a standardized operational risk approach that uses loss history. Requirements bind only as implemented in national law and supervisory rules.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.bis.org/bcbs/basel3.htm",
+      "https://www.bis.org/bcbs/publ/d424.htm"
+    ]
+  },
+  {
+    "frameworkId": "eu-dsa",
+    "name": "Digital Services Act",
+    "alsoKnownAs": [
+      "DSA",
+      "Regulation (EU) 2022/2065"
+    ],
+    "jurisdiction": "European Union",
+    "region": "EU",
+    "category": "industry",
+    "type": "regulation",
+    "issuingBody": "European Union",
+    "officialUrl": "https://eur-lex.europa.eu/eli/reg/2022/2065/oj",
+    "scopeSummary": "Applies by service tier, with cumulative duties for intermediaries, hosting providers, online platforms and very large platforms or search engines with over 45 million monthly EU users.",
+    "keyObligationsSummary": "Requires transparent terms, notice and action mechanisms, statements of reasons for content decisions, internal complaint handling and out-of-court dispute settlement, plus points of contact and legal representatives. Online platforms face additional duties on trader traceability, advertising transparency, protection of minors and dark pattern prohibitions, while designated very large platforms must conduct systemic risk assessments, independent audits and data access for researchers. Micro and small enterprises are exempt from several platform-specific obligations.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://eur-lex.europa.eu/eli/reg/2022/2065/oj",
+      "https://digital-strategy.ec.europa.eu/en/policies/digital-services-act-package"
+    ]
+  },
+  {
+    "frameworkId": "eu-dma",
+    "name": "Digital Markets Act",
+    "alsoKnownAs": [
+      "DMA",
+      "Regulation (EU) 2022/1925"
+    ],
+    "jurisdiction": "European Union",
+    "region": "EU",
+    "category": "industry",
+    "type": "regulation",
+    "issuingBody": "European Union",
+    "officialUrl": "https://eur-lex.europa.eu/eli/reg/2022/1925/oj",
+    "scopeSummary": "Covers designated core platform services such as app stores, search engines, social networks, messaging, operating systems and advertising services meeting quantitative thresholds.",
+    "keyObligationsSummary": "Imposes ex ante obligations on gatekeepers including interoperability, data portability, restrictions on self-preferencing and on combining personal data across services without consent, and fair access terms for business users. Gatekeepers must notify designation-relevant thresholds, submit compliance reports and inform the Commission of intended acquisitions. Most companies are affected as business users rather than as regulated gatekeepers.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://eur-lex.europa.eu/eli/reg/2022/1925/oj",
+      "https://digital-markets-act.ec.europa.eu/index_en"
+    ]
+  },
+  {
+    "frameworkId": "eu-data-act",
+    "name": "EU Data Act",
+    "alsoKnownAs": [
+      "Data Act",
+      "Regulation (EU) 2023/2854"
+    ],
+    "jurisdiction": "European Union",
+    "region": "EU",
+    "category": "industry",
+    "type": "regulation",
+    "issuingBody": "European Union",
+    "officialUrl": "https://eur-lex.europa.eu/eli/reg/2023/2854/oj",
+    "scopeSummary": "Covers access to and sharing of data generated by connected products and related services, cloud switching, unfair data-sharing contract terms and international access safeguards.",
+    "keyObligationsSummary": "Requires connected products and related services to be designed so that data is accessible to users, and data holders to share data with users and, on request, with third parties on fair, reasonable and non-discriminatory terms. Cloud and edge providers must remove switching charges on the statutory timeline, provide contractual switching terms with defined transition periods, and support functional equivalence or export of exportable data. It also invalidates unfair unilaterally imposed data contract terms and adds safeguards against unlawful third-country access. Most obligations apply from 12 September 2025.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://eur-lex.europa.eu/eli/reg/2023/2854/oj",
+      "https://digital-strategy.ec.europa.eu/en/policies/data-act"
+    ]
+  },
+  {
+    "frameworkId": "eu-accessibility-act",
+    "name": "European Accessibility Act",
+    "alsoKnownAs": [
+      "EAA",
+      "Directive (EU) 2019/882"
+    ],
+    "jurisdiction": "European Union",
+    "region": "EU",
+    "category": "industry",
+    "type": "regulation",
+    "issuingBody": "European Union",
+    "officialUrl": "https://eur-lex.europa.eu/eli/dir/2019/882/oj",
+    "scopeSummary": "Covers listed products and services supplied to consumers in the EU, with microenterprise exemptions for services and disproportionate burden assessments.",
+    "keyObligationsSummary": "Requires in-scope products and services to meet functional accessibility requirements, documented in technical documentation or an accessibility statement. Conformity is presumed where harmonized standards such as EN 301 549 are met. Requirements apply from 28 June 2025, with transitional periods for some services and self-service terminals, and enforcement is by designated national authorities.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://eur-lex.europa.eu/eli/dir/2019/882/oj",
+      "https://ec.europa.eu/social/main.jsp?catId=1202"
+    ]
+  },
+  {
+    "frameworkId": "csrd",
+    "name": "Corporate Sustainability Reporting Directive",
+    "alsoKnownAs": [
+      "CSRD",
+      "Directive (EU) 2022/2464",
+      "ESRS"
+    ],
+    "jurisdiction": "European Union",
+    "region": "EU",
+    "category": "industry",
+    "type": "regulation",
+    "issuingBody": "European Union",
+    "officialUrl": "https://eur-lex.europa.eu/eli/dir/2022/2464/oj",
+    "scopeSummary": "Covers sustainability reporting on environmental, social and governance matters using a double materiality assessment across the company's own operations and value chain.",
+    "keyObligationsSummary": "Requires reporting under the European Sustainability Reporting Standards in the management report, tagged in a digital format, and subject to limited assurance by an auditor or independent assurance provider. Companies must perform a double materiality assessment covering impacts, risks and opportunities. Application is phased, and the 2025 stop-the-clock directive postponed reporting for the second and third waves by two years while scope simplification is negotiated.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://eur-lex.europa.eu/eli/dir/2022/2464/oj",
+      "https://www.efrag.org/en/sustainability-reporting"
+    ]
+  },
+  {
+    "frameworkId": "pipeda",
+    "name": "Personal Information Protection and Electronic Documents Act",
+    "alsoKnownAs": [
+      "PIPEDA"
+    ],
+    "jurisdiction": "Canada",
+    "region": "Canada",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Office of the Privacy Commissioner of Canada",
+    "officialUrl": "https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/",
+    "scopeSummary": "Applies to commercial personal information handling in Canada, except in provinces with substantially similar private-sector laws such as Quebec, Alberta and British Columbia for intra-provincial activity.",
+    "keyObligationsSummary": "Requires compliance with ten fair information principles including accountability, identifying purposes, consent, limiting use and retention, safeguards and openness. Organizations must appoint a privacy officer, respond to access requests, and report breaches of security safeguards involving real risk of significant harm to the Privacy Commissioner and affected individuals. Accountability is retained when personal information is transferred to third-party processors, including across borders.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/",
+      "https://laws-lois.justice.gc.ca/eng/acts/P-8.6/"
+    ]
+  },
+  {
+    "frameworkId": "quebec-law-25",
+    "name": "Quebec Law 25",
+    "alsoKnownAs": [
+      "Law 25",
+      "Bill 64",
+      "Act respecting the protection of personal information in the private sector"
+    ],
+    "jurisdiction": "Canada - Quebec",
+    "region": "Canada",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Commission d'acces a l'information du Quebec",
+    "officialUrl": "https://www.legisquebec.gouv.qc.ca/en/document/cs/P-39.1",
+    "scopeSummary": "Applies to personal information handled by enterprises carrying on business in Quebec, including data processed outside Quebec on their behalf.",
+    "keyObligationsSummary": "Requires designation of a person in charge of protection of personal information, privacy impact assessments for information system projects and cross-border transfers, and confidentiality by default for technology products and services. Enterprises must report confidentiality incidents presenting a risk of serious injury to the Commission d'acces a l'information and affected individuals, and honor rights including access, correction, de-indexing and, since 2024, data portability. Consent rules are strict, with specific requirements for sensitive information and for profiling or location technologies.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.legisquebec.gouv.qc.ca/en/document/cs/P-39.1",
+      "https://www.cai.gouv.qc.ca/"
+    ]
+  },
+  {
+    "frameworkId": "casl",
+    "name": "Canada's Anti-Spam Legislation",
+    "alsoKnownAs": [
+      "CASL"
+    ],
+    "jurisdiction": "Canada",
+    "region": "Canada",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Government of Canada; CRTC",
+    "officialUrl": "https://ised-isde.canada.ca/site/canada-anti-spam-legislation/en",
+    "scopeSummary": "Applies to commercial electronic messages such as email and SMS sent to or accessed in Canada, and to computer program installation, regardless of sender location.",
+    "keyObligationsSummary": "Requires express or implied consent before sending commercial electronic messages, clear sender identification and contact information, and a working unsubscribe mechanism honored within ten business days. Consent records must be retained and proof of consent rests with the sender. Separate rules govern consent for installing computer programs.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://ised-isde.canada.ca/site/canada-anti-spam-legislation/en",
+      "https://crtc.gc.ca/eng/internet/anti.htm"
+    ]
+  },
+  {
+    "frameworkId": "lgpd",
+    "name": "Lei Geral de Protecao de Dados",
+    "alsoKnownAs": [
+      "LGPD",
+      "Brazilian General Data Protection Law",
+      "Lei 13.709/2018"
+    ],
+    "jurisdiction": "Brazil",
+    "region": "LATAM",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Autoridade Nacional de Protecao de Dados (ANPD)",
+    "officialUrl": "https://www.gov.br/anpd/pt-br",
+    "scopeSummary": "Applies to processing of personal data of individuals in Brazil by controllers and operators, in physical or digital form, with limited exceptions such as purely personal or journalistic use.",
+    "keyObligationsSummary": "Requires a legal basis from the statutory list, transparency, and support for data subject rights including confirmation, access, correction, anonymization, portability and deletion. Controllers must appoint a data protection officer, keep records of processing, adopt security and governance measures, and report security incidents to the ANPD and affected individuals within a deadline set by regulation. International transfers require adequacy, contractual instruments approved by the ANPD or another statutory basis.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.gov.br/anpd/pt-br",
+      "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm"
+    ]
+  },
+  {
+    "frameworkId": "au-privacy-act",
+    "name": "Australia Privacy Act 1988",
+    "alsoKnownAs": [
+      "Australian Privacy Principles",
+      "APPs",
+      "Privacy Act"
+    ],
+    "jurisdiction": "Australia",
+    "region": "APAC",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Office of the Australian Information Commissioner",
+    "officialUrl": "https://www.oaic.gov.au/privacy/privacy-legislation/the-privacy-act",
+    "scopeSummary": "Applies to handling of personal information by APP entities, including overseas entities carrying on business in Australia and collecting Australian personal information.",
+    "keyObligationsSummary": "Requires compliance with the thirteen Australian Privacy Principles covering open and transparent management, collection, use and disclosure, direct marketing, cross-border disclosure, data quality, security, access and correction. Entities must have a clearly expressed and up-to-date privacy policy and take reasonable steps to protect and destroy or de-identify information. Eligible data breaches must be assessed and notified to the OAIC and affected individuals under the Notifiable Data Breaches scheme.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.oaic.gov.au/privacy/privacy-legislation/the-privacy-act",
+      "https://www.oaic.gov.au/privacy/australian-privacy-principles"
+    ]
+  },
+  {
+    "frameworkId": "nz-privacy-act",
+    "name": "New Zealand Privacy Act 2020",
+    "alsoKnownAs": [
+      "NZ Privacy Act",
+      "Information Privacy Principles"
+    ],
+    "jurisdiction": "New Zealand",
+    "region": "APAC",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Office of the Privacy Commissioner (New Zealand)",
+    "officialUrl": "https://www.privacy.org.nz/privacy-act-2020/",
+    "scopeSummary": "Applies to collection, use, disclosure, storage and access of personal information by agencies in New Zealand, including foreign entities operating there.",
+    "keyObligationsSummary": "Requires compliance with the information privacy principles covering purpose, source, collection notice, security, access, correction, accuracy, retention, use, disclosure, unique identifiers and cross-border disclosure. Privacy breaches causing or likely to cause serious harm must be notified to the Privacy Commissioner and affected individuals as soon as practicable. Disclosures to overseas recipients require comparable safeguards under principle 12.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.privacy.org.nz/privacy-act-2020/",
+      "https://www.legislation.govt.nz/act/public/2020/0031/latest/LMS23223.html"
+    ]
+  },
+  {
+    "frameworkId": "pipl-china",
+    "name": "Personal Information Protection Law of China",
+    "alsoKnownAs": [
+      "PIPL"
+    ],
+    "jurisdiction": "China",
+    "region": "APAC",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "National People's Congress; Cyberspace Administration of China",
+    "officialUrl": "http://www.npc.gov.cn/npc/c2/c30834/202108/t20210820_313088.html",
+    "scopeSummary": "Applies to personal information handling activities within China and, extraterritorially, to specified processing of Chinese residents' data outside China.",
+    "keyObligationsSummary": "Requires a lawful basis, usually separate consent for sensitive personal information, cross-border transfers and disclosure to third parties, plus transparency and individual rights including access, correction, deletion and portability. Handlers must conduct personal information protection impact assessments, keep records and, above thresholds, appoint a protection officer and a domestic representative. Cross-border transfers require a CAC security assessment, CAC standard contract filing or certification, subject to current CAC exemption rules.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.gov.cn/xinwen/2021-08/20/content_5632486.htm",
+      "https://www.cac.gov.cn/"
+    ]
+  },
+  {
+    "frameworkId": "china-csl",
+    "name": "Cybersecurity Law of China",
+    "alsoKnownAs": [
+      "CSL",
+      "China Cybersecurity Law"
+    ],
+    "jurisdiction": "China",
+    "region": "APAC",
+    "category": "security",
+    "type": "law",
+    "issuingBody": "National People's Congress; Cyberspace Administration of China",
+    "officialUrl": "http://www.cac.gov.cn/2016-11/07/c_1119867116.htm",
+    "scopeSummary": "Applies to construction, operation, maintenance and use of networks in mainland China, with heightened duties for critical information infrastructure operators.",
+    "keyObligationsSummary": "Requires tiered network security protection under the Multi-Level Protection Scheme, real-name registration for certain services, incident response and reporting, and retention of network logs for at least six months. Critical information infrastructure operators face procurement security reviews, annual assessments and data localization for personal information and important data. Compliance frequently requires in-country hosting and Chinese-language documentation.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.gov.cn/xinwen/2016-11/07/content_5129723.htm",
+      "https://www.cac.gov.cn/"
+    ]
+  },
+  {
+    "frameworkId": "china-dsl",
+    "name": "Data Security Law of China",
+    "alsoKnownAs": [
+      "DSL",
+      "China Data Security Law"
+    ],
+    "jurisdiction": "China",
+    "region": "APAC",
+    "category": "security",
+    "type": "law",
+    "issuingBody": "National People's Congress",
+    "officialUrl": "http://www.npc.gov.cn/npc/c2/c30834/202106/t20210610_311888.html",
+    "scopeSummary": "Applies to all data, not only personal information, with heightened duties for important data and national core data.",
+    "keyObligationsSummary": "Requires a data classification and protection system, risk assessments for important data handlers with reports to regulators, and security management responsibilities across the data lifecycle. Cross-border provision of important data requires security assessment, and providing data to foreign law enforcement requires Chinese government approval. Sector regulators define important data catalogs.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.gov.cn/xinwen/2021-06/11/content_5616919.htm",
+      "https://www.cac.gov.cn/"
+    ]
+  },
+  {
+    "frameworkId": "pdpa-singapore",
+    "name": "Personal Data Protection Act (Singapore)",
+    "alsoKnownAs": [
+      "PDPA Singapore",
+      "SG PDPA"
+    ],
+    "jurisdiction": "Singapore",
+    "region": "APAC",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Personal Data Protection Commission Singapore",
+    "officialUrl": "https://www.pdpc.gov.sg/overview-of-pdpa/the-legislation/personal-data-protection-act",
+    "scopeSummary": "Applies to personal data of individuals handled by organizations in Singapore, excluding public agencies and, for most obligations, employees acting for their organization.",
+    "keyObligationsSummary": "Requires consent or an applicable exception, notification of purposes, and compliance with obligations covering accuracy, protection, retention limitation, access and correction, and transfer limitation. Organizations must appoint a Data Protection Officer and register the contact details, and must notify the PDPC and affected individuals of notifiable data breaches, generally within three calendar days of assessment. Do Not Call provisions apply to marketing messages to Singapore telephone numbers.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.pdpc.gov.sg/overview-of-pdpa/the-legislation/personal-data-protection-act",
+      "https://www.pdpc.gov.sg/"
+    ]
+  },
+  {
+    "frameworkId": "pdpa-thailand",
+    "name": "Personal Data Protection Act (Thailand)",
+    "alsoKnownAs": [
+      "Thailand PDPA",
+      "PDPA B.E. 2562"
+    ],
+    "jurisdiction": "Thailand",
+    "region": "APAC",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Personal Data Protection Committee (Thailand)",
+    "officialUrl": "https://www.pdpc.or.th/",
+    "scopeSummary": "Applies to collection, use and disclosure of personal data in Thailand, with extraterritorial reach for offering goods or services to, or monitoring behavior of, individuals in Thailand.",
+    "keyObligationsSummary": "Requires a lawful basis, explicit consent for sensitive personal data, privacy notices and support for data subject rights including access, portability, erasure and objection. Controllers must maintain records of processing activities, implement security measures and notify the Office of the PDPC of personal data breaches within 72 hours where feasible. A data protection officer and a local representative are required in specified cases, and cross-border transfers need adequate protection or an approved mechanism.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.pdpc.or.th/",
+      "https://www.mdes.go.th/"
+    ]
+  },
+  {
+    "frameworkId": "appi-japan",
+    "name": "Act on the Protection of Personal Information",
+    "alsoKnownAs": [
+      "APPI",
+      "Japan APPI"
+    ],
+    "jurisdiction": "Japan",
+    "region": "APAC",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Personal Information Protection Commission (Japan)",
+    "officialUrl": "https://www.ppc.go.jp/en/legal/",
+    "scopeSummary": "Applies to handling of personal information, pseudonymously processed information and anonymously processed information by business operators, with extraterritorial application.",
+    "keyObligationsSummary": "Requires specification and notification of utilization purposes, limits on use and third-party provision, security control measures and records for third-party transfers. Operators must respond to disclosure, correction and cessation requests, and must report leaks that risk individual rights to the Personal Information Protection Commission and notify affected individuals. Cross-border transfers require consent with prescribed information, an adequacy finding or equivalent safeguards with ongoing verification.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.ppc.go.jp/en/legal/",
+      "https://www.ppc.go.jp/en/"
+    ]
+  },
+  {
+    "frameworkId": "pipa-korea",
+    "name": "Personal Information Protection Act (Korea)",
+    "alsoKnownAs": [
+      "PIPA Korea",
+      "K-PIPA"
+    ],
+    "jurisdiction": "South Korea",
+    "region": "APAC",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Personal Information Protection Commission (Korea)",
+    "officialUrl": "https://www.pipc.go.kr/eng/",
+    "scopeSummary": "Applies to processing of personal information of Korean data subjects, including pseudonymized data rules and specific provisions for overseas transfers.",
+    "keyObligationsSummary": "Requires a specific legal basis, typically granular consent, privacy notices, and support for rights including access, correction, deletion and suspension of processing. Controllers must appoint a privacy officer, implement prescribed technical and administrative safeguards, and report data breaches to the PIPC and affected individuals within statutory deadlines. Overseas transfers require consent or another listed basis, and the PIPC can order transfer suspension.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.pipc.go.kr/eng/",
+      "https://www.law.go.kr/LSW/eng/engMain.do"
+    ]
+  },
+  {
+    "frameworkId": "india-dpdp",
+    "name": "Digital Personal Data Protection Act, 2023",
+    "alsoKnownAs": [
+      "DPDP Act",
+      "DPDPA India"
+    ],
+    "jurisdiction": "India",
+    "region": "APAC",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Ministry of Electronics and Information Technology (India)",
+    "officialUrl": "https://www.meity.gov.in/data-protection-framework",
+    "scopeSummary": "Applies to digital personal data, including data digitized after collection, with exemptions for certain government processing and publicly available data.",
+    "keyObligationsSummary": "Requires clear notice and consent or a legitimate use basis, appointment of a consent manager where used, and honoring rights to access, correction, erasure and grievance redressal. Data fiduciaries must implement reasonable security safeguards, notify the Data Protection Board and affected data principals of breaches, and observe additional duties for children's data. Significant data fiduciaries face extra obligations including a data protection officer in India, independent audits and impact assessments, with timelines set by the DPDP Rules.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.meity.gov.in/data-protection-framework",
+      "https://www.meity.gov.in/"
+    ]
+  },
+  {
+    "frameworkId": "popia",
+    "name": "Protection of Personal Information Act",
+    "alsoKnownAs": [
+      "POPIA",
+      "POPI Act"
+    ],
+    "jurisdiction": "South Africa",
+    "region": "MEA",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Information Regulator (South Africa)",
+    "officialUrl": "https://inforegulator.org.za/",
+    "scopeSummary": "Applies to processing of personal information entered in a record by or for a responsible party domiciled in South Africa, or using means in South Africa.",
+    "keyObligationsSummary": "Requires compliance with eight conditions for lawful processing covering accountability, processing limitation, purpose specification, further processing limitation, information quality, openness, security safeguards and data subject participation. Responsible parties must register an Information Officer with the Information Regulator, maintain security measures and notify the Regulator and data subjects of security compromises. Special personal information and children's data require additional authorization, and cross-border transfers require a listed basis.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://inforegulator.org.za/",
+      "https://www.gov.za/documents/protection-personal-information-act"
+    ]
+  },
+  {
+    "frameworkId": "nigeria-ndpa",
+    "name": "Nigeria Data Protection Act 2023",
+    "alsoKnownAs": [
+      "NDPA",
+      "NDP Act"
+    ],
+    "jurisdiction": "Nigeria",
+    "region": "MEA",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Nigeria Data Protection Commission",
+    "officialUrl": "https://ndpc.gov.ng/",
+    "scopeSummary": "Applies to processing of personal data where the controller or processor is in Nigeria, processes Nigerian residents' data, or targets people in Nigeria.",
+    "keyObligationsSummary": "Requires a lawful basis, transparency, and support for data subject rights including access, rectification, erasure and objection. Controllers and processors of major importance must register with the Nigeria Data Protection Commission, appoint a data protection officer and conduct compliance audits. Security breaches must be reported to the Commission within 72 hours, and cross-border transfers require an adequacy determination or another statutory basis.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://ndpc.gov.ng/",
+      "https://ndpc.gov.ng/Files/Nigeria_Data_Protection_Act_2023.pdf"
+    ]
+  },
+  {
+    "frameworkId": "saudi-pdpl",
+    "name": "Saudi Personal Data Protection Law",
+    "alsoKnownAs": [
+      "Saudi PDPL",
+      "KSA PDPL"
+    ],
+    "jurisdiction": "Saudi Arabia",
+    "region": "MEA",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Saudi Data and Artificial Intelligence Authority (SDAIA)",
+    "officialUrl": "https://sdaia.gov.sa/en/SDAIA/about/Documents/PersonalDataProtectionLaw.pdf",
+    "scopeSummary": "Applies to processing of personal data in Saudi Arabia by public and private entities, with extraterritorial reach for data of residents.",
+    "keyObligationsSummary": "Requires a lawful basis, privacy notices, records of processing and registration on the SDAIA national platform where required, plus support for rights of access, correction and destruction. Controllers must conduct impact assessments for higher-risk processing, appoint a personal data protection officer in specified cases, and notify SDAIA of breaches within 72 hours. Cross-border transfers require compliance with the transfer regulations, including risk assessments and, in some cases, appropriate safeguards.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://sdaia.gov.sa/en/SDAIA/about/Documents/PersonalDataProtectionLaw.pdf",
+      "https://sdaia.gov.sa/en/default.aspx"
+    ]
+  },
+  {
+    "frameworkId": "uae-pdpl",
+    "name": "UAE Personal Data Protection Law",
+    "alsoKnownAs": [
+      "UAE PDPL",
+      "Federal Decree-Law No. 45 of 2021"
+    ],
+    "jurisdiction": "United Arab Emirates",
+    "region": "MEA",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "UAE Data Office",
+    "officialUrl": "https://u.ae/en/about-the-uae/digital-uae/data/data-protection-laws",
+    "scopeSummary": "Applies onshore in the UAE outside free zones with their own regimes; the DIFC Data Protection Law and ADGM Data Protection Regulations apply separately within those financial free zones.",
+    "keyObligationsSummary": "Requires a lawful basis or consent meeting statutory conditions, privacy notices, records of processing and support for rights including access, correction, erasure, portability and objection. Controllers must implement appropriate security measures, notify the UAE Data Office and affected individuals of breaches without undue delay, and appoint a data protection officer in specified higher-risk cases. Cross-border transfers require an adequate destination or specified safeguards such as contractual clauses.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://u.ae/en/about-the-uae/digital-uae/data/data-protection-laws",
+      "https://uaelegislation.gov.ae/en/legislations/1972"
+    ]
+  },
+  {
+    "frameworkId": "swiss-fadp",
+    "name": "Swiss Federal Act on Data Protection",
+    "alsoKnownAs": [
+      "FADP",
+      "revFADP",
+      "nFADP",
+      "DSG"
+    ],
+    "jurisdiction": "Switzerland",
+    "region": "EU",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Federal Data Protection and Information Commissioner (Switzerland)",
+    "officialUrl": "https://www.fedlex.admin.ch/eli/cc/2022/491/en",
+    "scopeSummary": "Applies to processing of personal data of natural persons by private persons and federal bodies, with extraterritorial effect for processing that affects Switzerland.",
+    "keyObligationsSummary": "Requires transparency, proportionality and purpose limitation, a register of processing activities for many organizations, data protection impact assessments for high-risk processing and privacy by design and default. Data security breaches that pose a high risk must be reported to the FDPIC as soon as possible. Transfers abroad require adequacy, contractual safeguards such as SCCs with Swiss adaptations, or another legal basis, and some foreign controllers must appoint a Swiss representative.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.fedlex.admin.ch/eli/cc/2022/491/en",
+      "https://www.edoeb.admin.ch/en"
+    ]
+  },
+  {
+    "frameworkId": "turkey-kvkk",
+    "name": "Turkish Personal Data Protection Law",
+    "alsoKnownAs": [
+      "KVKK",
+      "Law No. 6698"
+    ],
+    "jurisdiction": "Turkey",
+    "region": "MEA",
+    "category": "privacy",
+    "type": "law",
+    "issuingBody": "Kisisel Verileri Koruma Kurumu (KVKK)",
+    "officialUrl": "https://www.kvkk.gov.tr/",
+    "scopeSummary": "Applies to processing of personal data of natural persons in Turkey by controllers and processors, wholly or partly by automated means.",
+    "keyObligationsSummary": "Requires a lawful basis, explicit consent for special categories unless an exception applies, privacy notices, and registration in the VERBIS data controllers registry unless exempt. Controllers must respond to data subject applications within 30 days, take technical and organizational measures, and notify the Authority within 72 hours of learning of a data breach. Cross-border transfers rely on adequacy, standard contracts filed with the Authority, binding corporate rules or explicit consent under the amended transfer regime.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.kvkk.gov.tr/",
+      "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.6698.pdf"
+    ]
+  },
+  {
+    "frameworkId": "nerc-cip",
+    "name": "NERC CIP Standards",
+    "alsoKnownAs": [
+      "NERC Critical Infrastructure Protection",
+      "CIP-002 through CIP-015"
+    ],
+    "jurisdiction": "United States and Canada",
+    "region": "US",
+    "category": "industry",
+    "type": "standard",
+    "issuingBody": "North American Electric Reliability Corporation",
+    "officialUrl": "https://www.nerc.com/pa/Stand/Pages/CIPStandards.aspx",
+    "scopeSummary": "Applies to BES Cyber Systems and associated assets categorized as high, medium or low impact.",
+    "keyObligationsSummary": "Requires categorization of BES cyber systems and implementation of standards covering security management controls, personnel and training, electronic security perimeters, physical security, system security management, incident reporting, recovery, configuration change management, information protection and supply chain risk. Compliance is enforced by NERC and regional entities through audits and self-reports. Registered entities must retain evidence for defined periods.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.nerc.com/pa/Stand/Pages/CIPStandards.aspx",
+      "https://www.nerc.com/pa/comp/Pages/default.aspx"
+    ]
+  },
+  {
+    "frameworkId": "tsa-security-directives",
+    "name": "TSA Cybersecurity Security Directives",
+    "alsoKnownAs": [
+      "TSA pipeline security directives",
+      "TSA rail security directives"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "industry",
+    "type": "regulation",
+    "issuingBody": "US Transportation Security Administration",
+    "officialUrl": "https://www.tsa.gov/sd-and-ea",
+    "scopeSummary": "Covers designated critical cyber systems, including information technology and operational technology systems supporting the regulated operations.",
+    "keyObligationsSummary": "Requires designation of a cybersecurity coordinator, reporting of cybersecurity incidents to CISA generally within 24 hours, a cybersecurity assessment plan with annual testing of controls, and a TSA-approved cybersecurity implementation plan including network segmentation, access control, continuous monitoring and patching. Owners and operators must submit plans for approval and report on assessment results. Directives are periodically renewed and updated, and TSA has proposed a permanent rule.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.tsa.gov/sd-and-ea",
+      "https://www.tsa.gov/for-industry/surface-transportation"
+    ]
+  },
+  {
+    "frameworkId": "fsma",
+    "name": "Food Safety Modernization Act",
+    "alsoKnownAs": [
+      "FSMA",
+      "FSMA Rules",
+      "21 CFR Part 117"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "industry",
+    "type": "law",
+    "issuingBody": "US Food and Drug Administration",
+    "officialUrl": "https://www.fda.gov/food/guidance-regulation-food-and-dietary-supplements/food-safety-modernization-act-fsma",
+    "scopeSummary": "Covers human and animal food operations subject to FDA jurisdiction, with exemptions and modified requirements for qualified small businesses.",
+    "keyObligationsSummary": "Requires a written food safety plan with hazard analysis and risk-based preventive controls, monitoring, corrective actions, verification and records, implemented under Part 117. Importers must operate a Foreign Supplier Verification Program, and produce safety, sanitary transportation and intentional adulteration rules apply to relevant operations. The Food Traceability Rule requires additional records and traceability lot codes for listed foods, with the compliance date extended to July 2028.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.fda.gov/food/guidance-regulation-food-and-dietary-supplements/food-safety-modernization-act-fsma",
+      "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-117"
+    ]
+  },
+  {
+    "frameworkId": "haccp",
+    "name": "Hazard Analysis and Critical Control Point",
+    "alsoKnownAs": [
+      "HACCP"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "industry",
+    "type": "framework",
+    "issuingBody": "US Food and Drug Administration",
+    "officialUrl": "https://www.fda.gov/food/guidance-regulation-food-and-dietary-supplements/hazard-analysis-critical-control-point-haccp",
+    "scopeSummary": "Covers food production processes and the identification and control of biological, chemical and physical hazards at critical control points.",
+    "keyObligationsSummary": "Requires a hazard analysis, identification of critical control points with critical limits, monitoring procedures, corrective actions, verification activities and recordkeeping. Mandatory application arises under FDA seafood and juice HACCP regulations and USDA FSIS rules, while other sectors adopt it voluntarily or under buyer schemes such as GFSI-recognized standards. Plans must be validated and reassessed when processes change.",
+    "mandatoryVsVoluntary": "mixed",
+    "researchSourceUrls": [
+      "https://www.fda.gov/food/hazard-analysis-critical-control-point-haccp",
+      "https://www.fsis.usda.gov/inspection/compliance-guidance/haccp"
+    ]
+  },
+  {
+    "frameworkId": "tl9000",
+    "name": "TL 9000",
+    "alsoKnownAs": [
+      "TL 9000 Quality Management System",
+      "QuEST Forum"
+    ],
+    "jurisdiction": "Global",
+    "region": "Global",
+    "category": "industry",
+    "type": "certification",
+    "issuingBody": "TIA QuEST Forum",
+    "officialUrl": "https://www.tl9000.org/",
+    "scopeSummary": "Covers the quality management system for telecom products and services in the declared scope, including hardware, software and services categories.",
+    "keyObligationsSummary": "Builds on ISO 9001 with telecom-specific adders and requires submission of standardized performance measurements to the industry measurement repository. Certification is issued by accredited certification bodies following audit. Measurement reporting is a distinguishing ongoing obligation compared with plain ISO 9001.",
+    "mandatoryVsVoluntary": "voluntary",
+    "researchSourceUrls": [
+      "https://www.tl9000.org/",
+      "https://tiaonline.org/what-we-do/quest-forum/"
+    ]
+  },
+  {
+    "frameworkId": "sasb-standards",
+    "name": "SASB Standards",
+    "alsoKnownAs": [
+      "Sustainability Accounting Standards Board Standards"
+    ],
+    "jurisdiction": "Global",
+    "region": "Global",
+    "category": "industry",
+    "type": "standard",
+    "issuingBody": "IFRS Foundation",
+    "officialUrl": "https://sasb.ifrs.org/",
+    "scopeSummary": "Covers industry-specific sustainability topics and metrics across 77 industries, focused on financially material information for investors.",
+    "keyObligationsSummary": "Provides disclosure topics and accounting metrics by industry that companies use to report financially material sustainability information. The standards are voluntary in themselves but are referenced by IFRS S1 for identifying industry-specific risks, opportunities and metrics. They are maintained by the ISSB under the IFRS Foundation.",
+    "mandatoryVsVoluntary": "voluntary",
+    "researchSourceUrls": [
+      "https://sasb.ifrs.org/",
+      "https://sasb.ifrs.org/standards/"
+    ]
+  },
+  {
+    "frameworkId": "gri-standards",
+    "name": "GRI Standards",
+    "alsoKnownAs": [
+      "Global Reporting Initiative Standards"
+    ],
+    "jurisdiction": "Global",
+    "region": "Global",
+    "category": "industry",
+    "type": "standard",
+    "issuingBody": "Global Reporting Initiative",
+    "officialUrl": "https://www.globalreporting.org/standards/",
+    "scopeSummary": "Covers an organization's most significant impacts on the economy, environment and people, including human rights, using an impact materiality lens.",
+    "keyObligationsSummary": "Requires reporting in accordance with universal standards covering context, material topics and management approach, supplemented by sector and topic standards. Organizations determine material topics through an impact materiality process and disclose management approach and metrics. Use is voluntary and self-declared, with third-party assurance optional.",
+    "mandatoryVsVoluntary": "voluntary",
+    "researchSourceUrls": [
+      "https://www.globalreporting.org/standards/",
+      "https://www.globalreporting.org/"
+    ]
+  },
+  {
+    "frameworkId": "ifrs-s1-s2",
+    "name": "IFRS Sustainability Disclosure Standards",
+    "alsoKnownAs": [
+      "IFRS S1",
+      "IFRS S2",
+      "ISSB standards"
+    ],
+    "jurisdiction": "Global",
+    "region": "Global",
+    "category": "industry",
+    "type": "standard",
+    "issuingBody": "International Sustainability Standards Board, IFRS Foundation",
+    "officialUrl": "https://www.ifrs.org/issued-standards/ifrs-sustainability-standards-navigator/",
+    "scopeSummary": "Covers sustainability-related risks and opportunities that could reasonably be expected to affect an entity's cash flows, access to finance or cost of capital, with IFRS S2 focused on climate.",
+    "keyObligationsSummary": "Requires disclosure of governance, strategy, risk management, and metrics and targets for material sustainability-related risks and opportunities, aligned with the TCFD structure. IFRS S2 adds climate-specific requirements including Scope 1, 2 and, subject to relief, Scope 3 greenhouse gas emissions measured using the GHG Protocol, plus climate resilience analysis. Legal force depends on each jurisdiction's adoption decisions and timelines.",
+    "mandatoryVsVoluntary": "mixed",
+    "researchSourceUrls": [
+      "https://www.ifrs.org/issued-standards/ifrs-sustainability-standards-navigator/",
+      "https://www.ifrs.org/groups/international-sustainability-standards-board/"
+    ]
+  }
+]
