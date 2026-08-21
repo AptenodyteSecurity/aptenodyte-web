@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import MobileNav from "@/components/MobileNav";
 import { ctaDemoClassName, ctaLoginClassName, navLinks } from "@/lib/nav";
@@ -7,9 +8,13 @@ export default function Header() {
     <header className="relative border-b-2 border-black bg-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4">
         <Link href="/" className="flex items-center gap-3">
-          <span
-            aria-hidden="true"
-            className="h-8 w-8 shrink-0 border-2 border-black bg-white"
+          <Image
+            src="/AptenodyteLogo9.png"
+            alt="Aptenodyte"
+            width={64}
+            height={64}
+            className="h-12 w-12 object-contain"
+            priority
           />
           <span className="text-lg font-bold tracking-tight text-black">
             Aptenodyte
