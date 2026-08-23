@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import { Atkinson_Hyperlegible } from "next/font/google";
 import Script from "next/script";
 import Footer from "@/components/Footer";
@@ -44,6 +45,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </div>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
