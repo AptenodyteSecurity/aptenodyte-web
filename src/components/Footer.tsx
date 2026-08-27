@@ -28,7 +28,10 @@ export default function Footer() {
           <h2 className="text-sm font-bold text-black">Contact</h2>
           <address className="mt-3 not-italic">
             <p className="text-sm text-zinc-700">
-              <a href="UNAVAILABLE">UNAVAILABLE@aptenodyte.com</a>
+              <a href="mailto:rhett@aptenodyte.com">rhett@aptenodyte.com</a>
+            </p>
+            <p className="mt-1 text-sm text-zinc-700">
+              <a href="mailto:jake@aptenodyte.com">jake@aptenodyte.com</a>
             </p>
             <p className="mt-2 text-sm text-zinc-700">United States</p>
           </address>
