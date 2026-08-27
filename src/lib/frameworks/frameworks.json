@@ -3048,5 +3048,478 @@
       "https://www.ifrs.org/issued-standards/ifrs-sustainability-standards-navigator/",
       "https://www.ifrs.org/groups/international-sustainability-standards-board/"
     ]
+  },
+  {
+    "frameworkId": "fincen-msb",
+    "name": "FinCEN Money Services Business Registration",
+    "alsoKnownAs": [
+      "MSB registration",
+      "FinCEN Form 107",
+      "31 CFR 1022.380"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "financial",
+    "type": "regulation",
+    "issuingBody": "US Financial Crimes Enforcement Network (FinCEN)",
+    "officialUrl": "https://www.fincen.gov/money-services-business-msb-information",
+    "scopeSummary": "Applies to entities that provide money services business activities in the United States as defined in FinCEN regulations, whether or not state-licensed.",
+    "keyObligationsSummary": "Requires registration with FinCEN generally within 180 days of establishing the MSB, renewal every two years, designation of a compliance officer contact, and maintenance of an agent list where applicable. Registration is separate from state money transmitter licensing and from the BSA/AML program obligations that also apply to MSBs.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.fincen.gov/money-services-business-msb-information",
+      "https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1022"
+    ]
+  },
+  {
+    "frameworkId": "us-mtl",
+    "name": "US State Money Transmitter Licensing",
+    "alsoKnownAs": [
+      "MTL",
+      "money transmission license",
+      "state money transmitter laws"
+    ],
+    "jurisdiction": "United States - State",
+    "region": "US-State",
+    "category": "financial",
+    "type": "regulation",
+    "issuingBody": "State banking and financial services regulators",
+    "officialUrl": "https://www.csbs.org/money-transmission",
+    "scopeSummary": "Covers money transmission and related activities as defined by each state statute, often including receipt of money for transfer to another person or location and certain prepaid or virtual currency activities.",
+    "keyObligationsSummary": "Typically requires a license in each state of operation before launching, net worth and surety bond requirements, background checks on control persons, permissible investment and safeguarding of customer funds, examination readiness, and ongoing reporting. Definitions and exemptions vary by state; multi-state expansion is a primary compliance cost driver for payments companies.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.csbs.org/money-transmission",
+      "https://mortgage.nationwidelicensingsystem.org/slr/Pages/default.aspx"
+    ]
+  },
+  {
+    "frameworkId": "mtma",
+    "name": "Money Transmission Modernization Act",
+    "alsoKnownAs": [
+      "MTMA",
+      "CSBS model money transmission law"
+    ],
+    "jurisdiction": "United States - State",
+    "region": "US-State",
+    "category": "financial",
+    "type": "framework",
+    "issuingBody": "Conference of State Bank Supervisors (CSBS)",
+    "officialUrl": "https://www.csbs.org/money-transmission-modernization-act",
+    "scopeSummary": "Provides a model legal framework for licensing, prudential standards, and supervision of money transmission, including virtual currency in adopting states' enactments.",
+    "keyObligationsSummary": "Where enacted, establishes licensing thresholds, net worth and surety bond formulas, permissible investments, customer fund safeguarding, and supervisory cooperation through NMLS. It does not itself bind companies until adopted by a state legislature; non-adopting states retain legacy money transmitter statutes.",
+    "mandatoryVsVoluntary": "mixed",
+    "researchSourceUrls": [
+      "https://www.csbs.org/money-transmission-modernization-act",
+      "https://www.csbs.org/money-transmission"
+    ]
+  },
+  {
+    "frameworkId": "nmls-lending",
+    "name": "NMLS State Lending and Mortgage Licensing",
+    "alsoKnownAs": [
+      "NMLS",
+      "SAFE Act licensing",
+      "state consumer lending licenses"
+    ],
+    "jurisdiction": "United States - State",
+    "region": "US-State",
+    "category": "financial",
+    "type": "regulation",
+    "issuingBody": "State financial regulators via Nationwide Multistate Licensing System",
+    "officialUrl": "https://mortgage.nationwidelicensingsystem.org/",
+    "scopeSummary": "Covers company and individual licenses administered through NMLS for mortgage and other financial services activities as defined by each participating state.",
+    "keyObligationsSummary": "Requires license applications and renewals through NMLS, disclosure of ownership and control persons, background checks, surety bonds or net worth where required, call reports, and compliance with underlying state lending laws. The SAFE Act drives mortgage loan originator registration and licensing; other lending activities remain state-defined.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://mortgage.nationwidelicensingsystem.org/",
+      "https://www.csbs.org/nationwide-multistate-licensing-system"
+    ]
+  },
+  {
+    "frameworkId": "ny-bitlicense",
+    "name": "New York BitLicense",
+    "alsoKnownAs": [
+      "23 NYCRR Part 200",
+      "NY virtual currency license"
+    ],
+    "jurisdiction": "United States - New York",
+    "region": "US-State",
+    "category": "financial",
+    "type": "regulation",
+    "issuingBody": "New York State Department of Financial Services",
+    "officialUrl": "https://www.dfs.ny.gov/virtual_currency_businesses",
+    "scopeSummary": "Covers receiving, transmitting, storing, exchanging, or issuing virtual currency, and controlling or administering virtual currency, when New York nexus exists.",
+    "keyObligationsSummary": "Requires a BitLicense or a limited purpose trust charter before engaging in covered activity, capital and surety requirements, AML/KYC program, cybersecurity compliance overlapping Part 500, custody and consumer protection rules, and ongoing reporting to DFS.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.dfs.ny.gov/virtual_currency_businesses",
+      "https://www.dfs.ny.gov/industry_guidance/regulations/virtual_currency"
+    ]
+  },
+  {
+    "frameworkId": "cfpb-reg-e",
+    "name": "CFPB Regulation E (Electronic Fund Transfers)",
+    "alsoKnownAs": [
+      "Reg E",
+      "EFTA",
+      "12 CFR Part 1005"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "financial",
+    "type": "regulation",
+    "issuingBody": "US Consumer Financial Protection Bureau",
+    "officialUrl": "https://www.consumerfinance.gov/rules-policy/regulations/1005/",
+    "scopeSummary": "Applies to electronic fund transfers that debit or credit a consumer account, and to remittance transfers under subpart B, with product-specific coverage rules.",
+    "keyObligationsSummary": "Requires initial and change-in-terms disclosures, periodic statements or alternatives, provisional credit and error investigation timelines, limited consumer liability for unauthorized transfers, and remittance transfer disclosures and cancellation rights where applicable.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.consumerfinance.gov/rules-policy/regulations/1005/",
+      "https://www.ecfr.gov/current/title-12/chapter-X/part-1005"
+    ]
+  },
+  {
+    "frameworkId": "cfpb-reg-z",
+    "name": "CFPB Regulation Z (Truth in Lending)",
+    "alsoKnownAs": [
+      "Reg Z",
+      "TILA",
+      "12 CFR Part 1026"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "financial",
+    "type": "regulation",
+    "issuingBody": "US Consumer Financial Protection Bureau",
+    "officialUrl": "https://www.consumerfinance.gov/rules-policy/regulations/1026/",
+    "scopeSummary": "Covers consumer credit transactions and accounts as defined in TILA/Reg Z, with distinct rules for open-end credit, closed-end credit, and mortgages.",
+    "keyObligationsSummary": "Requires clear APR and finance charge disclosures, account-opening and periodic statements for open-end credit, Loan Estimate and Closing Disclosure timing for most mortgages, ability-to-repay and qualified mortgage rules where applicable, and advertising restrictions.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.consumerfinance.gov/rules-policy/regulations/1026/",
+      "https://www.ecfr.gov/current/title-12/chapter-X/part-1026"
+    ]
+  },
+  {
+    "frameworkId": "cfpb-reg-b",
+    "name": "CFPB Regulation B (Equal Credit Opportunity)",
+    "alsoKnownAs": [
+      "Reg B",
+      "ECOA",
+      "12 CFR Part 1002"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "financial",
+    "type": "regulation",
+    "issuingBody": "US Consumer Financial Protection Bureau",
+    "officialUrl": "https://www.consumerfinance.gov/rules-policy/regulations/1002/",
+    "scopeSummary": "Applies to applications for and extensions of credit to consumers and, in many respects, businesses, with special rules for adverse action and appraisal notices.",
+    "keyObligationsSummary": "Prohibits discrimination on prohibited bases, requires notices of action taken and statements of specific reasons for adverse action, limits certain information collection practices, and requires retention of application records. Small business lending data collection rules under Section 1071 are implemented through Reg B amendments where in effect.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.consumerfinance.gov/rules-policy/regulations/1002/",
+      "https://www.ecfr.gov/current/title-12/chapter-X/part-1002"
+    ]
+  },
+  {
+    "frameworkId": "cfpb-udaap",
+    "name": "UDAAP (Unfair, Deceptive, or Abusive Acts or Practices)",
+    "alsoKnownAs": [
+      "UDAAP",
+      "CFPA Section 1031/1036"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "financial",
+    "type": "law",
+    "issuingBody": "US Consumer Financial Protection Bureau; federal and state banking agencies",
+    "officialUrl": "https://www.consumerfinance.gov/compliance/supervision-examinations/unfair-deceptive-or-abusive-acts-or-practices-udaaps/",
+    "scopeSummary": "Applies to acts or practices in connection with consumer financial products or services that are unfair, deceptive, or abusive under the Consumer Financial Protection Act standards.",
+    "keyObligationsSummary": "Requires product design, marketing, servicing, and collections practices that do not mislead consumers, cause substantial unavoidable injury that is not outweighed by benefits, or take unreasonable advantage of consumers. Compliance programs typically include complaint analytics, marketing review, and product governance.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.consumerfinance.gov/compliance/supervision-examinations/unfair-deceptive-or-abusive-acts-or-practices-udaaps/",
+      "https://www.consumerfinance.gov/rules-policy/final-rules/"
+    ]
+  },
+  {
+    "frameworkId": "investment-advisers-act",
+    "name": "Investment Advisers Act of 1940",
+    "alsoKnownAs": [
+      "Advisers Act",
+      "Form ADV",
+      "RIA registration"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "financial",
+    "type": "law",
+    "issuingBody": "US Securities and Exchange Commission; state securities regulators",
+    "officialUrl": "https://www.sec.gov/resources-small-businesses/small-business-compliance-guides/regulation-investment-advisers",
+    "scopeSummary": "Covers advisory relationships, marketing, custody, compliance programs, and disclosures for registered investment advisers.",
+    "keyObligationsSummary": "Requires SEC or state registration (often via Form ADV), a written compliance program under Rule 206(4)-7, fiduciary duty of care and loyalty, marketing rule compliance, custody rule protections where applicable, books and records, and delivery of Form ADV Part 2 brochure and Form CRS where required.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.sec.gov/resources-small-businesses/small-business-compliance-guides/regulation-investment-advisers",
+      "https://www.sec.gov/investment/fast-answers/divisionsinvestmentiaregulationformadvhtm"
+    ]
+  },
+  {
+    "frameworkId": "reg-bi",
+    "name": "SEC Regulation Best Interest",
+    "alsoKnownAs": [
+      "Reg BI",
+      "Exchange Act Rule 15l-1"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "financial",
+    "type": "regulation",
+    "issuingBody": "US Securities and Exchange Commission",
+    "officialUrl": "https://www.sec.gov/regulation-best-interest",
+    "scopeSummary": "Applies to recommendations to retail customers; does not replace the Advisers Act fiduciary standard for RIAs.",
+    "keyObligationsSummary": "Requires a best interest standard composed of disclosure, care, conflict of interest, and compliance obligations when making recommendations. Firms must deliver Form CRS, identify and mitigate conflicts, and maintain policies reasonably designed to achieve compliance with Reg BI.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.sec.gov/regulation-best-interest",
+      "https://www.finra.org/rules-guidance/key-topics/regulation-best-interest"
+    ]
+  },
+  {
+    "frameworkId": "reg-s-p",
+    "name": "SEC Regulation S-P",
+    "alsoKnownAs": [
+      "Reg S-P",
+      "privacy of consumer financial information for broker-dealers and advisers"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "financial",
+    "type": "regulation",
+    "issuingBody": "US Securities and Exchange Commission",
+    "officialUrl": "https://www.sec.gov/rules/final/2024/34-100155.pdf",
+    "scopeSummary": "Covers nonpublic personal information about consumers obtained in connection with covered firms' business.",
+    "keyObligationsSummary": "Requires privacy notices, limits on sharing nonpublic personal information, and written policies for protecting customer information. 2024 amendments add incident response program requirements and customer notification of certain unauthorized access to sensitive customer information, with compliance dates phased by firm size.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.sec.gov/rules/final/2024/34-100155.pdf",
+      "https://www.sec.gov/investment/regulation-s-p"
+    ]
+  },
+  {
+    "frameworkId": "nacha",
+    "name": "NACHA Operating Rules (ACH)",
+    "alsoKnownAs": [
+      "ACH Rules",
+      "Nacha Operating Rules & Guidelines"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "financial",
+    "type": "standard",
+    "issuingBody": "Nacha",
+    "officialUrl": "https://www.nacha.org/rules",
+    "scopeSummary": "Covers ACH entries, authorizations, returns, warranties, and risk management for Originators, ODFIs, RDFIs, and Third-Party Senders.",
+    "keyObligationsSummary": "Requires valid consumer or corporate authorizations, data security obligations for account numbers, return rate monitoring, Third-Party Sender registration and risk management, and compliance with evolving Same Day ACH and risk rules. Enforcement is through financial institution agreements and Nacha enforcement rather than a government license.",
+    "mandatoryVsVoluntary": "contractual",
+    "researchSourceUrls": [
+      "https://www.nacha.org/rules",
+      "https://www.nacha.org/ach-network"
+    ]
+  },
+  {
+    "frameworkId": "card-network-rules",
+    "name": "Payment Card Network Rules",
+    "alsoKnownAs": [
+      "Visa Core Rules",
+      "Mastercard Rules",
+      "card scheme rules"
+    ],
+    "jurisdiction": "Global",
+    "region": "Global",
+    "category": "financial",
+    "type": "standard",
+    "issuingBody": "Visa; Mastercard; other card networks",
+    "officialUrl": "https://usa.visa.com/support/consumer/visa-rules.html",
+    "scopeSummary": "Covers brand use, transaction processing, chargebacks, fraud monitoring, data use, and onboarding of merchants and payment facilitators.",
+    "keyObligationsSummary": "Requires compliance with network operating regulations, registration of payment facilitators and certain high-risk merchants, chargeback and fraud program thresholds, brand and disclosure rules, and settlement obligations. Distinct from PCI DSS, though networks may mandate PCI validation as a condition of participation.",
+    "mandatoryVsVoluntary": "contractual",
+    "researchSourceUrls": [
+      "https://usa.visa.com/support/consumer/visa-rules.html",
+      "https://www.mastercard.us/en-us/business/overview/support/rules.html"
+    ]
+  },
+  {
+    "frameworkId": "uk-open-banking",
+    "name": "UK Open Banking",
+    "alsoKnownAs": [
+      "CMA Open Banking Order",
+      "Open Banking Implementation Entity standards"
+    ],
+    "jurisdiction": "United Kingdom",
+    "region": "UK",
+    "category": "financial",
+    "type": "regulation",
+    "issuingBody": "UK Competition and Markets Authority; Financial Conduct Authority; Open Banking Limited",
+    "officialUrl": "https://www.openbanking.org.uk/",
+    "scopeSummary": "Covers access to payment account data and payment initiation via standardized APIs under UK PSD2-derived rules and the CMA retail banking remedies.",
+    "keyObligationsSummary": "Requires ASPSPs to provide secure API access, strong customer authentication, and performance/availability commitments for Open Banking APIs. Third-party providers must be authorized by the FCA and follow customer authentication and consent standards maintained by Open Banking Limited.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.openbanking.org.uk/",
+      "https://www.fca.org.uk/firms/open-banking"
+    ]
+  },
+  {
+    "frameworkId": "psd3",
+    "name": "Payment Services Directive 3 / Payment Services Regulation",
+    "alsoKnownAs": [
+      "PSD3",
+      "PSR",
+      "EU open banking reform package"
+    ],
+    "jurisdiction": "European Union",
+    "region": "EU",
+    "category": "financial",
+    "type": "regulation",
+    "issuingBody": "European Union",
+    "officialUrl": "https://finance.ec.europa.eu/consumer-finance-and-payments/payment-services_en",
+    "scopeSummary": "Covers payment services, strong customer authentication, open banking access, and related consumer protections under the forthcoming PSD3/PSR framework.",
+    "keyObligationsSummary": "Expected to strengthen open banking access rules, fraud liability and IBAN verification expectations, and supervisory consistency versus PSD2. Exact obligations and dates depend on final legislative text and member-state implementation; treat as forward-looking until published and applicable.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://finance.ec.europa.eu/consumer-finance-and-payments/payment-services_en",
+      "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52023PC0366"
+    ]
+  },
+  {
+    "frameworkId": "mica",
+    "name": "Markets in Crypto-Assets Regulation",
+    "alsoKnownAs": [
+      "MiCA",
+      "Regulation (EU) 2023/1114"
+    ],
+    "jurisdiction": "European Union",
+    "region": "EU",
+    "category": "financial",
+    "type": "regulation",
+    "issuingBody": "European Union",
+    "officialUrl": "https://eur-lex.europa.eu/eli/reg/2023/1114/oj",
+    "scopeSummary": "Covers public offers and admission to trading of crypto-assets, and CASP services such as custody, exchange, trading, and advice, excluding certain already-regulated instruments.",
+    "keyObligationsSummary": "Requires white papers for certain offerings, authorization of CASPs, prudential and governance requirements, custody and complaint-handling rules, market abuse prohibitions for crypto-assets, and ongoing supervision by national authorities with ESMA/EBA roles.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://eur-lex.europa.eu/eli/reg/2023/1114/oj",
+      "https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica"
+    ]
+  },
+  {
+    "frameworkId": "fatf-travel-rule",
+    "name": "FATF Travel Rule / Crypto Transfer Information Sharing",
+    "alsoKnownAs": [
+      "Travel Rule",
+      "FATF Recommendation 16",
+      "EU Transfer of Funds Regulation for crypto"
+    ],
+    "jurisdiction": "Global",
+    "region": "Global",
+    "category": "financial",
+    "type": "framework",
+    "issuingBody": "Financial Action Task Force; national AML authorities",
+    "officialUrl": "https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Fatf-recommendations.html",
+    "scopeSummary": "Applies to cross-border and certain domestic transfers of funds and virtual assets above jurisdictional thresholds.",
+    "keyObligationsSummary": "Requires collection and transmission of required originator and beneficiary information with the transfer, sanctions screening, and recordkeeping. Implementation mechanisms differ by country (for example FinCEN funds transfer rules in the US and the EU Transfer of Funds Regulation for crypto-assets).",
+    "mandatoryVsVoluntary": "mixed",
+    "researchSourceUrls": [
+      "https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Fatf-recommendations.html",
+      "https://finance.ec.europa.eu/publications/anti-money-laundering-and-countering-financing-terrorism-legislative-package_en"
+    ]
+  },
+  {
+    "frameworkId": "naic-insurance-data-security",
+    "name": "NAIC Insurance Data Security Model Law",
+    "alsoKnownAs": [
+      "NAIC Model 668",
+      "state insurance cybersecurity laws"
+    ],
+    "jurisdiction": "United States - State",
+    "region": "US-State",
+    "category": "financial",
+    "type": "regulation",
+    "issuingBody": "National Association of Insurance Commissioners; state insurance departments",
+    "officialUrl": "https://content.naic.org/cipr-topics/cybersecurity",
+    "scopeSummary": "Covers nonpublic information and information systems used in the licensed entity's insurance business in adopting jurisdictions.",
+    "keyObligationsSummary": "Requires a written information security program based on risk assessment, oversight of third-party service providers, board or senior management reporting, incident investigation, and notification to the state insurance commissioner of cybersecurity events meeting statutory triggers.",
+    "mandatoryVsVoluntary": "mixed",
+    "researchSourceUrls": [
+      "https://content.naic.org/cipr-topics/cybersecurity",
+      "https://content.naic.org/sites/default/files/inline-files/MDL-668.pdf"
+    ]
+  },
+  {
+    "frameworkId": "solvency-ii",
+    "name": "Solvency II",
+    "alsoKnownAs": [
+      "Directive 2009/138/EC",
+      "EU insurance prudential regime"
+    ],
+    "jurisdiction": "European Union",
+    "region": "EU",
+    "category": "financial",
+    "type": "regulation",
+    "issuingBody": "European Union; European Insurance and Occupational Pensions Authority",
+    "officialUrl": "https://www.eiopa.europa.eu/browse/regulation-and-policy/solvency-ii_en",
+    "scopeSummary": "Covers capital requirements, risk management, governance, and supervisory reporting for in-scope insurers.",
+    "keyObligationsSummary": "Requires Solvency Capital Requirement and Minimum Capital Requirement calculations, Own Risk and Solvency Assessment, fit-and-proper governance, risk management and internal control functions, and quantitative and narrative supervisory reporting including SFCR disclosures.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.eiopa.europa.eu/browse/regulation-and-policy/solvency-ii_en",
+      "https://eur-lex.europa.eu/eli/dir/2009/138/oj"
+    ]
+  },
+  {
+    "frameworkId": "interagency-tprm",
+    "name": "US Interagency Third-Party Risk Management Guidance",
+    "alsoKnownAs": [
+      "Federal banking TPRM guidance",
+      "OCC/FDIC/FRB third-party guidance"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "financial",
+    "type": "guidance",
+    "issuingBody": "Office of the Comptroller of the Currency; Federal Deposit Insurance Corporation; Board of Governors of the Federal Reserve System",
+    "officialUrl": "https://www.occ.gov/news-issuances/news-releases/2023/nr-ia-2023-53.html",
+    "scopeSummary": "Covers the life cycle of third-party relationships that may pose risk to a banking organization, including fintech partnerships and critical service providers.",
+    "keyObligationsSummary": "Expects board and management oversight of third-party risk, planning and due diligence before engagement, contract provisions addressing performance and audit rights, ongoing monitoring, and contingency planning for termination. Supervisory findings can require remediation even though the guidance is not a regulation.",
+    "mandatoryVsVoluntary": "mixed",
+    "researchSourceUrls": [
+      "https://www.occ.gov/news-issuances/news-releases/2023/nr-ia-2023-53.html",
+      "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20230606a.htm"
+    ]
+  },
+  {
+    "frameworkId": "fdic-interagency-safeguards",
+    "name": "Interagency Guidelines Establishing Information Security Standards",
+    "alsoKnownAs": [
+      "GLBA bank safeguards",
+      "12 CFR Part 364 Appendix B",
+      "OCC/FDIC/FRB safeguards guidelines"
+    ],
+    "jurisdiction": "United States",
+    "region": "US",
+    "category": "financial",
+    "type": "regulation",
+    "issuingBody": "Federal Deposit Insurance Corporation; OCC; Federal Reserve",
+    "officialUrl": "https://www.fdic.gov/regulations/laws/rules/2000-8660.html",
+    "scopeSummary": "Covers customer information and information systems of covered financial institutions under the interagency guidelines.",
+    "keyObligationsSummary": "Requires a comprehensive written information security program approved by the board, risk assessment, access controls, response programs for unauthorized access to customer information, and oversight of service providers. Complements but is separate from the FTC Safeguards Rule that applies to many non-bank fintechs.",
+    "mandatoryVsVoluntary": "mandatory",
+    "researchSourceUrls": [
+      "https://www.fdic.gov/regulations/laws/rules/2000-8660.html",
+      "https://www.occ.gov/news-issuances/bulletins/2005/bulletin-2005-13.html"
+    ]
   }
 ]
