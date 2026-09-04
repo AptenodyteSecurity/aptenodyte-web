@@ -15,7 +15,7 @@ export default function BlogPage() {
     <main
       id="main-content"
       tabIndex={-1}
-      className="mx-auto w-full max-w-4xl flex-1 px-6 py-10"
+      className="mx-auto w-full max-w-5xl flex-1 px-6 py-10"
     >
       <header className="max-w-3xl">
         <h1 className="text-4xl font-bold tracking-tight text-black">Blog</h1>
@@ -29,7 +29,7 @@ export default function BlogPage() {
           No posts yet. Check back soon.
         </p>
       ) : (
-        <div className="mt-10 flex flex-col gap-6">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {posts.map((post) => (
             <PostCard key={post.slug} post={post} />
           ))}

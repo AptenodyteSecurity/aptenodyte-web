@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { formatPostDate, getPost, getPostSlugs } from "@/lib/blog/load";
@@ -78,6 +79,18 @@ export default async function BlogPostPage({ params }: BlogPostProps) {
             </ul>
           ) : null}
         </header>
+
+        {post.coverImage ? (
+          <Image
+            src={post.coverImage}
+            alt=""
+            width={1600}
+            height={900}
+            sizes="(min-width: 768px) 48rem, 100vw"
+            className="mt-8 w-full border-2 border-black"
+            priority
+          />
+        ) : null}
 
         <div
           className="blog-prose mt-8"

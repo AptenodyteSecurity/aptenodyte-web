@@ -18,6 +18,7 @@ export type PostInput = {
   excerpt: string;
   author: string;
   tags: string[];
+  coverImage: string | null;
   draft: boolean;
   body: string;
 };
@@ -73,6 +74,10 @@ export function readPostSource(slug: string): PostSource | null {
     excerpt: typeof data.excerpt === "string" ? data.excerpt : "",
     author: typeof data.author === "string" ? data.author : "",
     tags: Array.isArray(data.tags) ? data.tags : [],
+    coverImage:
+      typeof data.coverImage === "string" && data.coverImage.trim()
+        ? data.coverImage.trim()
+        : null,
     draft: data.draft === true,
     body: content,
   };
@@ -87,6 +92,9 @@ export function serializePost(input: Omit<PostInput, "slug">): string {
     `author: ${toYamlScalar(input.author)}`,
     "tags:",
     ...input.tags.map((tag) => `  - ${toYamlScalar(tag)}`),
+    ...(input.coverImage
+      ? [`coverImage: ${toYamlScalar(input.coverImage)}`]
+      : []),
     `draft: ${input.draft}`,
     "---",
     "",
@@ -105,6 +113,11 @@ function validate(input: PostInput): string[] {
   if (!input.excerpt.trim()) errors.push("Excerpt is required.");
   if (!input.author.trim()) errors.push("Author is required.");
   if (!input.body.trim()) errors.push("Body is required.");
+  if (input.coverImage && !input.coverImage.startsWith("/")) {
+    errors.push(
+      "Cover image must be a path under public/, starting with / (e.g. /blog/foo.jpg).",
+    );
+  }
   return errors;
 }
 

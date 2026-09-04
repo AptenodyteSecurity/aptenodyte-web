@@ -6,6 +6,8 @@ export type BlogFrontmatter = {
   excerpt: string;
   author: string;
   tags: string[];
+  /** Optional cover image, as a path under `public/` (e.g. "/blog/foo.jpg"). */
+  coverImage: string | null;
   /** Draft posts are hidden from listings and excluded from production builds. */
   draft: boolean;
 };

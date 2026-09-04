@@ -71,6 +71,7 @@ export async function savePost(
       .split(",")
       .map((tag) => tag.trim())
       .filter(Boolean),
+    coverImage: String(formData.get("coverImage") || "").trim() || null,
     draft: formData.get("draft") === "on",
     body: String(formData.get("body") || ""),
   };

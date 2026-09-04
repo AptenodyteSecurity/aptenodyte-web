@@ -119,10 +119,18 @@
 }
 
 .blog-prose blockquote {
-  border-left: 4px solid #000;
-  padding-left: 1rem;
-  font-style: italic;
-  color: #3f3f46;
+  border: 2px solid #000;
+  background: #fafafa;
+  padding: 1rem 1.25rem;
+  color: #27272a;
+}
+
+.blog-prose blockquote > :first-child {
+  margin-top: 0;
+}
+
+.blog-prose blockquote > :last-child {
+  margin-bottom: 0;
 }
 
 .blog-prose code {

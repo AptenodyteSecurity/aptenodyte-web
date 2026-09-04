@@ -1,6 +1,7 @@
 "use client";
 
 import { marked } from "marked";
+import Image from "next/image";
 import Link from "next/link";
 import { useActionState, useMemo, useState } from "react";
 import { savePost, type SavePostState } from "@/app/studio/actions";
@@ -14,6 +15,7 @@ export type EditorInitial = {
   excerpt: string;
   author: string;
   tags: string[];
+  coverImage: string | null;
   draft: boolean;
   body: string;
 };
@@ -42,6 +44,7 @@ export default function PostEditor({ mode, initial }: PostEditorProps) {
   const [slug, setSlug] = useState(initial.slug);
   const [slugTouched, setSlugTouched] = useState(mode === "edit");
   const [body, setBody] = useState(initial.body);
+  const [coverImage, setCoverImage] = useState(initial.coverImage ?? "");
 
   const boundSave = savePost.bind(null, mode === "edit" ? initial.slug : null);
   const [state, formAction, pending] = useActionState(boundSave, EMPTY);
@@ -157,6 +160,27 @@ export default function PostEditor({ mode, initial }: PostEditorProps) {
             />
           </div>
 
+          <div>
+            <label htmlFor="coverImage" className={labelClass}>
+              Cover image{" "}
+              <span className="font-normal text-zinc-700">
+                (path under public/, optional)
+              </span>
+            </label>
+            <input
+              id="coverImage"
+              name="coverImage"
+              value={coverImage}
+              onChange={(event) => setCoverImage(event.target.value)}
+              placeholder="/blog/my-image.jpg"
+              className={fieldClass}
+            />
+            <p className="mt-1 text-xs text-zinc-700">
+              Add the file to <code>public/blog/</code> in the repo, then
+              reference it here.
+            </p>
+          </div>
+
           <label className="flex items-center gap-2 text-sm font-bold text-black">
             <input
               type="checkbox"
@@ -189,6 +213,15 @@ export default function PostEditor({ mode, initial }: PostEditorProps) {
             <h1 className="text-3xl font-bold tracking-tight text-black">
               {title || "Untitled"}
             </h1>
+            {coverImage.startsWith("/") ? (
+              <Image
+                src={coverImage}
+                alt=""
+                width={1600}
+                height={900}
+                className="mt-4 w-full border-2 border-black"
+              />
+            ) : null}
             <div
               className="blog-prose mt-4"
               dangerouslySetInnerHTML={{ __html: previewHtml }}

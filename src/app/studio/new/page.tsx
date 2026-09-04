@@ -22,6 +22,7 @@ export default function NewPostPage() {
           excerpt: "",
           author: "Aptenodyte Team",
           tags: [],
+          coverImage: null,
           draft: true,
           body: "",
         }}

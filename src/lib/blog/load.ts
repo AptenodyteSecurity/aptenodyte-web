@@ -35,6 +35,10 @@ function toFrontmatter(
     excerpt: data.excerpt as string,
     author: data.author as string,
     tags: Array.isArray(data.tags) ? (data.tags as string[]) : [],
+    coverImage:
+      typeof data.coverImage === "string" && data.coverImage.trim()
+        ? data.coverImage.trim()
+        : null,
     draft: data.draft === true,
   };
 }
@@ -73,6 +77,7 @@ function toMeta(post: BlogPost): BlogPostMeta {
     excerpt: post.excerpt,
     author: post.author,
     tags: post.tags,
+    coverImage: post.coverImage,
     draft: post.draft,
     readingTimeMinutes: post.readingTimeMinutes,
   };
