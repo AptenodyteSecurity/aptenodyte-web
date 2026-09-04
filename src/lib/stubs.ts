@@ -1,7 +1,6 @@
 export const stubPages = {
   about: "About",
   contact: "Contact",
-  login: "Login",
   "request-demo": "Request a demo",
   privacy: "Privacy Policy",
   terms: "Terms",

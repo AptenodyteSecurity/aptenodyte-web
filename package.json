@@ -11,6 +11,8 @@
     "new:post": "node scripts/new-post.mjs"
   },
   "dependencies": {
+    "@supabase/ssr": "^0.12.5",
+    "@supabase/supabase-js": "^2.115.0",
     "@vercel/analytics": "^2.0.1",
     "marked": "^14.1.4",
     "next": "16.3.1",

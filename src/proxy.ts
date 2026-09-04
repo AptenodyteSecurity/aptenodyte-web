@@ -1,37 +1,16 @@
-import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
-import {
-  STUDIO_COOKIE,
-  isStudioConfigured,
-  verifySessionToken,
-} from "@/lib/studio/auth";
+import { type NextRequest } from "next/server";
+import { updateSession } from "@/lib/supabase/proxy";
+
+/** Next.js 16 request proxy — refreshes Supabase session cookies. */
+export async function proxy(request: NextRequest) {
+  return updateSession(request);
+}
 
 export const config = {
-  matcher: "/studio/:path*",
+  matcher: [
+    /*
+     * Skip static assets; run on app routes so auth cookies stay fresh.
+     */
+    "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
+  ],
 };
-
-export function proxy(request: NextRequest) {
-  const { pathname } = request.nextUrl;
-
-  // The login screen must stay reachable without a session.
-  if (pathname === "/studio/login") {
-    return NextResponse.next();
-  }
-
-  if (!isStudioConfigured()) {
-    const url = new URL("/studio/login", request.url);
-    url.searchParams.set("error", "unconfigured");
-    return NextResponse.redirect(url);
-  }
-
-  const token = request.cookies.get(STUDIO_COOKIE)?.value;
-  if (verifySessionToken(token)) {
-    return NextResponse.next();
-  }
-
-  const url = new URL("/studio/login", request.url);
-  if (pathname !== "/studio") {
-    url.searchParams.set("next", pathname);
-  }
-  return NextResponse.redirect(url);
-}
