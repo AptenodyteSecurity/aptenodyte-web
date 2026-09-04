@@ -34,8 +34,7 @@ title: ${title}
 date: ${date}
 excerpt: One or two sentences that show up in listings and search metadata.
 author: Aptenodyte Team
-tags:
-  - uncategorized
+# coverImage: /blog/your-image.jpg
 draft: true
 ---
 

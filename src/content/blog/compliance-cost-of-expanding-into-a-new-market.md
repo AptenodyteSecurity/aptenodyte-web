@@ -3,9 +3,6 @@ title: The Compliance Cost of Expanding Into a New Market
 date: 2026-09-03
 excerpt: International expansion comes with a hidden compliance cost most founders underestimate. Here's why regulatory delays, not fines, are the real risk of entering a new market.
 author: Aptenodyte Team
-tags:
-  - compliance
-  - expansion
 coverImage: /blog/compliance-cost-new-market.jpg
 draft: false
 ---

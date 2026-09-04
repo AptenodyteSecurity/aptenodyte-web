@@ -51,22 +51,9 @@ export default function PostCard({ post }: PostCardProps) {
 
         <p className="mt-3 text-sm text-zinc-800">{post.excerpt}</p>
 
-        {post.tags.length > 0 ? (
-          <ul className="mt-4 flex flex-wrap gap-2">
-            {post.tags.map((tag) => (
-              <li
-                key={tag}
-                className="border-2 border-black px-2 py-0.5 text-xs font-semibold text-black"
-              >
-                {tag}
-              </li>
-            ))}
-          </ul>
-        ) : null}
-
         <Link
           href={`/blog/${post.slug}`}
-          className="mt-4 inline-flex text-sm font-semibold text-black underline underline-offset-4"
+          className="mt-auto inline-flex pt-4 text-sm font-semibold text-black underline underline-offset-4"
         >
           Read post
           <span className="sr-only">: {post.title}</span>

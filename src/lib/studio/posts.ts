@@ -17,7 +17,6 @@ export type PostInput = {
   date: string;
   excerpt: string;
   author: string;
-  tags: string[];
   coverImage: string | null;
   draft: boolean;
   body: string;
@@ -73,7 +72,6 @@ export function readPostSource(slug: string): PostSource | null {
     date: typeof data.date === "string" ? data.date : "",
     excerpt: typeof data.excerpt === "string" ? data.excerpt : "",
     author: typeof data.author === "string" ? data.author : "",
-    tags: Array.isArray(data.tags) ? data.tags : [],
     coverImage:
       typeof data.coverImage === "string" && data.coverImage.trim()
         ? data.coverImage.trim()
@@ -90,8 +88,6 @@ export function serializePost(input: Omit<PostInput, "slug">): string {
     `date: ${input.date}`,
     `excerpt: ${toYamlScalar(input.excerpt)}`,
     `author: ${toYamlScalar(input.author)}`,
-    "tags:",
-    ...input.tags.map((tag) => `  - ${toYamlScalar(tag)}`),
     ...(input.coverImage
       ? [`coverImage: ${toYamlScalar(input.coverImage)}`]
       : []),

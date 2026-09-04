@@ -66,18 +66,6 @@ export default async function BlogPostPage({ params }: BlogPostProps) {
               </span>
             ) : null}
           </p>
-          {post.tags.length > 0 ? (
-            <ul className="mt-4 flex flex-wrap gap-2">
-              {post.tags.map((tag) => (
-                <li
-                  key={tag}
-                  className="border-2 border-black px-2 py-0.5 text-xs font-semibold text-black"
-                >
-                  {tag}
-                </li>
-              ))}
-            </ul>
-          ) : null}
         </header>
 
         {post.coverImage ? (

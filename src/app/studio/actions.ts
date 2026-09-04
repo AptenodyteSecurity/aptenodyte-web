@@ -67,10 +67,6 @@ export async function savePost(
     date: String(formData.get("date") || "").trim(),
     excerpt: String(formData.get("excerpt") || "").trim(),
     author: String(formData.get("author") || "").trim(),
-    tags: String(formData.get("tags") || "")
-      .split(",")
-      .map((tag) => tag.trim())
-      .filter(Boolean),
     coverImage: String(formData.get("coverImage") || "").trim() || null,
     draft: formData.get("draft") === "on",
     body: String(formData.get("body") || ""),

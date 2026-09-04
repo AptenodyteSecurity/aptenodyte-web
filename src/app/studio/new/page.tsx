@@ -21,7 +21,6 @@ export default function NewPostPage() {
           date: today,
           excerpt: "",
           author: "Aptenodyte Team",
-          tags: [],
           coverImage: null,
           draft: true,
           body: "",

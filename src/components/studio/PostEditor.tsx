@@ -14,7 +14,6 @@ export type EditorInitial = {
   date: string;
   excerpt: string;
   author: string;
-  tags: string[];
   coverImage: string | null;
   draft: boolean;
   body: string;
@@ -145,18 +144,6 @@ export default function PostEditor({ mode, initial }: PostEditorProps) {
               rows={2}
               defaultValue={initial.excerpt}
               className={`${fieldClass} min-h-0`}
-            />
-          </div>
-
-          <div>
-            <label htmlFor="tags" className={labelClass}>
-              Tags <span className="font-normal text-zinc-700">(comma-separated)</span>
-            </label>
-            <input
-              id="tags"
-              name="tags"
-              defaultValue={initial.tags.join(", ")}
-              className={fieldClass}
             />
           </div>
 

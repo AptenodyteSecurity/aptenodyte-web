@@ -23,14 +23,14 @@ Two ways:
 
 ## Frontmatter
 
-| Field     | Required | Notes                                            |
-| --------- | -------- | ------------------------------------------------ |
-| `title`   | yes      | Post heading and `<title>`                       |
-| `date`    | yes      | `YYYY-MM-DD`; controls ordering                  |
-| `excerpt` | yes      | Shown in the listing and used as meta description|
-| `author`  | yes      | Byline                                           |
-| `tags`    | no       | YAML list; rendered as chips                     |
-| `draft`   | no       | `true` hides the post from production            |
+| Field        | Required | Notes                                                              |
+| ------------ | -------- | ------------------------------------------------------------------ |
+| `title`      | yes      | Post heading and `<title>`                                         |
+| `date`       | yes      | `YYYY-MM-DD`; controls ordering                                    |
+| `excerpt`    | yes      | Shown in the listing and used as meta description                  |
+| `author`     | yes      | Byline                                                             |
+| `coverImage` | no       | Path under `public/` (e.g. `/blog/foo.jpg`); card + post hero image |
+| `draft`      | no       | `true` hides the post from production                              |
 
 ## Publishing
 

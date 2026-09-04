@@ -34,7 +34,6 @@ function toFrontmatter(
     date: data.date as string,
     excerpt: data.excerpt as string,
     author: data.author as string,
-    tags: Array.isArray(data.tags) ? (data.tags as string[]) : [],
     coverImage:
       typeof data.coverImage === "string" && data.coverImage.trim()
         ? data.coverImage.trim()
@@ -76,7 +75,6 @@ function toMeta(post: BlogPost): BlogPostMeta {
     date: post.date,
     excerpt: post.excerpt,
     author: post.author,
-    tags: post.tags,
     coverImage: post.coverImage,
     draft: post.draft,
     readingTimeMinutes: post.readingTimeMinutes,
@@ -93,14 +91,6 @@ export function getPostSlugs(): string[] {
 
 export function getPost(slug: string): BlogPost | null {
   return allPosts().find((post) => post.slug === slug) ?? null;
-}
-
-export function getAllTags(): string[] {
-  const tags = new Set<string>();
-  for (const post of allPosts()) {
-    for (const tag of post.tags) tags.add(tag);
-  }
-  return [...tags].sort((a, b) => a.localeCompare(b));
 }
 
 const DATE_FORMAT = new Intl.DateTimeFormat("en-US", {
