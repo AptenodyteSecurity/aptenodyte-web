@@ -1,12 +1,10 @@
 "use client";
 
-import { marked } from "marked";
+import { markdownToSafeHtml } from "@/lib/blog/sanitize";
 import Image from "next/image";
 import Link from "next/link";
 import { useActionState, useMemo, useState } from "react";
 import { savePost, type SavePostState } from "@/app/studio/actions";
-
-marked.setOptions({ gfm: true, breaks: false });
 
 export type EditorInitial = {
   slug: string;
@@ -43,16 +41,18 @@ export default function PostEditor({ mode, initial }: PostEditorProps) {
   const [slug, setSlug] = useState(initial.slug);
   const [slugTouched, setSlugTouched] = useState(mode === "edit");
   const [body, setBody] = useState(initial.body);
-  const [coverImage, setCoverImage] = useState(initial.coverImage ?? "");
+  const coverImage = initial.coverImage ?? "";
 
   const boundSave = savePost.bind(null, mode === "edit" ? initial.slug : null);
   const [state, formAction, pending] = useActionState(boundSave, EMPTY);
 
   const effectiveSlug = slugTouched ? slug : slugify(title);
   const previewHtml = useMemo(
-    () => marked.parse(body || "_Nothing yet._") as string,
+    () => markdownToSafeHtml(body || "_Nothing yet._"),
     [body],
   );
+  const showCover =
+    coverImage.startsWith("/") || coverImage.startsWith("https://");
 
   return (
     <form action={formAction} className="mt-6">
@@ -148,23 +148,20 @@ export default function PostEditor({ mode, initial }: PostEditorProps) {
           </div>
 
           <div>
-            <label htmlFor="coverImage" className={labelClass}>
-              Cover image{" "}
-              <span className="font-normal text-zinc-700">
-                (path under public/, optional)
-              </span>
+            <label htmlFor="coverFile" className={labelClass}>
+              Cover image
             </label>
             <input
-              id="coverImage"
-              name="coverImage"
-              value={coverImage}
-              onChange={(event) => setCoverImage(event.target.value)}
-              placeholder="/blog/my-image.jpg"
+              id="coverFile"
+              name="coverFile"
+              type="file"
+              accept="image/jpeg,image/png,image/webp,image/gif"
               className={fieldClass}
             />
+            <input type="hidden" name="coverImage" value={coverImage} />
             <p className="mt-1 text-xs text-zinc-700">
-              Add the file to <code>public/blog/</code> in the repo, then
-              reference it here.
+              Upload JPEG, PNG, WebP, or GIF (max 2 MB) to Storage. Leave empty
+              to keep the current image.
             </p>
           </div>
 
@@ -200,7 +197,7 @@ export default function PostEditor({ mode, initial }: PostEditorProps) {
             <h1 className="text-3xl font-bold tracking-tight text-black">
               {title || "Untitled"}
             </h1>
-            {coverImage.startsWith("/") ? (
+            {showCover ? (
               <Image
                 src={coverImage}
                 alt=""

@@ -13,7 +13,9 @@ type LoginPageProps = {
 export default async function LoginPage({ searchParams }: LoginPageProps) {
   const params = await searchParams;
   const nextPath =
-    params.next && params.next.startsWith("/") ? params.next : "/dashboard";
+    params.next && params.next.startsWith("/") && !params.next.startsWith("//")
+      ? params.next
+      : "/dashboard";
 
   return (
     <main

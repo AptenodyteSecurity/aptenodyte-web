@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { logout } from "@/app/studio/actions";
+import { signOut } from "@/lib/auth/actions";
 
 export default function StudioNav() {
   return (
@@ -21,12 +21,12 @@ export default function StudioNav() {
           New post
         </Link>
       </div>
-      <form action={logout}>
+      <form action={signOut}>
         <button
           type="submit"
           className="min-h-9 border-2 border-black bg-white px-3 py-1 text-sm font-semibold text-black hover:bg-zinc-200"
         >
-          Log out
+          Sign out
         </button>
       </form>
     </div>

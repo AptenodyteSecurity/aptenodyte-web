@@ -8,22 +8,24 @@
     "start": "next start",
     "lint": "eslint",
     "import:frameworks": "node scripts/import-frameworks.mjs",
-    "new:post": "node scripts/new-post.mjs"
+    "migrate:blog": "node scripts/migrate-blog.mjs"
   },
   "dependencies": {
-    "@supabase/ssr": "^0.12.5",
+    "@supabase/ssr": "^0.12.6",
     "@supabase/supabase-js": "^2.115.0",
     "@vercel/analytics": "^2.0.1",
     "marked": "^14.1.4",
     "next": "16.3.1",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "sanitize-html": "^2.17.7"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/sanitize-html": "^2.16.1",
     "eslint": "^9",
     "eslint-config-next": "16.3.1",
     "tailwindcss": "^4",

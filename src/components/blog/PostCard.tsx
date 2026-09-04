@@ -12,7 +12,9 @@ export default function PostCard({ post }: PostCardProps) {
     <article className="flex flex-col border-2 border-black bg-white">
       <Link href={`/blog/${post.slug}`} className="block">
         <div className="relative aspect-[16/9] w-full border-b-2 border-black bg-zinc-100">
-          {post.coverImage ? (
+          {post.coverImage &&
+          (post.coverImage.startsWith("/") ||
+            post.coverImage.startsWith("https://")) ? (
             <Image
               src={post.coverImage}
               alt=""

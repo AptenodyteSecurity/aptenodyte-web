@@ -1,41 +1,18 @@
-# Blog content
+# Blog content (legacy files)
 
-Each post is one Markdown file in this directory. The file name is the URL slug
-(`my-post.md` → `/blog/my-post`).
+Posts now live in the `blog_posts` table. These Markdown files are only a
+seed source for `npm run migrate:blog`.
 
-## Create a post
+## Publish
 
-Two ways:
+Sign in with an Aptenodyte owner/admin account and use `/studio`, or the
+New post / Edit controls on `/blog` (admin-only).
 
-1. **Hidden web editor** at `/studio` (password-protected). Set
-   `BLOG_STUDIO_PASSWORD` and `BLOG_STUDIO_SECRET` in `.env.local` (see
-   `.env.example`), then visit `/studio`. It lists, creates, edits, and deletes
-   posts, with a live Markdown preview. Saving writes `.md` files here; commit
-   them to publish. This is a stop-gap until the database-backed editor lands.
-2. **CLI scaffold:**
+Cover images upload to the `blog-covers` Storage bucket.
 
-   ```bash
-   npm run new:post -- "My post title"
-   ```
+## One-time migration
 
-   Creates `src/content/blog/my-post-title.md` with the required frontmatter,
-   marked `draft: true`.
-
-## Frontmatter
-
-| Field        | Required | Notes                                                              |
-| ------------ | -------- | ------------------------------------------------------------------ |
-| `title`      | yes      | Post heading and `<title>`                                         |
-| `date`       | yes      | `YYYY-MM-DD`; controls ordering                                    |
-| `excerpt`    | yes      | Shown in the listing and used as meta description                  |
-| `author`     | yes      | Byline                                                             |
-| `coverImage` | no       | Path under `public/` (e.g. `/blog/foo.jpg`); card + post hero image |
-| `draft`      | no       | `true` hides the post from production                              |
-
-## Publishing
-
-Set `draft: false`. Drafts are visible with `npm run dev` but are excluded from
-`npm run build`. Posts render as static pages via `generateStaticParams`.
-
-The Markdown body is compiled with [`marked`](https://marked.js.org) (GFM) and
-styled by the `.blog-prose` rules in `src/app/globals.css`.
+1. Apply `supabase/migrations/` in the SQL editor (orgs first, then blog).
+2. Add `SUPABASE_SERVICE_ROLE_KEY` to `.env.local`.
+3. Run `npm run migrate:blog`.
+4. Confirm the post appears on `/blog`, then you can ignore these files.

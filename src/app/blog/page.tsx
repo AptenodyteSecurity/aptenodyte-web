@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import AdminBlogControls from "@/components/blog/AdminBlogControls";
 import PostCard from "@/components/blog/PostCard";
 import { getAllPostsMeta } from "@/lib/blog/load";
+
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "Blog — Aptenodyte",
@@ -8,8 +11,8 @@ export const metadata: Metadata = {
     "Notes on compliance, security, and building Aptenodyte.",
 };
 
-export default function BlogPage() {
-  const posts = getAllPostsMeta();
+export default async function BlogPage() {
+  const posts = await getAllPostsMeta();
 
   return (
     <main
@@ -22,6 +25,7 @@ export default function BlogPage() {
         <p className="mt-4 text-lg text-zinc-800">
           Notes on compliance, security, and building Aptenodyte.
         </p>
+        <AdminBlogControls />
       </header>
 
       {posts.length === 0 ? (

@@ -1,9 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import HeaderAuth from "@/components/HeaderAuth";
 import MobileNav from "@/components/MobileNav";
-import { ctaDemoClassName, ctaLoginClassName, navLinks } from "@/lib/nav";
+import { getAuthContext } from "@/lib/auth/context";
+import { navLinks } from "@/lib/nav";
 
-export default function Header() {
+export default async function Header() {
+  const { signedIn, isAdmin } = await getAuthContext();
+
   return (
     <header className="relative border-b-2 border-black bg-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4">
@@ -34,15 +38,10 @@ export default function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
-          <Link href="/login" className={ctaLoginClassName}>
-            Login
-          </Link>
-          <Link href="/request-demo" className={ctaDemoClassName}>
-            Request a demo
-          </Link>
+          <HeaderAuth signedIn={signedIn} isAdmin={isAdmin} />
         </div>
 
-        <MobileNav />
+        <MobileNav signedIn={signedIn} isAdmin={isAdmin} />
       </div>
     </header>
   );

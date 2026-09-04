@@ -1,8 +1,7 @@
 import Link from "next/link";
+import DeletePostButton from "@/components/studio/DeletePostButton";
 import StudioNav from "@/components/studio/StudioNav";
-import { formatPostDate } from "@/lib/blog/load";
-import { listPostSources, writesEnabled } from "@/lib/studio/posts";
-import { deletePost } from "./actions";
+import { formatPostDate, listStudioPosts } from "@/lib/blog/load";
 
 type StudioHomeProps = {
   searchParams: Promise<{ saved?: string; deleted?: string; error?: string }>;
@@ -10,8 +9,7 @@ type StudioHomeProps = {
 
 export default async function StudioHome({ searchParams }: StudioHomeProps) {
   const { saved, deleted, error } = await searchParams;
-  const posts = listPostSources();
-  const canWrite = writesEnabled();
+  const posts = await listStudioPosts();
 
   return (
     <>
@@ -21,8 +19,8 @@ export default async function StudioHome({ searchParams }: StudioHomeProps) {
         <div>
           <h1 className="text-3xl font-bold tracking-tight text-black">Posts</h1>
           <p className="mt-1 text-sm text-zinc-700">
-            {posts.length} {posts.length === 1 ? "post" : "posts"} in{" "}
-            <code>src/content/blog/</code>
+            {posts.length} {posts.length === 1 ? "post" : "posts"} in the
+            database
           </p>
         </div>
         <Link
@@ -33,20 +31,10 @@ export default async function StudioHome({ searchParams }: StudioHomeProps) {
         </Link>
       </header>
 
-      {!canWrite ? (
-        <p className="mt-4 border-2 border-black bg-yellow-100 px-4 py-3 text-sm text-black">
-          <strong>Read-only here.</strong> This deployment can preview the editor
-          but cannot save files. Run the site locally, or set{" "}
-          <code>STUDIO_ALLOW_WRITES=true</code> on a persistent host. Saving moves
-          to the database once it is live.
-        </p>
-      ) : (
-        <p className="mt-4 border-2 border-black bg-white px-4 py-3 text-xs text-zinc-700">
-          Saving writes Markdown files to <code>src/content/blog/</code> on this
-          server. Commit them to publish. This is temporary until the database is
-          connected.
-        </p>
-      )}
+      <p className="mt-4 border-2 border-black bg-white px-4 py-3 text-xs text-zinc-700">
+        Aptenodyte admins can publish here. Posts are stored in Postgres; cover
+        images go to Storage. The public blog only shows published posts.
+      </p>
 
       {saved ? (
         <p className="mt-4 border-2 border-black bg-white px-4 py-2 text-sm text-black">
@@ -100,15 +88,7 @@ export default async function StudioHome({ searchParams }: StudioHomeProps) {
                 >
                   Edit
                 </Link>
-                <form action={deletePost.bind(null, post.slug)}>
-                  <button
-                    type="submit"
-                    disabled={!canWrite}
-                    className="min-h-9 border-2 border-black bg-white px-3 py-1 text-sm font-semibold text-black hover:bg-zinc-200 disabled:opacity-50"
-                  >
-                    Delete
-                  </button>
-                </form>
+                <DeletePostButton slug={post.slug} title={post.title} />
               </div>
             </li>
           ))

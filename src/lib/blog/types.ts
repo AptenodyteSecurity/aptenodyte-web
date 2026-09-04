@@ -1,23 +1,29 @@
-export type BlogFrontmatter = {
+export type BlogPostMeta = {
+  slug: string;
   title: string;
   /** ISO date, e.g. "2026-09-03". */
   date: string;
-  /** One or two sentence summary shown in listings and metadata. */
   excerpt: string;
   author: string;
-  /** Optional cover image, as a path under `public/` (e.g. "/blog/foo.jpg"). */
+  /** Public URL or same-origin path for the cover image. */
   coverImage: string | null;
-  /** Draft posts are hidden from listings and excluded from production builds. */
+  /** Unpublished posts are hidden from the public site. */
   draft: boolean;
-};
-
-export type BlogPostMeta = BlogFrontmatter & {
-  slug: string;
-  /** Estimated reading time in whole minutes (min 1). */
   readingTimeMinutes: number;
 };
 
 export type BlogPost = BlogPostMeta & {
-  /** Rendered HTML for the post body (markdown compiled by `marked`). */
+  /** Sanitized HTML for the post body. */
   contentHtml: string;
+};
+
+export type BlogPostRow = {
+  slug: string;
+  title: string;
+  excerpt: string;
+  body: string;
+  cover_image_url: string | null;
+  author_name: string;
+  published: boolean;
+  published_at: string | null;
 };

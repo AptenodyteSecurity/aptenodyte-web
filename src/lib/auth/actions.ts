@@ -17,7 +17,8 @@ function readCredentials(formData: FormData) {
   return {
     email,
     password,
-    next: next.startsWith("/") ? next : "/dashboard",
+    next:
+      next.startsWith("/") && !next.startsWith("//") ? next : "/dashboard",
   };
 }
 

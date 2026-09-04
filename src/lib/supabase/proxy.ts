@@ -7,7 +7,8 @@ import {
 
 /**
  * Refresh the auth session cookie and gate protected routes.
- * Marketing pages stay public — only /dashboard requires a session.
+ * Marketing pages stay public. /dashboard and /studio require a session.
+ * Aptenodyte admin role is enforced in /studio layouts and mutations (RLS).
  */
 export async function updateSession(request: NextRequest) {
   let supabaseResponse = NextResponse.next({
@@ -45,10 +46,12 @@ export async function updateSession(request: NextRequest) {
   const user = data?.claims;
   const pathname = request.nextUrl.pathname;
 
-  const isDashboard = pathname === "/dashboard" || pathname.startsWith("/dashboard/");
+  const isDashboard =
+    pathname === "/dashboard" || pathname.startsWith("/dashboard/");
+  const isStudio = pathname === "/studio" || pathname.startsWith("/studio/");
   const isLogin = pathname === "/login" || pathname.startsWith("/login/");
 
-  if (isDashboard && !user) {
+  if ((isDashboard || isStudio) && !user) {
     const url = request.nextUrl.clone();
     url.pathname = "/login";
     url.searchParams.set("next", pathname);
@@ -57,7 +60,11 @@ export async function updateSession(request: NextRequest) {
 
   if (isLogin && user) {
     const url = request.nextUrl.clone();
-    url.pathname = "/dashboard";
+    const next = request.nextUrl.searchParams.get("next");
+    url.pathname =
+      next && next.startsWith("/") && !next.startsWith("//")
+        ? next
+        : "/dashboard";
     url.search = "";
     return NextResponse.redirect(url);
   }

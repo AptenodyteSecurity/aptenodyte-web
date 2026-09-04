@@ -1,96 +1,103 @@
-import fs from "node:fs";
-import path from "node:path";
-import { marked } from "marked";
-import { parseFrontmatter } from "./frontmatter";
-import type { BlogFrontmatter, BlogPost, BlogPostMeta } from "./types";
+import { markdownToSafeHtml, readingTimeMinutes } from "@/lib/blog/sanitize";
+import type { BlogPost, BlogPostMeta, BlogPostRow } from "@/lib/blog/types";
+import { createClient } from "@/lib/supabase/server";
 
-const BLOG_DIR = path.join(process.cwd(), "src/content/blog");
-
-/** Drafts are visible during local development but never in production builds. */
-const INCLUDE_DRAFTS = process.env.NODE_ENV !== "production";
-
-marked.setOptions({ gfm: true, breaks: false });
-
-function readingTimeMinutes(markdown: string): number {
-  const words = markdown.trim().split(/\s+/).filter(Boolean).length;
-  return Math.max(1, Math.round(words / 200));
+function publishedDate(row: BlogPostRow): string {
+  if (row.published_at) {
+    return row.published_at.slice(0, 10);
+  }
+  return "1970-01-01";
 }
 
-function toFrontmatter(
-  slug: string,
-  data: Record<string, unknown>,
-): BlogFrontmatter {
-  const required = ["title", "date", "excerpt", "author"] as const;
-  for (const field of required) {
-    if (typeof data[field] !== "string" || !(data[field] as string).trim()) {
-      throw new Error(
-        `Blog post "${slug}" is missing required frontmatter field: ${field}`,
-      );
-    }
+function toMeta(row: BlogPostRow): BlogPostMeta {
+  return {
+    slug: row.slug,
+    title: row.title,
+    date: publishedDate(row),
+    excerpt: row.excerpt,
+    author: row.author_name,
+    coverImage: row.cover_image_url,
+    draft: !row.published,
+    readingTimeMinutes: readingTimeMinutes(row.body),
+  };
+}
+
+function toPost(row: BlogPostRow): BlogPost {
+  return {
+    ...toMeta(row),
+    contentHtml: markdownToSafeHtml(row.body),
+  };
+}
+
+const SELECT_COLUMNS =
+  "slug, title, excerpt, body, cover_image_url, author_name, published, published_at";
+
+export async function getAllPostsMeta(): Promise<BlogPostMeta[]> {
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("blog_posts")
+    .select(SELECT_COLUMNS)
+    .eq("published", true)
+    .order("published_at", { ascending: false });
+
+  if (error || !data) {
+    return [];
   }
 
+  return (data as BlogPostRow[]).map(toMeta);
+}
+
+export async function getPost(slug: string): Promise<BlogPost | null> {
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("blog_posts")
+    .select(SELECT_COLUMNS)
+    .eq("slug", slug)
+    .eq("published", true)
+    .maybeSingle();
+
+  if (error || !data) {
+    return null;
+  }
+
+  return toPost(data as BlogPostRow);
+}
+
+/** Admin listing: RLS returns unpublished rows only for Aptenodyte admins. */
+export async function listStudioPosts(): Promise<BlogPostMeta[]> {
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("blog_posts")
+    .select(SELECT_COLUMNS)
+    .order("published_at", { ascending: false, nullsFirst: false });
+
+  if (error || !data) {
+    return [];
+  }
+
+  return (data as BlogPostRow[]).map(toMeta);
+}
+
+export async function getStudioPost(slug: string): Promise<
+  | (BlogPostMeta & { body: string })
+  | null
+> {
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("blog_posts")
+    .select(SELECT_COLUMNS)
+    .eq("slug", slug)
+    .maybeSingle();
+
+  if (error || !data) {
+    return null;
+  }
+
+  const row = data as BlogPostRow;
   return {
-    title: data.title as string,
-    date: data.date as string,
-    excerpt: data.excerpt as string,
-    author: data.author as string,
-    coverImage:
-      typeof data.coverImage === "string" && data.coverImage.trim()
-        ? data.coverImage.trim()
-        : null,
-    draft: data.draft === true,
+    ...toMeta(row),
+    body: row.body,
   };
-}
-
-function loadFile(fileName: string): BlogPost {
-  const slug = fileName.replace(/\.md$/, "");
-  const raw = fs.readFileSync(path.join(BLOG_DIR, fileName), "utf8");
-  const { data, content } = parseFrontmatter(raw);
-  const frontmatter = toFrontmatter(slug, data);
-
-  return {
-    ...frontmatter,
-    slug,
-    readingTimeMinutes: readingTimeMinutes(content),
-    contentHtml: marked.parse(content) as string,
-  };
-}
-
-function allPosts(): BlogPost[] {
-  if (!fs.existsSync(BLOG_DIR)) return [];
-
-  return fs
-    .readdirSync(BLOG_DIR)
-    .filter((file) => file.endsWith(".md") && !file.startsWith("_"))
-    .filter((file) => file.toLowerCase() !== "readme.md")
-    .map(loadFile)
-    .filter((post) => INCLUDE_DRAFTS || !post.draft)
-    .sort((a, b) => (a.date < b.date ? 1 : -1));
-}
-
-function toMeta(post: BlogPost): BlogPostMeta {
-  return {
-    slug: post.slug,
-    title: post.title,
-    date: post.date,
-    excerpt: post.excerpt,
-    author: post.author,
-    coverImage: post.coverImage,
-    draft: post.draft,
-    readingTimeMinutes: post.readingTimeMinutes,
-  };
-}
-
-export function getAllPostsMeta(): BlogPostMeta[] {
-  return allPosts().map(toMeta);
-}
-
-export function getPostSlugs(): string[] {
-  return allPosts().map((post) => post.slug);
-}
-
-export function getPost(slug: string): BlogPost | null {
-  return allPosts().find((post) => post.slug === slug) ?? null;
 }
 
 const DATE_FORMAT = new Intl.DateTimeFormat("en-US", {
@@ -101,6 +108,6 @@ const DATE_FORMAT = new Intl.DateTimeFormat("en-US", {
 });
 
 export function formatPostDate(isoDate: string): string {
-  const parsed = new Date(isoDate);
+  const parsed = new Date(`${isoDate}T00:00:00.000Z`);
   return Number.isNaN(parsed.getTime()) ? isoDate : DATE_FORMAT.format(parsed);
 }
