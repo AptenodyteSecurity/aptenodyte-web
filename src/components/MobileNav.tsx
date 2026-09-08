@@ -2,9 +2,16 @@
 
 import Link from "next/link";
 import { useEffect, useId, useRef, useState } from "react";
+import { signOut } from "@/lib/auth/actions";
 import { ctaDemoClassName, ctaLoginClassName, navLinks } from "@/lib/nav";
 
-export default function MobileNav() {
+export default function MobileNav({
+  signedIn,
+  isAdmin,
+}: {
+  signedIn: boolean;
+  isAdmin: boolean;
+}) {
   const [open, setOpen] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const panelRef = useRef<HTMLElement>(null);
@@ -94,20 +101,48 @@ export default function MobileNav() {
           ))}
         </ul>
         <div className="flex flex-col gap-3 border-t-2 border-black px-6 py-4">
-          <Link
-            href="/login"
-            className={ctaLoginClassName}
-            onClick={() => setOpen(false)}
-          >
-            Login
-          </Link>
-          <Link
-            href="/request-demo"
-            className={ctaDemoClassName}
-            onClick={() => setOpen(false)}
-          >
-            Request a demo
-          </Link>
+          {signedIn ? (
+            <>
+              {isAdmin ? (
+                <Link
+                  href="/studio"
+                  className="inline-flex min-h-11 items-center justify-center border-2 border-black bg-white px-4 py-2 text-sm font-semibold text-black"
+                  onClick={() => setOpen(false)}
+                >
+                  Studio
+                </Link>
+              ) : null}
+              <Link
+                href="/dashboard"
+                className="inline-flex min-h-11 items-center justify-center border-2 border-black bg-white px-4 py-2 text-sm font-semibold text-black"
+                onClick={() => setOpen(false)}
+              >
+                Dashboard
+              </Link>
+              <form action={signOut}>
+                <button type="submit" className={`w-full ${ctaLoginClassName}`}>
+                  Sign out
+                </button>
+              </form>
+            </>
+          ) : (
+            <>
+              <Link
+                href="/login"
+                className={ctaLoginClassName}
+                onClick={() => setOpen(false)}
+              >
+                Login
+              </Link>
+              <Link
+                href="/request-demo"
+                className={ctaDemoClassName}
+                onClick={() => setOpen(false)}
+              >
+                Request a demo
+              </Link>
+            </>
+          )}
         </div>
       </nav>
     </>
