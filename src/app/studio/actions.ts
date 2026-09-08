@@ -20,9 +20,16 @@ export type SavePostState = {
 const WRITE_WINDOW_MS = 5 * 60 * 1000;
 const WRITE_LIMIT = 20;
 const COVER_MAX_BYTES = 2 * 1024 * 1024;
-const COVER_TYPES = new Set(["image/jpeg", "image/png", "image/webp", "image/gif"]);
+const COVER_TYPES = new Set([
+  "image/jpeg",
+  "image/jpg",
+  "image/png",
+  "image/webp",
+  "image/gif",
+]);
 
 async function assertWriteRate(userId: string): Promise<string | null> {
+  if (!userId) return null;
   const supabase = await createClient();
   const since = new Date(Date.now() - WRITE_WINDOW_MS).toISOString();
   const { count, error } = await supabase
@@ -31,6 +38,7 @@ async function assertWriteRate(userId: string): Promise<string | null> {
     .eq("author_id", userId)
     .gte("updated_at", since);
 
+  // If the table is missing or the query fails, do not block the save here.
   if (error) {
     return null;
   }
@@ -55,40 +63,84 @@ function readPostInput(formData: FormData): PostInput {
   };
 }
 
+function resolveCoverFormat(
+  file: File,
+): { ext: string; contentType: string } | null {
+  if (file.type && COVER_TYPES.has(file.type)) {
+    const ext =
+      file.type === "image/png"
+        ? "png"
+        : file.type === "image/webp"
+          ? "webp"
+          : file.type === "image/gif"
+            ? "gif"
+            : "jpg";
+    return {
+      ext,
+      contentType: file.type === "image/jpg" ? "image/jpeg" : file.type,
+    };
+  }
+
+  const match = file.name.toLowerCase().match(/\.(jpe?g|png|webp|gif)$/);
+  if (!match) return null;
+  const ext = match[1] === "jpeg" ? "jpg" : match[1];
+  const contentType =
+    ext === "png"
+      ? "image/png"
+      : ext === "webp"
+        ? "image/webp"
+        : ext === "gif"
+          ? "image/gif"
+          : "image/jpeg";
+  return { ext, contentType };
+}
+
+function isCoverFile(value: FormDataEntryValue | null): value is File {
+  return (
+    typeof File !== "undefined" &&
+    value instanceof File &&
+    value.size > 0 &&
+    value.name.length > 0
+  );
+}
+
 async function uploadCoverIfPresent(
   formData: FormData,
   userId: string,
 ): Promise<{ url: string | null; error: string | null }> {
-  const file = formData.get("coverFile");
-  if (!(file instanceof File) || file.size === 0) {
+  const raw = formData.get("coverFile");
+  // Cover is optional — empty file inputs must not block saving.
+  if (!isCoverFile(raw)) {
     return { url: null, error: null };
   }
-  if (file.size > COVER_MAX_BYTES) {
+
+  if (raw.size > COVER_MAX_BYTES) {
     return { url: null, error: "Cover image must be 2 MB or smaller." };
   }
-  if (!COVER_TYPES.has(file.type)) {
-    return { url: null, error: "Cover image must be JPEG, PNG, WebP, or GIF." };
+
+  const format = resolveCoverFormat(raw);
+  if (!format) {
+    return {
+      url: null,
+      error: "Cover image must be JPEG, PNG, WebP, or GIF.",
+    };
   }
 
-  const ext =
-    file.type === "image/png"
-      ? "png"
-      : file.type === "image/webp"
-        ? "webp"
-        : file.type === "image/gif"
-          ? "gif"
-          : "jpg";
-  const path = `${userId}/${randomUUID()}.${ext}`;
+  const path = `${userId}/${randomUUID()}.${format.ext}`;
   const supabase = await createClient();
   const { error } = await supabase.storage
     .from("blog-covers")
-    .upload(path, await file.arrayBuffer(), {
-      contentType: file.type,
+    .upload(path, await raw.arrayBuffer(), {
+      contentType: format.contentType,
       upsert: false,
     });
 
   if (error) {
-    return { url: null, error: "Could not upload the cover image." };
+    const detail = error.message || "unknown storage error";
+    return {
+      url: null,
+      error: `Could not upload the cover image (${detail}). Cover is optional — clear the file to save without one. If this keeps failing, apply the blog_posts migration so the blog-covers bucket exists.`,
+    };
   }
 
   const { data } = supabase.storage.from("blog-covers").getPublicUrl(path);
@@ -105,6 +157,25 @@ function revalidateBlog(slug: string) {
   revalidatePath(`/studio/${slug}`);
 }
 
+function saveFailureMessage(error: { code?: string; message?: string }): string {
+  if (error.code === "23505") {
+    return "A post with that slug already exists.";
+  }
+  if (
+    error.code === "42P01" ||
+    /relation .* does not exist/i.test(error.message ?? "")
+  ) {
+    return "The blog_posts table is missing. Run supabase/migrations/20260904010000_blog_posts.sql in the Supabase SQL editor.";
+  }
+  if (
+    error.code === "42501" ||
+    /row-level security/i.test(error.message ?? "")
+  ) {
+    return "Save blocked by permissions. Sign in as an Aptenodyte owner/admin, and confirm the blog RLS policies are applied.";
+  }
+  return `Could not save the post${error.message ? `: ${error.message}` : "."}`;
+}
+
 export async function savePost(
   previousSlug: string | null,
   _state: SavePostState,
@@ -113,13 +184,19 @@ export async function savePost(
   const admin = await requireAptenodyteAdmin(
     previousSlug ? `/studio/${previousSlug}` : "/studio/new",
   );
-  const rateError = await assertWriteRate(admin.userId ?? "");
+  if (!admin.userId) {
+    return {
+      errors: ["Your session is missing a user id. Sign out and sign in again."],
+    };
+  }
+
+  const rateError = await assertWriteRate(admin.userId);
   if (rateError) {
     return { errors: [rateError] };
   }
 
   const input = readPostInput(formData);
-  const uploaded = await uploadCoverIfPresent(formData, admin.userId ?? "anon");
+  const uploaded = await uploadCoverIfPresent(formData, admin.userId);
   if (uploaded.error) {
     return { errors: [uploaded.error] };
   }
@@ -154,7 +231,7 @@ export async function savePost(
       if (error.code === "23505") {
         return { errors: [`A post with slug "${input.slug}" already exists.`] };
       }
-      return { errors: ["Could not save the post."] };
+      return { errors: [saveFailureMessage(error)] };
     }
   } else {
     const { error } = await supabase.from("blog_posts").insert(payload);
@@ -162,7 +239,7 @@ export async function savePost(
       if (error.code === "23505") {
         return { errors: [`A post with slug "${input.slug}" already exists.`] };
       }
-      return { errors: ["Could not save the post."] };
+      return { errors: [saveFailureMessage(error)] };
     }
   }
 
@@ -183,7 +260,7 @@ export async function deletePost(slug: string): Promise<void> {
   const supabase = await createClient();
   const { error } = await supabase.from("blog_posts").delete().eq("slug", slug);
   if (error) {
-    redirect("/studio?error=Could%20not%20delete%20the%20post.");
+    redirect(`/studio?error=${encodeURIComponent(saveFailureMessage(error))}`);
   }
 
   revalidatePath("/blog");

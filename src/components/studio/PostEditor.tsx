@@ -40,8 +40,13 @@ export default function PostEditor({ mode, initial }: PostEditorProps) {
   const [title, setTitle] = useState(initial.title);
   const [slug, setSlug] = useState(initial.slug);
   const [slugTouched, setSlugTouched] = useState(mode === "edit");
+  const [date, setDate] = useState(initial.date);
+  const [author, setAuthor] = useState(initial.author);
+  const [excerpt, setExcerpt] = useState(initial.excerpt);
+  const [draft, setDraft] = useState(initial.draft);
   const [body, setBody] = useState(initial.body);
-  const coverImage = initial.coverImage ?? "";
+  const [coverImage] = useState(initial.coverImage ?? "");
+  const [coverFileName, setCoverFileName] = useState<string | null>(null);
 
   const boundSave = savePost.bind(null, mode === "edit" ? initial.slug : null);
   const [state, formAction, pending] = useActionState(boundSave, EMPTY);
@@ -115,7 +120,8 @@ export default function PostEditor({ mode, initial }: PostEditorProps) {
                 name="date"
                 type="date"
                 required
-                defaultValue={initial.date}
+                value={date}
+                onChange={(event) => setDate(event.target.value)}
                 className={fieldClass}
               />
             </div>
@@ -127,7 +133,8 @@ export default function PostEditor({ mode, initial }: PostEditorProps) {
                 id="author"
                 name="author"
                 required
-                defaultValue={initial.author}
+                value={author}
+                onChange={(event) => setAuthor(event.target.value)}
                 className={fieldClass}
               />
             </div>
@@ -142,14 +149,16 @@ export default function PostEditor({ mode, initial }: PostEditorProps) {
               name="excerpt"
               required
               rows={2}
-              defaultValue={initial.excerpt}
+              value={excerpt}
+              onChange={(event) => setExcerpt(event.target.value)}
               className={`${fieldClass} min-h-0`}
             />
           </div>
 
           <div>
             <label htmlFor="coverFile" className={labelClass}>
-              Cover image
+              Cover image{" "}
+              <span className="font-normal text-zinc-700">(optional)</span>
             </label>
             <input
               id="coverFile"
@@ -157,11 +166,20 @@ export default function PostEditor({ mode, initial }: PostEditorProps) {
               type="file"
               accept="image/jpeg,image/png,image/webp,image/gif"
               className={fieldClass}
+              onChange={(event) => {
+                const file = event.target.files?.[0];
+                setCoverFileName(file && file.size > 0 ? file.name : null);
+              }}
             />
             <input type="hidden" name="coverImage" value={coverImage} />
             <p className="mt-1 text-xs text-zinc-700">
-              Upload JPEG, PNG, WebP, or GIF (max 2 MB) to Storage. Leave empty
-              to keep the current image.
+              Optional. JPEG, PNG, WebP, or GIF (max 2 MB). Leave empty to save
+              without a cover
+              {coverFileName ? ` — selected: ${coverFileName}` : ""}
+              {coverImage && !coverFileName
+                ? " — keeping the current cover unless you pick a new file"
+                : ""}
+              .
             </p>
           </div>
 
@@ -169,7 +187,8 @@ export default function PostEditor({ mode, initial }: PostEditorProps) {
             <input
               type="checkbox"
               name="draft"
-              defaultChecked={initial.draft}
+              checked={draft}
+              onChange={(event) => setDraft(event.target.checked)}
               className="size-4 border-2 border-black"
             />
             Draft (hidden from the live site)
@@ -220,7 +239,11 @@ export default function PostEditor({ mode, initial }: PostEditorProps) {
           disabled={pending}
           className="inline-flex min-h-11 items-center justify-center border-2 border-yellow-500 bg-yellow-400 px-4 py-2 text-sm font-semibold text-black hover:bg-yellow-500 disabled:opacity-60"
         >
-          {pending ? "Saving…" : mode === "create" ? "Create post" : "Save changes"}
+          {pending
+            ? "Saving…"
+            : mode === "create"
+              ? "Create post"
+              : "Save changes"}
         </button>
         <Link
           href="/studio"
