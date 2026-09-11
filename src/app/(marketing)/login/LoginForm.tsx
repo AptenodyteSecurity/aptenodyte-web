@@ -81,12 +81,12 @@ export default function LoginForm({ nextPath }: LoginFormProps) {
       </form>
 
       <p className="mt-6 text-center text-sm text-zinc-700">
-        Need access?{" "}
+        Have an access code?{" "}
         <Link
-          href="/request-demo"
+          href="/signup"
           className="font-semibold text-black underline-offset-2 hover:underline"
         >
-          Request access
+          Sign up
         </Link>
       </p>
 

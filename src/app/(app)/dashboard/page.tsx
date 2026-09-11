@@ -56,8 +56,9 @@ export default async function DashboardPage() {
           </ul>
         ) : (
           <p className="mt-3 border-2 border-black bg-white px-4 py-3 text-sm text-zinc-700">
-            No organization is attached to this account yet. Ask Aptenodyte to
-            add you — you cannot join an organization from this page.
+            No organization is attached to this account yet. If you have an
+            access code, create an account from the sign-up page, or ask
+            Aptenodyte to attach your user.
           </p>
         )}
       </header>
