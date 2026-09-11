@@ -6,6 +6,13 @@ const supabaseHostname = supabaseUrl
   : "*.supabase.co";
 
 const nextConfig: NextConfig = {
+  serverExternalPackages: ["xlsx"],
+  experimental: {
+    proxyClientMaxBodySize: "5mb",
+    serverActions: {
+      bodySizeLimit: "5mb",
+    },
+  },
   images: {
     remotePatterns: [
       {
