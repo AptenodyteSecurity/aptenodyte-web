@@ -30,9 +30,7 @@ export default function Footer() {
             <p className="text-sm text-zinc-700">
               <a href="mailto:rhett@aptenodyte.com">rhett@aptenodyte.com</a>
             </p>
-            <p className="mt-1 text-sm text-zinc-700">
-              <a href="mailto:jake@aptenodyte.com">jake@aptenodyte.com</a>
-            </p>
+
             <p className="mt-2 text-sm text-zinc-700">United States</p>
           </address>
         </div>
