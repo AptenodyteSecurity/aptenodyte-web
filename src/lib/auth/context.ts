@@ -53,6 +53,7 @@ export async function requireAptenodyteAdmin(nextPath = "/studio") {
 export type UserProfile = {
   firstName: string | null;
   lastName: string | null;
+  phone: string | null;
   displayName: string;
   email: string;
   initials: string;
@@ -63,7 +64,7 @@ export async function getUserProfile(): Promise<UserProfile> {
   const supabase = await createClient();
   const { data } = await supabase
     .from("profiles")
-    .select("first_name, last_name, email")
+    .select("first_name, last_name, phone, email")
     .eq("user_id", ctx.userId)
     .maybeSingle();
 
@@ -73,6 +74,7 @@ export async function getUserProfile(): Promise<UserProfile> {
     typeof data?.last_name === "string" ? data.last_name.trim() : "";
   const email =
     (typeof data?.email === "string" && data.email) || ctx.email || "";
+  const phone = typeof data?.phone === "string" ? data.phone.trim() : "";
   const displayName =
     [firstName, lastName].filter(Boolean).join(" ") || email || "Signed in";
   const initials = (
@@ -84,6 +86,7 @@ export async function getUserProfile(): Promise<UserProfile> {
   return {
     firstName: firstName || null,
     lastName: lastName || null,
+    phone: phone || null,
     displayName,
     email,
     initials,

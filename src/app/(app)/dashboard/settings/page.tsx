@@ -1,8 +1,12 @@
 import AccessibilitySettings from "@/components/AccessibilitySettings";
+import AccountSettingsForm from "@/components/AccountSettingsForm";
+import { getUserProfile } from "@/lib/auth/context";
 import { signOut } from "@/lib/auth/actions";
 import { ctaLoginClassName } from "@/lib/nav";
 
-export default function SettingsPage() {
+export default async function SettingsPage() {
+  const profile = await getUserProfile();
+
   return (
     <main
       id="main-content"
@@ -14,12 +18,13 @@ export default function SettingsPage() {
           Settings
         </h1>
         <p className="mt-3 text-lg text-zinc-800">
-          Account preferences will expand here. Accessibility controls are
-          available now.
+          Manage your account, password, and accessibility preferences.
         </p>
       </header>
 
-      <div className="mt-8 border-2 border-black bg-white p-6">
+      <AccountSettingsForm profile={profile} />
+
+      <div className="mt-6 border-2 border-black bg-white p-6">
         <h2 className="text-xl font-bold text-black">Accessibility</h2>
         <p className="mt-2 text-sm text-zinc-700">
           Text size, contrast, and motion preferences for this browser.
