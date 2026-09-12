@@ -62,6 +62,15 @@ export default function LoginForm({ nextPath }: LoginFormProps) {
           />
         </div>
 
+        <div className="text-right text-sm">
+          <Link
+            href="/forgot-password"
+            className="font-semibold text-black underline-offset-2 hover:underline"
+          >
+            Forgot your password?
+          </Link>
+        </div>
+
         {state.error ? (
           <p
             role="alert"
